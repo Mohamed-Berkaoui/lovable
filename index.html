@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lovable  Full Course Presentation</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ====== Progress Bar ====== -->
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <!-- ====== Slide Counter ====== -->
+  <div class="slide-counter" aria-live="polite">1 / 12</div>
+
+  <!-- ====== Navigation Arrows ====== -->
+  <div class="nav-arrows">
+    <button id="btn-prev" aria-label="Previous slide">&#8592;</button>
+    <button id="btn-next" aria-label="Next slide">&#8594;</button>
+  </div>
+
+  <!-- ====== Slides Wrapper ====== -->
+  <div class="slides-wrapper">
+
+    <!-- SLIDE 0  Title -->
+    <section class="slide active title-slide">
+      <div class="slide-inner">
+        <img src="assets/images/logo-lovable.svg" alt="Lovable logo" class="lovable-logo" />
+        <h1 class="slide-title">Mastering Lovable</h1>
+        <p class="slide-subtitle">
+          A comprehensive, beginner-friendly course on building full-stack apps with AI 
+          from raw idea all the way to production deployment.
+        </p>
+        <div class="slide-stats">
+          <div class="stat-card"><div class="stat-value">10</div><div class="stat-label">Sections</div></div>
+          <div class="stat-card"><div class="stat-value">50+</div><div class="stat-label">Examples</div></div>
+          <div class="stat-card"><div class="stat-value">2h</div><div class="stat-label">Reading</div></div>
+          <div class="stat-card"><div class="stat-value">0</div><div class="stat-label">Prerequisites</div></div>
+        </div>
+        <p class="nav-hint">Press <kbd>&rarr;</kbd> or click the arrow to begin</p>
+      </div>
+    </section>
+
+    <!-- SLIDE 1  Section 01 -->
+    <section class="slide">
+      <div class="slide-inner">
+        <span class="slide-number">Section 01</span>
+        <h2 class="slide-title">Introduction to Lovable</h2>
+        <p class="slide-subtitle">Understand what Lovable is, who it's built for, and why it's reshaping modern development.</p>
+        <ul class="slide-bullets">
+          <li>AI-powered full-stack app builder  plain English to production code</li>
+          <li>React + TypeScript + Supabase stack with zero manual setup</li>
+          <li>Built-in hosting, deployment, and domain management</li>
+          <li>Designed for founders, PMs, designers, and developers alike</li>
+          <li>No coding experience required to get started</li>
+        </ul>
+        <a href="sections/intro.html" class="btn btn-primary">Deep Dive &rarr;</a>
+      </div>
+    </section>
+
+    <!-- SLIDE 2  Section 02 -->
+    <section class="slide">
+      <div class="slide-inner">
+        <span class="slide-number">Section 02</span>
+        <h2 class="slide-title">Project Preparation</h2>
+        <p class="slide-subtitle">Great apps begin with great preparation  define your problem, users, and goals before building.</p>
+        <ul class="slide-bullets">
+          <li>Write a 2-sentence problem statement before opening Lovable</li>
+          <li>Create 23 realistic user personas to ground every decision</li>
+          <li>Define measurable success metrics (acquisition, activation, retention)</li>
+          <li>Identify MVP features vs. nice-to-haves  ruthlessly cut scope</li>
+          <li>Avoid feature overload, vague goals, and skipped research</li>
+        </ul>
+        <a href="sections/preparation.html" class="btn btn-primary">Deep Dive &rarr;</a>
+      </div>
+    </section>
+
+    <!-- SLIDE 3  Section 03 -->
+    <section class="slide">
+      <div class="slide-inner">
+        <span class="slide-number">Section 03</span>
+        <h2 class="slide-title">PRD Creation</h2>
+        <p class="slide-subtitle">The Product Requirements Document is your blueprint. Without it, you're building blind.</p>
+        <ul class="slide-bullets">
+          <li>Project overview, problem statement, and target users</li>
+          <li>Feature list scoped to MVP only  no extras</li>
+          <li>User flows, navigation, and page-by-page screen elements</li>
+          <li>Tech stack, database schema, and design tokens</li>
+          <li>Success metrics and explicit out-of-scope list</li>
+        </ul>
+        <a href="sections/prd.html" class="btn btn-primary">Deep Dive &rarr;</a>
+      </div>
+    </section>
+
+    <!-- SLIDE 4  Section 04 -->
+    <section class="slide">
+      <div class="slide-inner">
+        <span class="slide-number">Section 04</span>
+        <h2 class="slide-title">PRD &rarr; Lovable Prompts</h2>
+        <p class="slide-subtitle">Turn your PRD into precise, structured prompts that Lovable executes with accuracy.</p>
+        <ul class="slide-bullets">
+          <li>One feature per prompt  never bundle multiple requirements</li>
+          <li>Use bullet-point lists, not paragraphs, inside each prompt</li>
+          <li>State explicitly what NOT to change or break</li>
+          <li>Reference existing components and pages by name</li>
+          <li>Build in logical order: layout &rarr; data &rarr; logic &rarr; polish</li>
+        </ul>
+        <a href="sections/prompts.html" class="btn btn-primary">Deep Dive &rarr;</a>
+      </div>
+    </section>
+
+    <!-- SLIDE 5  Section 05 -->
+    <section class="slide">
+      <div class="slide-inner">
+        <span class="slide-number">Section 05</span>
+        <h2 class="slide-title">Context Prompt (Knowledge Base)</h2>
+        <p class="slide-subtitle">Permanent project-wide instructions that keep every AI output consistent and on-brand.</p>
+        <ul class="slide-bullets">
+          <li>Lock in your tech stack: React, TypeScript, Tailwind, Supabase</li>
+          <li>Define security rules  never expose API keys, always use RLS</li>
+          <li>Set design tokens: colours, fonts, spacing, and responsive behaviour</li>
+          <li>Document naming conventions and code style preferences</li>
+          <li>Keep it under 2,000 characters for optimal AI comprehension</li>
+        </ul>
+        <a href="sections/context.html" class="btn btn-primary">Deep Dive &rarr;</a>
+      </div>
+    </section>
+
+    <!-- SLIDE 6  Section 06 -->
+    <section class="slide">
+      <div class="slide-inner">
+        <span class="slide-number">Section 06</span>
+        <h2 class="slide-title">Iteration &amp; Refinement</h2>
+        <p class="slide-subtitle">Nothing is right on the first try. Learn to use the feedback loop to reach perfection, fast.</p>
+        <ul class="slide-bullets">
+          <li>Follow the Prompt &rarr; Review &rarr; Identify &rarr; Refine &rarr; Repeat cycle</li>
+          <li>Use the "Keep / Change / Remove" format for clear feedback</li>
+          <li>Fix one bug per prompt  surgical, not sweeping</li>
+          <li>Test on mobile after every single change</li>
+          <li>Define a "good enough" threshold to avoid endless polish</li>
+        </ul>
+        <a href="sections/iteration.html" class="btn btn-primary">Deep Dive &rarr;</a>
+      </div>
+    </section>
+
+    <!-- SLIDE 7  Section 07 -->
+    <section class="slide">
+      <div class="slide-inner">
+        <span class="slide-number">Section 07</span>
+        <h2 class="slide-title">Visual Mode</h2>
+        <p class="slide-subtitle">Click directly on any element in the preview to adjust colours, spacing, text, and more.</p>
+        <ul class="slide-bullets">
+          <li>Use Visual Mode for colours, padding, font sizes, and static text</li>
+          <li>Use text prompts for logic, new components, and multi-page changes</li>
+          <li>Combine both: rough prompt to build, Visual Mode to fine-tune</li>
+          <li>Changes in Visual Mode are tracked in version history</li>
+          <li>Great for fast design tweaks without re-prompting from scratch</li>
+        </ul>
+        <a href="sections/visual.html" class="btn btn-primary">Deep Dive &rarr;</a>
+      </div>
+    </section>
+
+    <!-- SLIDE 8  Section 08 -->
+    <section class="slide">
+      <div class="slide-inner">
+        <span class="slide-number">Section 08</span>
+        <h2 class="slide-title">Lovable Cloud</h2>
+        <p class="slide-subtitle">Zero-config infrastructure: hosting, SSL, CDN, environments, and version control  all included.</p>
+        <ul class="slide-bullets">
+          <li>Global CDN with free SSL on every deployment  no setup needed</li>
+          <li>Preview, Staging, and Production environments out of the box</li>
+          <li>Every prompt creates a snapshot  roll back any time</li>
+          <li>GitHub sync with full branch and pull request support</li>
+          <li>One-click promotion from staging to production</li>
+        </ul>
+        <a href="sections/cloud.html" class="btn btn-primary">Deep Dive &rarr;</a>
+      </div>
+    </section>
+
+    <!-- SLIDE 9  Section 09 -->
+    <section class="slide">
+      <div class="slide-inner">
+        <span class="slide-number">Section 09</span>
+        <h2 class="slide-title">Lovable AI</h2>
+        <p class="slide-subtitle">Built-in LLM integration — access Gemini, GPT, and more with zero API keys, zero setup. Just build.</p>
+        <ul class="slide-bullets">
+          <li>Add AI features instantly — no API keys, no provider accounts needed</li>
+          <li>Gemini 3 Flash (default), GPT-5, GPT-5.2, Gemini Pro, and more</li>
+          <li>Build AI chatbots, summaries, sentiment detection, and document Q&amp;A</li>
+          <li>Image &amp; document analysis, multilingual translation, creative generation</li>
+          <li>Usage-based pricing — $1 free/month, same cost as going direct to provider</li>
+        </ul>
+        <a href="sections/ai.html" class="btn btn-primary">Deep Dive &rarr;</a>
+      </div>
+    </section>
+
+    <!-- SLIDE 10  Section 10 -->
+    <section class="slide">
+      <div class="slide-inner">
+        <span class="slide-number">Section 10</span>
+        <h2 class="slide-title">API Integration</h2>
+        <p class="slide-subtitle">Connect your app to the world: external APIs, AI services, payment systems, and more.</p>
+        <ul class="slide-bullets">
+          <li>Build a Supabase Edge Function as a secure server-side proxy</li>
+          <li>Store all API keys in environment secrets  never in frontend code</li>
+          <li>Call your Edge Function from the React frontend</li>
+          <li>Handle success, error, and loading states for every API call</li>
+          <li>Connect to OpenAI, Stripe, Resend, and more with the same pattern</li>
+        </ul>
+        <a href="sections/api.html" class="btn btn-primary">Deep Dive &rarr;</a>
+      </div>
+    </section>
+
+    <!-- SLIDE 11  Closing -->
+    <section class="slide title-slide">
+      <div class="slide-inner">
+        <img src="assets/images/logo-lovable.svg" alt="Lovable logo" class="lovable-logo" />
+        <span class="slide-number">That's a Wrap!</span>
+        <h2 class="slide-title">You're Ready to Build</h2>
+        <p class="slide-subtitle">
+          You now have a complete mental model for building professional apps with Lovable.
+          The only thing left is to start.
+        </p>
+        <div class="slide-stats">
+          <div class="stat-card"><div class="stat-value">10</div><div class="stat-label">Sections mastered</div></div>
+          <div class="stat-card"><div class="stat-value">6</div><div class="stat-label">Workflow steps</div></div>
+          <div class="stat-card"><div class="stat-value">5</div><div class="stat-label">Core principles</div></div>
+          <div class="stat-card"><div class="stat-value">&#8734;</div><div class="stat-label">Apps you can build</div></div>
+        </div>
+        <p class="text-muted" style="font-size:0.88rem;">
+          Click <strong>Deep Dive</strong> on any section slide to access the full detail page.
+        </p>
+      </div>
+    </section>
+
+  </div><!-- /slides-wrapper -->
+
+  <script src="js/app.js"></script>
+</body>
+</html>

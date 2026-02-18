@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PRD → Lovable Prompts – Lovable Course</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <!-- ====== Header ====== -->
+  <header class="section-header">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a> <span>&rsaquo;</span> PRD → Lovable Prompts
+      </nav>
+      <h1 class="section-title">PRD → Lovable Prompts</h1>
+      <p class="section-subtitle">
+        Transform your structured PRD into precise prompts that Lovable can execute perfectly.
+      </p>
+      <span class="reading-time">&#128337; Estimated reading time: 14 minutes</span>
+    </div>
+  </header>
+
+  <!-- ====== Body ====== -->
+  <main class="section-body">
+    <div class="container">
+
+      <!-- How Lovable Interprets Prompts -->
+      <h2>How Lovable Interprets Prompts</h2>
+
+      <div class="content-card">
+        <p>
+          Lovable's AI reads your prompt, breaks it down into tasks, and generates code for each
+          task. It processes prompts <strong>sequentially and literally</strong>. This means:
+        </p>
+        <ul>
+          <li>Every sentence can result in a code decision.</li>
+          <li>Ambiguity leads to the AI choosing for you — and it might choose wrong.</li>
+          <li>Order matters: the AI processes from top to bottom.</li>
+          <li>Shorter, focused prompts yield better results than massive monolithic ones.</li>
+        </ul>
+
+        <div class="highlight-box info">
+          <p class="box-title">&#128218; Key Concept</p>
+          <p>
+            Think of Lovable's AI as a very fast, very literal junior developer. It will do
+            exactly what you say — but it won't read between the lines. If you leave something
+            out, it won't be built.
+          </p>
+        </div>
+      </div>
+
+      <!-- Prompt Engineering Basics -->
+      <h2>Prompt Engineering Basics</h2>
+
+      <div class="content-card">
+        <p>
+          <strong>Prompt engineering</strong> is the skill of writing instructions that produce the
+          best possible output from an AI. Here are the fundamental principles:
+        </p>
+
+        <h3>1. Be Specific</h3>
+        <p>Instead of "add a navbar", say:</p>
+        <div class="code-block">
+          <span class="code-label">Prompt</span>
+          <code>Add a fixed horizontal navigation bar at the top of every page.
+It should contain:
+- Logo on the left (link to home page)
+- Navigation links: Home, Products, Cart, Account
+- A shopping cart icon with item count badge on the right
+- On mobile: collapse to a hamburger menu</code>
+        </div>
+
+        <h3>2. One Task Per Prompt</h3>
+        <p>
+          Avoid sending a 500-word prompt that asks for 10 things at once. Break it down into
+          individual prompts, each focused on a single feature or page.
+        </p>
+
+        <h3>3. Use Structured Formatting</h3>
+        <p>
+          Use bullet points, numbered lists, and clear headings. The AI parses structured text
+          much better than long paragraphs.
+        </p>
+
+        <h3>4. Include Constraints</h3>
+        <p>
+          Tell the AI what <em>not</em> to do. For example: "Do NOT add pagination. Show all
+          products on one page."
+        </p>
+
+        <h3>5. Reference Previous Context</h3>
+        <p>
+          If you've already built a page, reference it: "On the existing product detail page,
+          add a reviews section below the specs table."
+        </p>
+      </div>
+
+      <!-- Prompt Structure -->
+      <h2>Prompt Structure Template</h2>
+
+      <div class="content-card">
+        <p>Use this template for every prompt you send to Lovable:</p>
+
+        <div class="code-block">
+          <span class="code-label">Template</span>
+          <code>## [Task Title]
+
+### What to build:
+[Clear description of the feature or page]
+
+### Requirements:
+- [Requirement 1]
+- [Requirement 2]
+- [Requirement 3]
+
+### Layout / UI:
+- [Position, size, style details]
+
+### Behaviour:
+- [What happens on click, load, submit, etc.]
+
+### Constraints:
+- [What NOT to do]
+- [Performance / accessibility requirements]
+
+### Data:
+- [What data is needed, where it comes from]</code>
+        </div>
+      </div>
+
+      <!-- Page Generation Prompts -->
+      <h2>Example: Page Generation Prompts</h2>
+
+      <div class="content-card">
+        <h3>Prompt 1: Home Page</h3>
+        <div class="code-block">
+          <span class="code-label">Prompt</span>
+          <code>## Build the Home Page
+
+### What to build:
+The main landing page for TechMart e-commerce store.
+
+### Requirements:
+- Hero section with a large banner image, headline, and CTA button
+- Featured products section showing 8 products in a 4-column grid
+- Category navigation section with icon cards (Phones, Laptops,
+  Accessories, Audio)
+- Footer with links, social icons, and copyright
+
+### Layout / UI:
+- Full-width hero with gradient overlay on the image
+- Product cards: image, name, price, "Add to Cart" button
+- Category cards: icon + label, hover effect with scale
+
+### Behaviour:
+- CTA button scrolls to featured products
+- Product cards link to product detail page
+- Category cards link to filtered category page
+
+### Constraints:
+- Do NOT add a sidebar
+- Maximum 8 featured products
+- Mobile responsive: 2-column grid on tablet, 1-column on phone
+
+### Data:
+- Products from Supabase "products" table
+- Categories are hardcoded for now</code>
+        </div>
+
+        <h3>Prompt 2: Product Detail Page</h3>
+        <div class="code-block">
+          <span class="code-label">Prompt</span>
+          <code>## Build the Product Detail Page
+
+### What to build:
+A detail page for a single product, accessible via /product/:id.
+
+### Requirements:
+- Image gallery (main image + thumbnail strip)
+- Product name, price, description
+- Specifications table (key-value pairs)
+- Quantity selector (1-10)
+- "Add to Cart" button
+- Related products section (4 items from same category)
+
+### Layout / UI:
+- Two-column layout: images left, details right
+- On mobile: stack vertically (images on top)
+- Specs in a striped table
+- Related products in a horizontal scroll on mobile
+
+### Behaviour:
+- Click thumbnail to change main image
+- "Add to Cart" adds to local cart state and shows toast
+- Related products link to their own detail pages
+
+### Data:
+- Product data from Supabase by ID
+- Related products: query same category, exclude current</code>
+        </div>
+      </div>
+
+      <!-- Feature Prompts -->
+      <h2>Example: Feature Prompts</h2>
+
+      <div class="content-card">
+        <h3>Adding Authentication</h3>
+        <div class="code-block">
+          <span class="code-label">Prompt</span>
+          <code>## Add User Authentication
+
+### What to build:
+Email + Google OAuth authentication using Supabase Auth.
+
+### Requirements:
+- Sign Up page: email, password, confirm password, Google button
+- Sign In page: email, password, Google button
+- "Forgot Password" link that triggers Supabase reset email
+- Protected routes: Cart and Account require login
+- Show user avatar + name in navbar when logged in
+
+### Behaviour:
+- After sign up, redirect to home with success toast
+- After sign in, redirect to previous page or home
+- Unauthenticated users clicking Cart → redirect to Sign In
+- Sign out button in account dropdown
+
+### Constraints:
+- Do NOT add phone number auth
+- Do NOT add Magic Link auth
+- Passwords must be minimum 8 characters</code>
+        </div>
+
+        <h3>Adding a Shopping Cart</h3>
+        <div class="code-block">
+          <span class="code-label">Prompt</span>
+          <code>## Build Shopping Cart Feature
+
+### What to build:
+A client-side shopping cart stored in localStorage.
+
+### Requirements:
+- Cart icon in navbar with badge showing item count
+- Cart page showing all added items
+- Each item shows: image, name, price, quantity, subtotal
+- Quantity controls: +/- buttons, minimum 1
+- Remove item button
+- Cart total at the bottom
+- "Proceed to Checkout" button
+
+### Behaviour:
+- Adding same product increments quantity
+- Removing last item shows "Your cart is empty" message
+- Cart persists across page reloads (localStorage)
+- "Proceed to Checkout" goes to /checkout (requires auth)
+
+### Constraints:
+- Do NOT integrate payments yet (that's a separate prompt)
+- Maximum 99 of any single item</code>
+        </div>
+      </div>
+
+      <div class="highlight-box tip">
+        <p class="box-title">&#128161; Pro Tip</p>
+        <p>
+          Send prompts in a logical order: layout first, then data, then interactions, then
+          edge cases. This mirrors how a human developer would build.
+        </p>
+      </div>
+
+      <div class="highlight-box warning">
+        <p class="box-title">&#9888;&#65039; Common Mistake</p>
+        <p>
+          Don't ask Lovable to "make it look good" or "use best practices". These are too vague.
+          Instead, specify exact colours, spacing, fonts, and layout rules.
+        </p>
+      </div>
+
+      <!-- Summary -->
+      <h2>Section Summary</h2>
+
+      <div class="content-card">
+        <ol class="steps-list">
+          <li>Lovable reads prompts literally — be specific and structured.</li>
+          <li>Use the prompt template: Task → Requirements → Layout → Behaviour → Constraints → Data.</li>
+          <li>One prompt per feature or page for best results.</li>
+          <li>Include explicit constraints (what NOT to do).</li>
+          <li>Send prompts in logical build order: layout → data → interactions → edge cases.</li>
+        </ol>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ====== Footer ====== -->
+  <footer class="section-footer">
+    <a href="../index.html" class="btn btn-back">&larr; Back to Presentation</a>
+  </footer>
+
+</body>
+</html>

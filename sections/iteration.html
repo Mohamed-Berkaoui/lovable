@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iteration &amp; Refinement – Lovable Course</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <!-- ====== Header ====== -->
+  <header class="section-header">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a> <span>&rsaquo;</span> Iteration &amp; Refinement
+      </nav>
+      <h1 class="section-title">Iteration &amp; Refinement</h1>
+      <p class="section-subtitle">
+        Software is never right on the first try. Master the feedback loop to build polished products.
+      </p>
+      <span class="reading-time">&#128337; Estimated reading time: 11 minutes</span>
+    </div>
+  </header>
+
+  <!-- ====== Body ====== -->
+  <main class="section-body">
+    <div class="container">
+
+      <!-- Iterative Workflow -->
+      <h2>The Iterative Workflow</h2>
+
+      <div class="content-card">
+        <p>
+          Building with Lovable is not a one-shot process. The best results come from an
+          <strong>iterative workflow</strong>: build something, review it, identify issues, refine
+          it, and repeat.
+        </p>
+        <p>
+          This cycle is faster with Lovable than traditional development — often minutes per
+          iteration instead of hours — but the principle is the same. Each pass makes the product
+          better.
+        </p>
+
+        <h3>The Iteration Cycle</h3>
+        <ol class="steps-list">
+          <li><strong>Prompt:</strong> Send a clear, focused prompt to Lovable.</li>
+          <li><strong>Review:</strong> Examine the generated output in the preview.</li>
+          <li><strong>Identify:</strong> Note what's correct, what's wrong, and what's missing.</li>
+          <li><strong>Refine:</strong> Send a follow-up prompt that addresses only the issues.</li>
+          <li><strong>Repeat:</strong> Continue until the feature meets your standards.</li>
+        </ol>
+      </div>
+
+      <div class="highlight-box info">
+        <p class="box-title">&#128218; Why It Works</p>
+        <p>
+          Iteration works because each refinement prompt has more context (the AI can see what it
+          already built). The AI gets smarter about your project with every exchange.
+        </p>
+      </div>
+
+      <!-- Feedback Loops -->
+      <h2>Feedback Loops</h2>
+
+      <div class="content-card">
+        <p>
+          A <strong>feedback loop</strong> is the process of observing output, forming a response,
+          and feeding that response back into the system. In Lovable, there are three types:
+        </p>
+
+        <h3>1. Visual Feedback</h3>
+        <p>
+          Look at the preview. Does the layout match your expectation? Are colours correct? Is
+          spacing consistent? Are elements aligned?
+        </p>
+
+        <h3>2. Functional Feedback</h3>
+        <p>
+          Click through the app. Do buttons work? Do forms validate? Does navigation route
+          correctly? Do loading states appear?
+        </p>
+
+        <h3>3. Data Feedback</h3>
+        <p>
+          Does the app fetch and display real data? Are database operations (create, read, update,
+          delete) working? Are error states handled for empty or failed queries?
+        </p>
+
+        <div class="highlight-box tip">
+          <p class="box-title">&#128161; Tip</p>
+          <p>
+            Test on mobile view after every major change. Many issues (overflow, tiny text, broken
+            grids) only appear on smaller screens. Lovable's preview has a mobile toggle — use it.
+          </p>
+        </div>
+      </div>
+
+      <!-- Refinement Strategies -->
+      <h2>Refinement Strategies</h2>
+
+      <div class="content-card">
+        <h3>Strategy 1: Surgical Prompts</h3>
+        <p>
+          Instead of re-describing the entire feature, target the specific problem:
+        </p>
+        <div class="code-block">
+          <span class="code-label">Example</span>
+          <code>❌ Bad: "Rebuild the product card to look better."
+
+✅ Good: "On the product card component:
+1. Increase image height from 200px to 280px
+2. Add 8px border radius to the image
+3. Change price colour to #16a34a (green)
+4. Add a subtle hover shadow (shadow-lg on hover)"</code>
+        </div>
+
+        <h3>Strategy 2: Reference the Existing Output</h3>
+        <p>
+          Tell the AI what's already correct so it doesn't break working parts:
+        </p>
+        <div class="code-block">
+          <span class="code-label">Example</span>
+          <code>"The product list page layout is correct.
+Do NOT change the grid or card structure.
+Only add a 'Sort by Price' dropdown above the grid
+that sorts products ascending/descending."</code>
+        </div>
+
+        <h3>Strategy 3: Fix One Thing at a Time</h3>
+        <p>
+          If you found 5 issues, send 5 focused prompts — not one massive one. This gives the AI
+          clear context for each fix and reduces the chance of introducing new bugs.
+        </p>
+
+        <h3>Strategy 4: Use "Keep / Change / Remove" Format</h3>
+        <div class="code-block">
+          <span class="code-label">Example</span>
+          <code>On the checkout page:
+
+KEEP:
+- The form layout (shipping address fields)
+- The order summary sidebar
+
+CHANGE:
+- Submit button colour from grey to purple (#7c3aed)
+- Add form validation messages below each field
+
+REMOVE:
+- The "Apply Coupon" section (not needed for MVP)</code>
+        </div>
+      </div>
+
+      <!-- Example: Improving UI -->
+      <h2>Example: Improving UI</h2>
+
+      <div class="content-card">
+        <h3>Initial Output (after first prompt)</h3>
+        <p>
+          The AI generated a product list page. The layout works, but the cards look flat, spacing
+          is too tight, and there's no hover effect.
+        </p>
+
+        <h3>Refinement Prompt</h3>
+        <div class="code-block">
+          <span class="code-label">Prompt</span>
+          <code>"Improve the product list page visuals:
+1. Add shadow-md to each product card
+2. Add 16px gap between cards (currently too tight)
+3. On hover: scale card to 1.02 and increase shadow to shadow-lg
+4. Add a subtle border (1px solid #e2e8f0) to each card
+5. Round card corners to 12px
+6. Add a fade-in animation when cards load (300ms ease)"</code>
+        </div>
+
+        <p>Result: The AI updates only the visual properties without breaking layout or data.</p>
+      </div>
+
+      <!-- Example: Fixing Logic -->
+      <h2>Example: Fixing Logic</h2>
+
+      <div class="content-card">
+        <h3>Bug Found</h3>
+        <p>
+          The cart allows adding the same item multiple times as separate entries instead of
+          incrementing the quantity.
+        </p>
+
+        <h3>Fix Prompt</h3>
+        <div class="code-block">
+          <span class="code-label">Prompt</span>
+          <code>"Fix the cart logic:
+When a user adds a product that is already in the cart,
+do NOT add a new entry. Instead, find the existing entry
+by product ID and increment its quantity by 1.
+Show a toast notification: 'Quantity updated' instead
+of 'Added to cart' when incrementing."</code>
+        </div>
+      </div>
+
+      <!-- Example: Enhancing UX -->
+      <h2>Example: Enhancing UX</h2>
+
+      <div class="content-card">
+        <h3>Issue</h3>
+        <p>
+          The app works but feels static. There's no feedback when actions happen, and loading
+          states are missing.
+        </p>
+
+        <h3>Enhancement Prompt</h3>
+        <div class="code-block">
+          <span class="code-label">Prompt</span>
+          <code>"Enhance UX across the app:
+1. Add skeleton loaders to all pages that fetch data
+   (replace the empty white screen while loading)
+2. Add toast notifications for all user actions:
+   - 'Added to cart' (success, green)
+   - 'Removed from cart' (info, blue)
+   - 'Order placed!' (success, green)
+   - 'Error: please try again' (error, red)
+3. Add loading spinner inside submit buttons while
+   async operations are in progress
+4. Disable submit buttons during loading to prevent
+   double-clicks"</code>
+        </div>
+      </div>
+
+      <div class="highlight-box warning">
+        <p class="box-title">&#9888;&#65039; Common Pitfall</p>
+        <p>
+          Don't iterate endlessly on small visual tweaks. Set a "good enough" bar for your MVP.
+          You can always polish later. The goal of iteration is finding and fixing <em>real
+          problems</em>, not achieving pixel-perfection on day one.
+        </p>
+      </div>
+
+      <!-- Summary -->
+      <h2>Section Summary</h2>
+
+      <div class="content-card">
+        <ol class="steps-list">
+          <li>Use the iterate cycle: Prompt → Review → Identify → Refine → Repeat.</li>
+          <li>Three feedback types: visual (how it looks), functional (how it works), data (what it shows).</li>
+          <li>Write surgical, specific refinement prompts — not vague rewrites.</li>
+          <li>Fix one issue per prompt for best results.</li>
+          <li>Use the Keep / Change / Remove format for complex refinements.</li>
+          <li>Set a "good enough" bar for MVP — don't iterate forever.</li>
+        </ol>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ====== Footer ====== -->
+  <footer class="section-footer">
+    <a href="../index.html" class="btn btn-back">&larr; Back to Presentation</a>
+  </footer>
+
+</body>
+</html>

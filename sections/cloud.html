@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lovable Cloud – Lovable Course</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <!-- ====== Header ====== -->
+  <header class="section-header">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a> <span>&rsaquo;</span> Lovable Cloud
+      </nav>
+      <h1 class="section-title">Lovable Cloud</h1>
+      <p class="section-subtitle">
+        Deploy, manage environments, and version-control your apps — all from the Lovable platform.
+      </p>
+      <span class="reading-time">&#128337; Estimated reading time: 10 minutes</span>
+    </div>
+  </header>
+
+  <!-- ====== Body ====== -->
+  <main class="section-body">
+    <div class="container">
+
+      <!-- Hosting Model -->
+      <h2>Hosting Model</h2>
+
+      <div class="content-card">
+        <p>
+          Lovable Cloud is the built-in hosting infrastructure that powers your apps. When you
+          build something in Lovable, it's not just a preview — it's a real, deployed web
+          application running on Lovable's cloud infrastructure.
+        </p>
+        <p>
+          Here's how it works under the hood:
+        </p>
+        <ul>
+          <li>
+            <strong>Static assets</strong> (HTML, CSS, JS, images) are served via a global CDN
+            for fast delivery anywhere in the world.
+          </li>
+          <li>
+            <strong>Server-side logic</strong> (if any) runs through Supabase Edge Functions —
+            serverless functions deployed at the edge.
+          </li>
+          <li>
+            <strong>Database &amp; Auth</strong> are handled by Supabase PostgreSQL, with
+            automatic connection pooling and Row Level Security.
+          </li>
+          <li>
+            <strong>SSL certificates</strong> are provisioned automatically. Every deployed app
+            gets HTTPS out of the box.
+          </li>
+        </ul>
+
+        <div class="highlight-box info">
+          <p class="box-title">&#128218; What This Means for You</p>
+          <p>
+            You never need to configure a server, set up NGINX, manage SSL, or worry about
+            scaling. Lovable Cloud handles all of that. You focus on the product; the platform
+            handles the infrastructure.
+          </p>
+        </div>
+      </div>
+
+      <!-- Environments -->
+      <h2>Environments</h2>
+
+      <div class="content-card">
+        <p>
+          Professional software development uses <strong>environments</strong> to separate
+          different stages of your app. Lovable Cloud supports this pattern:
+        </p>
+
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Environment</th>
+              <th>Purpose</th>
+              <th>Who Uses It</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Preview</strong></td>
+              <td>Live preview during development. Updated with every prompt.</td>
+              <td>You (the builder)</td>
+            </tr>
+            <tr>
+              <td><strong>Staging</strong></td>
+              <td>A test environment for QA before going live.</td>
+              <td>You + testers</td>
+            </tr>
+            <tr>
+              <td><strong>Production</strong></td>
+              <td>The live version that real users access.</td>
+              <td>Everyone (public)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Why Environments Matter</h3>
+        <p>
+          Without environments, every change you make is immediately visible to users. This is
+          dangerous — a broken prompt could take down your live app. Environments let you test
+          changes safely before pushing them to production.
+        </p>
+
+        <div class="highlight-box tip">
+          <p class="box-title">&#128161; Best Practice</p>
+          <p>
+            Always test new features in the preview environment first. Only promote to production
+            when you've verified everything works correctly.
+          </p>
+        </div>
+      </div>
+
+      <!-- Deployment Flow -->
+      <h2>Deployment Flow</h2>
+
+      <div class="content-card">
+        <p>
+          Deploying with Lovable Cloud follows a simple, predictable flow:
+        </p>
+
+        <ol class="steps-list">
+          <li>
+            <strong>Build in Lovable:</strong> Use prompts and Visual Mode to create or update
+            your app. Every change is automatically reflected in the preview.
+          </li>
+          <li>
+            <strong>Test in Preview:</strong> Click through your app in the preview panel. Test
+            all features, forms, navigation, and edge cases.
+          </li>
+          <li>
+            <strong>Deploy to Staging:</strong> When satisfied, click "Deploy" and select the
+            staging environment. Share the staging URL with testers.
+          </li>
+          <li>
+            <strong>QA &amp; Feedback:</strong> Testers verify functionality. Collect feedback
+            and address any issues.
+          </li>
+          <li>
+            <strong>Promote to Production:</strong> Once approved, promote the staging build to
+            production. Your live URL is updated instantly.
+          </li>
+          <li>
+            <strong>Monitor:</strong> After deployment, check for errors, performance issues, or
+            user-reported bugs. Roll back if needed.
+          </li>
+        </ol>
+
+        <div class="code-block">
+          <span class="code-label">Flow Diagram</span>
+          <code>  Build (Prompt/Visual)
+        ↓
+  Preview (auto-updated)
+        ↓
+  Test & Verify
+        ↓
+  Deploy → Staging
+        ↓
+  QA & Feedback
+        ↓
+  Promote → Production
+        ↓
+  Monitor & Iterate</code>
+        </div>
+      </div>
+
+      <!-- Version Control -->
+      <h2>Version Control</h2>
+
+      <div class="content-card">
+        <p>
+          Version control means keeping a history of every change made to your project. Lovable
+          provides built-in version control so you can:
+        </p>
+
+        <ul>
+          <li><strong>See change history:</strong> Every prompt you send creates a new version snapshot.</li>
+          <li><strong>Roll back:</strong> If a change breaks something, restore a previous working version.</li>
+          <li><strong>Compare versions:</strong> See what changed between any two snapshots.</li>
+          <li><strong>Branch (via GitHub):</strong> Lovable integrates with GitHub. You can push your code to a repository and use standard Git workflows.</li>
+        </ul>
+
+        <h3>Lovable + GitHub Integration</h3>
+        <p>
+          Lovable can sync your project with a GitHub repository. This gives you:
+        </p>
+        <ul>
+          <li>Full Git history with commits for each change</li>
+          <li>Ability to clone the repo and work locally</li>
+          <li>Pull requests and code reviews if you have a team</li>
+          <li>CI/CD pipeline integration if needed</li>
+        </ul>
+
+        <div class="code-block">
+          <span class="code-label">Example Git Flow</span>
+          <code>  Lovable generates code
+        ↓
+  Auto-commit to GitHub (main branch)
+        ↓
+  You can create feature branches locally
+        ↓
+  Merge back to main
+        ↓
+  Lovable syncs with latest main</code>
+        </div>
+
+        <div class="highlight-box warning">
+          <p class="box-title">&#9888;&#65039; Important</p>
+          <p>
+            If you make changes in GitHub directly (outside Lovable), make sure to sync before
+            building more in Lovable to avoid conflicts.
+          </p>
+        </div>
+      </div>
+
+      <!-- Summary -->
+      <h2>Section Summary</h2>
+
+      <div class="content-card">
+        <ol class="steps-list">
+          <li>Lovable Cloud provides built-in hosting with CDN, SSL, and serverless functions.</li>
+          <li>Use environments (preview, staging, production) to separate development from live.</li>
+          <li>Follow the deployment flow: build → test → staging → QA → production → monitor.</li>
+          <li>Built-in version control lets you track changes, roll back, and compare versions.</li>
+          <li>GitHub integration adds full Git history, branching, and team collaboration.</li>
+        </ol>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ====== Footer ====== -->
+  <footer class="section-footer">
+    <a href="../index.html" class="btn btn-back">&larr; Back to Presentation</a>
+  </footer>
+
+</body>
+</html>

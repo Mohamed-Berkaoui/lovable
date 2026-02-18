@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visual Mode – Lovable Course</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <!-- ====== Header ====== -->
+  <header class="section-header">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a> <span>&rsaquo;</span> Visual Mode
+      </nav>
+      <h1 class="section-title">Visual Mode</h1>
+      <p class="section-subtitle">
+        Click, drag, and tweak your UI visually — no code required. Understand when and how to use it.
+      </p>
+      <span class="reading-time">&#128337; Estimated reading time: 9 minutes</span>
+    </div>
+  </header>
+
+  <!-- ====== Body ====== -->
+  <main class="section-body">
+    <div class="container">
+
+      <!-- What Is Visual Mode? -->
+      <h2>What Is Visual Mode?</h2>
+
+      <div class="content-card">
+        <p>
+          <strong>Visual Mode</strong> is a feature in Lovable that lets you edit your app's
+          interface by directly clicking on elements in the preview, rather than writing text
+          prompts. It provides a point-and-click editing experience similar to Figma or a
+          WYSIWYG editor.
+        </p>
+        <p>
+          When you activate Visual Mode, hovering over any element in the preview highlights it.
+          Clicking selects it, and a panel appears with editable properties: text content, colours,
+          spacing, font sizes, borders, and more.
+        </p>
+        <p>
+          Under the hood, Lovable translates your visual changes into actual code changes. So
+          when you drag a button 20 pixels to the right in Visual Mode, the underlying CSS/JSX
+          is updated accordingly.
+        </p>
+      </div>
+
+      <!-- When to Use It -->
+      <h2>When to Use Visual Mode</h2>
+
+      <div class="content-card">
+        <p>
+          Visual Mode is ideal for <strong>small, visual adjustments</strong>. It's not designed
+          for adding new features or changing business logic. Here's a guide:
+        </p>
+
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Use Visual Mode For</th>
+              <th>Use Text Prompts For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Changing button colour</td>
+              <td>Adding a new button with logic</td>
+            </tr>
+            <tr>
+              <td>Adjusting padding/margins</td>
+              <td>Restructuring the entire layout</td>
+            </tr>
+            <tr>
+              <td>Editing text content</td>
+              <td>Adding dynamic text from a database</td>
+            </tr>
+            <tr>
+              <td>Changing font size</td>
+              <td>Implementing a theme switcher</td>
+            </tr>
+            <tr>
+              <td>Tweaking border radius</td>
+              <td>Adding form validation</td>
+            </tr>
+            <tr>
+              <td>Hiding/showing an element</td>
+              <td>Conditional rendering based on data</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="highlight-box tip">
+          <p class="box-title">&#128161; Rule of Thumb</p>
+          <p>
+            If the change is purely cosmetic and takes less than 5 seconds to describe, use Visual
+            Mode. If the change involves logic, data, or multiple elements, use a text prompt.
+          </p>
+        </div>
+      </div>
+
+      <!-- Visual vs Textual Control -->
+      <h2>Visual vs. Textual Control</h2>
+
+      <div class="content-card">
+        <p>
+          Both visual and textual editing have strengths. The best approach is to use them
+          <strong>together</strong>:
+        </p>
+
+        <h3>Textual Prompts — Best For:</h3>
+        <ul>
+          <li>Building new features from scratch</li>
+          <li>Implementing complex logic (auth, data fetching, state management)</li>
+          <li>Making changes that affect multiple pages simultaneously</li>
+          <li>Creating reusable components with specific props</li>
+        </ul>
+
+        <h3>Visual Mode — Best For:</h3>
+        <ul>
+          <li>Fine-tuning spacing, alignment, and sizing</li>
+          <li>Quick colour adjustments</li>
+          <li>Editing static text (headings, labels, placeholder text)</li>
+          <li>Previewing changes instantly before committing</li>
+        </ul>
+
+        <h3>The Ideal Workflow</h3>
+        <ol class="steps-list">
+          <li><strong>Build with text prompts:</strong> Generate the feature structure and logic.</li>
+          <li><strong>Review in preview:</strong> Check the output visually.</li>
+          <li><strong>Polish with Visual Mode:</strong> Adjust spacing, colours, text as needed.</li>
+          <li><strong>Refine with text prompts:</strong> If bigger changes are needed, go back to text.</li>
+        </ol>
+      </div>
+
+      <figure class="image-figure">
+        <img src="../assets/images/visual-edits.png" alt="Visual editing mode in Lovable" />
+        <figcaption>Visual Mode — click on any element to edit its properties directly.</figcaption>
+      </figure>
+
+      <!-- Example: Editing Layout -->
+      <h2>Example: Editing Layout with Visual Mode</h2>
+
+      <div class="content-card">
+        <h3>Scenario</h3>
+        <p>
+          You generated a product card component with a text prompt. The card works correctly,
+          but the image is too small, the padding is uneven, and the "Add to Cart" button should
+          be green instead of blue.
+        </p>
+
+        <h3>Visual Mode Steps</h3>
+        <ol class="steps-list">
+          <li>
+            <strong>Activate Visual Mode</strong> by clicking the toggle in Lovable's toolbar.
+          </li>
+          <li>
+            <strong>Click the product image.</strong> A properties panel opens. Change height
+            from 200px to 280px. Changes apply instantly in the preview.
+          </li>
+          <li>
+            <strong>Click the card container.</strong> Adjust padding from 12px to 20px on all
+            sides. The spacing now looks balanced.
+          </li>
+          <li>
+            <strong>Click the "Add to Cart" button.</strong> Change the background colour from
+            #3b82f6 (blue) to #16a34a (green). The button updates immediately.
+          </li>
+          <li>
+            <strong>Review</strong> the changes. If satisfied, they're automatically saved to code.
+          </li>
+        </ol>
+
+        <div class="highlight-box info">
+          <p class="box-title">&#128218; Note</p>
+          <p>
+            Every change you make in Visual Mode is reflected in the actual source code. You can
+            switch to the code view to see exactly what CSS or JSX was modified.
+          </p>
+        </div>
+      </div>
+
+      <!-- Example: Component Tuning -->
+      <h2>Example: Component Tuning</h2>
+
+      <div class="content-card">
+        <h3>Scenario</h3>
+        <p>
+          Your navigation bar looks good on desktop but the links are too small on tablet, and
+          the search bar needs more width.
+        </p>
+
+        <h3>Visual Mode Steps</h3>
+        <ol class="steps-list">
+          <li>
+            <strong>Switch to tablet preview</strong> using Lovable's responsive toggle.
+          </li>
+          <li>
+            <strong>Click a nav link.</strong> Increase font size from 14px to 16px. Increase
+            padding from 4px 8px to 8px 16px.
+          </li>
+          <li>
+            <strong>Click the search bar.</strong> Change width from 200px to 100% (or set
+            flex-grow: 1) so it fills available space.
+          </li>
+          <li>
+            <strong>Review on mobile view</strong> to ensure changes don't break the hamburger
+            menu layout.
+          </li>
+        </ol>
+      </div>
+
+      <div class="highlight-box warning">
+        <p class="box-title">&#9888;&#65039; Warning</p>
+        <p>
+          Visual Mode changes can sometimes conflict with responsive styles defined via text
+          prompts. After using Visual Mode, always check multiple screen sizes to ensure nothing
+          broke.
+        </p>
+      </div>
+
+      <!-- Summary -->
+      <h2>Section Summary</h2>
+
+      <div class="content-card">
+        <ol class="steps-list">
+          <li>Visual Mode lets you edit UI elements by clicking directly in the preview.</li>
+          <li>Use it for cosmetic tweaks: colours, spacing, text, sizing.</li>
+          <li>Use text prompts for logic, data, and multi-element changes.</li>
+          <li>The ideal workflow: build with text → polish with visual → refine with text.</li>
+          <li>Always check responsive views after visual edits.</li>
+        </ol>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ====== Footer ====== -->
+  <footer class="section-footer">
+    <a href="../index.html" class="btn btn-back">&larr; Back to Presentation</a>
+  </footer>
+
+</body>
+</html>

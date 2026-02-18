@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Context Prompt (Knowledge Base) – Lovable Course</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <!-- ====== Header ====== -->
+  <header class="section-header">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a> <span>&rsaquo;</span> Context Prompt
+      </nav>
+      <h1 class="section-title">Context Prompt (Knowledge&nbsp;Base)</h1>
+      <p class="section-subtitle">
+        Persistent instructions that shape every single response Lovable generates for your project.
+      </p>
+      <span class="reading-time">&#128337; Estimated reading time: 12 minutes</span>
+    </div>
+  </header>
+
+  <!-- ====== Body ====== -->
+  <main class="section-body">
+    <div class="container">
+
+      <!-- What Is a Context Prompt? -->
+      <h2>What Is a Context Prompt?</h2>
+
+      <div class="content-card">
+        <p>
+          A <strong>context prompt</strong> (also called a <em>knowledge base</em> or <em>system
+          prompt</em>) is a set of instructions that Lovable remembers <strong>across all future
+          prompts</strong> in a project. It acts like a permanent set of rules or guidelines.
+        </p>
+        <p>
+          Think of it as the project constitution. Every individual prompt you send is like a
+          specific law — but it must always follow the constitution. The context prompt defines
+          the constants: tech stack, coding style, naming conventions, security rules, design
+          tokens, and more.
+        </p>
+        <p>
+          Without a context prompt, Lovable starts every new prompt with a blank slate. It might
+          choose different styles, different patterns, or inconsistent naming across features.
+          With a context prompt, all output stays aligned.
+        </p>
+      </div>
+
+      <!-- Persistent Knowledge -->
+      <h2>Persistent Knowledge</h2>
+
+      <div class="content-card">
+        <p>
+          Persistent knowledge means the AI always has access to your context — even when you
+          don't repeat it. This is critical for:
+        </p>
+        <ul>
+          <li><strong>Consistency:</strong> Every generated component uses the same patterns.</li>
+          <li><strong>Efficiency:</strong> You don't repeat the same instructions every time.</li>
+          <li><strong>Quality:</strong> The AI makes better decisions when it knows the full picture.</li>
+        </ul>
+
+        <div class="highlight-box info">
+          <p class="box-title">&#128218; Analogy</p>
+          <p>
+            Imagine hiring a new developer every day and having to re-explain your project
+            from scratch each morning. That's what happens without a context prompt. With one,
+            it's like having a developer who already read the entire codebase documentation.
+          </p>
+        </div>
+      </div>
+
+      <!-- Rules vs Suggestions -->
+      <h2>Rules vs. Suggestions</h2>
+
+      <div class="content-card">
+        <p>
+          Not everything in a context prompt carries the same weight. It helps to categorise
+          your instructions into <strong>rules</strong> (must always follow) and
+          <strong>suggestions</strong> (preferred but flexible).
+        </p>
+
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Example</th>
+              <th>When to Use</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Rule</strong></td>
+              <td>"Always use TypeScript. Never use 'any' type."</td>
+              <td>Non-negotiable standards</td>
+            </tr>
+            <tr>
+              <td><strong>Rule</strong></td>
+              <td>"All API keys must be in environment variables."</td>
+              <td>Security requirements</td>
+            </tr>
+            <tr>
+              <td><strong>Suggestion</strong></td>
+              <td>"Prefer card-based layouts when showing lists."</td>
+              <td>Design preferences</td>
+            </tr>
+            <tr>
+              <td><strong>Suggestion</strong></td>
+              <td>"Use toast notifications for success messages."</td>
+              <td>UX patterns</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="highlight-box tip">
+          <p class="box-title">&#128161; Tip</p>
+          <p>
+            Use strong language for rules: "Always", "Never", "Must". Use softer language for
+            suggestions: "Prefer", "When possible", "Default to".
+          </p>
+        </div>
+      </div>
+
+      <!-- How Context Affects Outputs -->
+      <h2>How Context Affects Outputs</h2>
+
+      <div class="content-card">
+        <p>Here's a concrete example of how context changes the AI's behaviour:</p>
+
+        <h3>Without Context Prompt</h3>
+        <div class="code-block">
+          <span class="code-label">Prompt</span>
+          <code>Build a user profile page.</code>
+        </div>
+        <p>
+          Result: The AI might use JavaScript (not TypeScript), use a random colour scheme,
+          skip error handling, and use inline styles. It works, but it doesn't match your project.
+        </p>
+
+        <h3>With Context Prompt</h3>
+        <div class="code-block">
+          <span class="code-label">Context + Prompt</span>
+          <code>Context (always active):
+- Use TypeScript with strict mode
+- Use Tailwind CSS for styling
+- Primary colour: #7c3aed
+- All components must handle loading and error states
+- Use Supabase for data fetching
+- Follow mobile-first responsive design
+
+Prompt:
+Build a user profile page.</code>
+        </div>
+        <p>
+          Result: The AI generates a TypeScript React component, uses Tailwind with the correct
+          purple accent, includes loading spinners and error toasts, fetches data from Supabase,
+          and builds mobile-first.
+        </p>
+      </div>
+
+      <figure class="image-figure">
+        <img src="../assets/images/knowledge.png" alt="Knowledge base configuration in Lovable" />
+        <figcaption>The Knowledge Base (context prompt) panel in Lovable — add persistent rules here.</figcaption>
+      </figure>
+
+      <!-- Example: Stack Rules -->
+      <h2>Example: Stack Rules</h2>
+
+      <div class="content-card">
+        <div class="code-block">
+          <span class="code-label">Context Prompt – Stack</span>
+          <code>## Tech Stack Rules
+
+- Frontend: React 18 + TypeScript (strict mode)
+- Styling: Tailwind CSS (no inline styles, no CSS modules)
+- State Management: React Query for server state, Zustand for client state
+- Backend: Supabase (PostgreSQL, Auth, Edge Functions, Storage)
+- Routing: React Router v6 with lazy-loaded routes
+- Forms: React Hook Form + Zod validation
+- Always use named exports (no default exports)
+- File naming: kebab-case (e.g., user-profile.tsx)
+- Component naming: PascalCase (e.g., UserProfile)</code>
+        </div>
+      </div>
+
+      <!-- Example: Security Rules -->
+      <h2>Example: Security Rules</h2>
+
+      <div class="content-card">
+        <div class="code-block">
+          <span class="code-label">Context Prompt – Security</span>
+          <code>## Security Rules
+
+- NEVER hardcode API keys, secrets, or passwords in source code
+- All secrets must use environment variables (import.meta.env)
+- All Supabase queries must use Row Level Security (RLS)
+- Sanitize all user inputs before database operations
+- Authentication tokens must be stored in httpOnly cookies
+  or Supabase session (never in localStorage)
+- All forms must include CSRF protection
+- API endpoints must validate request origin</code>
+        </div>
+      </div>
+
+      <!-- Example: Design Rules -->
+      <h2>Example: Design Rules</h2>
+
+      <div class="content-card">
+        <div class="code-block">
+          <span class="code-label">Context Prompt – Design</span>
+          <code>## Design System Rules
+
+- Primary colour: #7c3aed (purple)
+- Secondary colour: #f472b6 (pink)
+- Background: #f5f6fa (light grey)
+- Surface: #ffffff (white cards)
+- Text: #1e1b4b (dark indigo)
+- Font: Inter (Google Fonts)
+- Border radius: 12px for cards, 9999px for buttons
+- Shadows: use Tailwind shadow-md for cards, shadow-lg for modals
+- Spacing: use Tailwind spacing scale (p-4, m-6, gap-4)
+- All pages must be responsive (mobile, tablet, desktop)
+- Maximum content width: 1200px, centred
+- Use skeleton loaders during data fetching (not spinners)</code>
+        </div>
+      </div>
+
+      <div class="highlight-box warning">
+        <p class="box-title">&#9888;&#65039; Warning</p>
+        <p>
+          A context prompt that is too long (over 2000 words) can confuse the AI or cause it to
+          ignore parts. Keep it focused: prioritise rules over suggestions, and remove any
+          instructions that are obvious or default behaviour.
+        </p>
+      </div>
+
+      <!-- Summary -->
+      <h2>Section Summary</h2>
+
+      <div class="content-card">
+        <ol class="steps-list">
+          <li>A context prompt provides persistent instructions that apply to every prompt in a project.</li>
+          <li>It ensures consistency in tech stack, coding style, security, and design across all outputs.</li>
+          <li>Separate rules (must follow) from suggestions (preferred but flexible).</li>
+          <li>Include stack rules, security rules, and design rules as a minimum.</li>
+          <li>Keep the context prompt under 2000 words to avoid diluting effectiveness.</li>
+        </ol>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ====== Footer ====== -->
+  <footer class="section-footer">
+    <a href="../index.html" class="btn btn-back">&larr; Back to Presentation</a>
+  </footer>
+
+</body>
+</html>

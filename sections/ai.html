@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lovable AI – Lovable Course</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <!-- ====== Header ====== -->
+  <header class="section-header">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a> <span>&rsaquo;</span> Lovable AI
+      </nav>
+      <h1 class="section-title">Lovable AI</h1>
+      <p class="section-subtitle">
+        Built-in LLM integration that lets you add powerful AI features to your app — no API keys, no provider accounts, no setup. Just build.
+      </p>
+      <span class="reading-time">&#128337; Estimated reading time: 12 minutes</span>
+    </div>
+  </header>
+
+  <!-- ====== Body ====== -->
+  <main class="section-body">
+    <div class="container">
+
+      <!-- What is Lovable AI -->
+      <h2>What is Lovable AI?</h2>
+
+      <div class="content-card">
+        <p>
+          Lovable AI is a <strong>built-in LLM integration</strong> that allows you to access large language models
+          directly from your Lovable apps — without managing API keys, creating provider accounts, or writing
+          backend proxy code. It's a shared connector that comes <strong>enabled by default</strong>.
+        </p>
+        <p>
+          Instead of spending time setting up OpenAI or Google Cloud accounts, configuring Edge Functions,
+          and managing secrets, you simply build AI-powered features and Lovable handles the rest.
+          The models are accessed through Lovable's infrastructure at the <strong>same cost as going direct
+          to the provider</strong>.
+        </p>
+
+        <div class="highlight-box info">
+          <p class="box-title">&#128218; Zero Setup Required</p>
+          <p>
+            Lovable AI is enabled by default in every workspace. No API keys, no billing configuration,
+            no Edge Functions — access models like Gemini and GPT instantly from your app code.
+          </p>
+        </div>
+      </div>
+
+      <!-- How to Enable -->
+      <h2>Enabling Lovable AI</h2>
+
+      <div class="content-card">
+        <p>
+          Lovable AI is a <strong>shared connector</strong> — pre-configured and ready to use from the moment
+          you create a project. To verify or adjust settings:
+        </p>
+
+        <ol class="steps-list">
+          <li>
+            <strong>Open Settings:</strong> Go to <strong>Settings → Connectors → Shared connectors</strong> in your workspace.
+          </li>
+          <li>
+            <strong>Find Lovable AI:</strong> It appears under the shared connectors list, enabled by default.
+          </li>
+          <li>
+            <strong>Set permission preference:</strong> Choose how you want to approve AI usage in your apps.
+          </li>
+        </ol>
+
+        <h3>Permission Preferences</h3>
+        <p>
+          You control how Lovable AI is used in your projects with three options:
+        </p>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Preference</th>
+              <th>Behaviour</th>
+              <th>Best For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Always allow</strong></td>
+              <td>AI features work automatically, no prompts</td>
+              <td>Rapid prototyping, personal projects</td>
+            </tr>
+            <tr>
+              <td><strong>Ask each time</strong></td>
+              <td>You approve or deny each AI request</td>
+              <td>Review-heavy workflows, shared workspaces</td>
+            </tr>
+            <tr>
+              <td><strong>Never allow</strong></td>
+              <td>AI features are completely disabled</td>
+              <td>Projects that should not use external LLMs</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Supported Models -->
+      <h2>Supported Models</h2>
+
+      <div class="content-card">
+        <p>
+          Lovable AI gives you access to a range of leading models. The <strong>default model is Gemini 3 Flash</strong>,
+          optimised for speed and cost, but you can choose any model depending on your use case.
+        </p>
+
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>Provider</th>
+              <th>Best For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Gemini 3 Flash</strong> (default)</td>
+              <td>Google</td>
+              <td>Fast responses, low cost, general tasks</td>
+            </tr>
+            <tr>
+              <td><strong>Gemini Pro</strong></td>
+              <td>Google</td>
+              <td>Complex reasoning, long context</td>
+            </tr>
+            <tr>
+              <td><strong>GPT-5</strong></td>
+              <td>OpenAI</td>
+              <td>Highest quality, complex analysis</td>
+            </tr>
+            <tr>
+              <td><strong>GPT-5.2</strong></td>
+              <td>OpenAI</td>
+              <td>Latest generation, advanced tasks</td>
+            </tr>
+            <tr>
+              <td><strong>GPT-5 Mini</strong></td>
+              <td>OpenAI</td>
+              <td>Balanced quality and cost</td>
+            </tr>
+            <tr>
+              <td><strong>GPT-5 Nano</strong></td>
+              <td>OpenAI</td>
+              <td>Ultra-fast, lightweight tasks</td>
+            </tr>
+            <tr>
+              <td><strong>Nano Banana Pro</strong></td>
+              <td>Various</td>
+              <td>Specialised / experimental use cases</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="highlight-box tip">
+          <p class="box-title">&#128161; Choosing the Right Model</p>
+          <p>
+            Start with <strong>Gemini 3 Flash</strong> for most features — it's fast and cheap. Switch to
+            <strong>GPT-5</strong> or <strong>Gemini Pro</strong> when you need higher reasoning quality
+            for complex analysis, nuanced generation, or long documents.
+          </p>
+        </div>
+      </div>
+
+      <!-- Use Cases -->
+      <h2>What You Can Build</h2>
+
+      <div class="content-card">
+        <p>
+          Lovable AI unlocks a wide range of AI-powered features you can add to your apps with minimal effort.
+          Here are the primary use cases:
+        </p>
+
+        <h3>AI Summaries</h3>
+        <p>
+          Automatically summarise long documents, articles, user reviews, or form submissions.
+          Feed in text content and receive concise, structured summaries.
+        </p>
+
+        <h3>AI Chatbots &amp; Agents</h3>
+        <p>
+          Build conversational interfaces — customer support bots, FAQ assistants, onboarding guides,
+          or interactive product demos. Handle multi-turn conversations with context retention.
+        </p>
+
+        <h3>Sentiment Detection</h3>
+        <p>
+          Analyse user feedback, reviews, or messages to determine positive, negative, or neutral sentiment.
+          Great for dashboards, moderation tools, and customer analytics.
+        </p>
+
+        <h3>Document Q&amp;A</h3>
+        <p>
+          Let users ask natural language questions about uploaded documents, knowledge bases, or help articles.
+          The AI extracts and returns relevant answers from your content.
+        </p>
+
+        <h3>Creative Generation</h3>
+        <p>
+          Generate marketing copy, product descriptions, email templates, social media posts,
+          or any creative text based on your brand voice and guidelines.
+        </p>
+
+        <h3>Multilingual Translation</h3>
+        <p>
+          Translate content between languages on the fly — user-facing text, form inputs, help documentation,
+          or notification messages — without external translation APIs.
+        </p>
+
+        <h3>Image &amp; Document Analysis</h3>
+        <p>
+          Analyse images and documents using multimodal models. Extract text from receipts,
+          describe product photos, categorise uploaded files, or validate document contents.
+        </p>
+
+        <h3>Task Completion &amp; Workflow Automation</h3>
+        <p>
+          Automate repetitive tasks: categorise support tickets, extract structured data from freeform text,
+          generate reports from raw data, or trigger workflows based on AI classification.
+        </p>
+      </div>
+
+      <figure class="image-figure">
+        <img src="../assets/images/ai.png" alt="Lovable AI integration in action" />
+        <figcaption>Lovable AI enables powerful LLM features directly inside your app — no API keys needed.</figcaption>
+      </figure>
+
+      <!-- Usage & Pricing -->
+      <h2>Usage &amp; Pricing</h2>
+
+      <div class="content-card">
+        <p>
+          Lovable AI uses <strong>usage-based pricing</strong> — you pay only for what your app consumes.
+          The cost is the <strong>same as going directly to the provider</strong>, with no Lovable markup.
+        </p>
+
+        <h3>Free Tier</h3>
+        <p>
+          Every workspace gets <strong>$1 of free AI usage per month</strong>. This is enough
+          for prototyping, testing, and light production use. Once you exceed the free tier,
+          usage is billed at the provider's standard rates.
+        </p>
+
+        <h3>How Costs Work</h3>
+        <ul>
+          <li>Each model has its own per-token pricing (input and output tokens)</li>
+          <li>Cheaper models (Gemini 3 Flash, GPT-5 Nano) cost fractions of a cent per request</li>
+          <li>Premium models (GPT-5, GPT-5.2) cost more but deliver higher quality</li>
+          <li>Image and document analysis may cost more due to multimodal processing</li>
+        </ul>
+
+        <div class="highlight-box tip">
+          <p class="box-title">&#128161; Cost Optimisation</p>
+          <p>
+            Use <strong>Gemini 3 Flash</strong> as your default model and only upgrade to premium models
+            for specific high-complexity tasks. This keeps costs minimal while maintaining quality.
+          </p>
+        </div>
+
+        <h3>Workspace Rate Limits</h3>
+        <p>
+          Each workspace has rate limits to prevent runaway costs and abuse. If your app hits a rate limit,
+          requests are queued or throttled — they won't fail. Plan your architecture to handle brief
+          delays in AI responses gracefully.
+        </p>
+      </div>
+
+      <!-- How It Works Under the Hood -->
+      <h2>How It Works</h2>
+
+      <div class="content-card">
+        <p>
+          When your app calls Lovable AI, the request flows through Lovable's infrastructure:
+        </p>
+
+        <ol class="steps-list">
+          <li>
+            <strong>Your app makes an AI request:</strong> The frontend or backend code calls
+            the Lovable AI connector with a prompt and chosen model.
+          </li>
+          <li>
+            <strong>Lovable routes the request:</strong> The request is proxied through Lovable Cloud
+            to the selected model provider (Google, OpenAI, etc.).
+          </li>
+          <li>
+            <strong>The model processes and responds:</strong> The LLM generates a response based on
+            your prompt, system instructions, and any context you provided.
+          </li>
+          <li>
+            <strong>Response returned to your app:</strong> Your app receives the model's output
+            and renders it in your UI — a chat message, summary, translation, etc.
+          </li>
+        </ol>
+
+        <div class="highlight-box info">
+          <p class="box-title">&#128218; Works with Lovable Cloud</p>
+          <p>
+            Lovable AI requests are routed through Lovable Cloud. Your app doesn't need its own
+            backend proxy, Edge Functions, or API key management — the infrastructure is handled for you.
+          </p>
+        </div>
+      </div>
+
+      <!-- Best Practices -->
+      <h2>Best Practices</h2>
+
+      <div class="content-card">
+        <ol class="steps-list">
+          <li>
+            <strong>Start with the default model:</strong> Gemini 3 Flash handles most tasks well
+            at the lowest cost. Only switch to GPT-5 or Gemini Pro when you need higher quality.
+          </li>
+          <li>
+            <strong>Write clear system prompts:</strong> Give the model explicit instructions about
+            tone, format, length, and constraints. Vague prompts produce vague results.
+          </li>
+          <li>
+            <strong>Handle loading &amp; errors gracefully:</strong> AI responses take 1–10 seconds.
+            Show loading states and handle timeouts or rate limits in your UI.
+          </li>
+          <li>
+            <strong>Keep token usage lean:</strong> Don't send the entire page content when you only
+            need to summarise a paragraph. Smaller inputs = faster responses and lower cost.
+          </li>
+          <li>
+            <strong>Test with real content:</strong> AI behaves differently on real user data vs.
+            test data. Use realistic content during development to catch edge cases.
+          </li>
+          <li>
+            <strong>Set permission preferences:</strong> For production apps, consider "Ask each time"
+            to maintain visibility and control over AI usage and costs.
+          </li>
+        </ol>
+      </div>
+
+      <div class="highlight-box warning">
+        <p class="box-title">&#9888;&#65039; Rate Limits</p>
+        <p>
+          Workspace rate limits apply to all Lovable AI usage. If your app generates high volumes
+          of AI requests (e.g. processing user uploads in bulk), design your UI to batch or queue
+          requests to stay within limits. Monitor your usage in the workspace settings.
+        </p>
+      </div>
+
+      <!-- Summary -->
+      <h2>Section Summary</h2>
+
+      <div class="content-card">
+        <ol class="steps-list">
+          <li>Lovable AI is a built-in LLM integration — no API keys, no provider accounts, no setup.</li>
+          <li>Access models like Gemini 3 Flash (default), GPT-5, GPT-5.2, and Gemini Pro.</li>
+          <li>Build AI chatbots, summaries, sentiment detection, document Q&amp;A, translation, and more.</li>
+          <li>Enabled by default; control permissions via Settings → Connectors → Shared connectors.</li>
+          <li>Usage-based pricing with $1 free/month — same cost as going direct to the provider.</li>
+          <li>Choose models strategically: Flash for speed/cost, Pro/GPT-5 for complex reasoning.</li>
+        </ol>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ====== Footer ====== -->
+  <footer class="section-footer">
+    <a href="../index.html" class="btn btn-back">&larr; Back to Presentation</a>
+  </footer>
+
+</body>
+</html>
