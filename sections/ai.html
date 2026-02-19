@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,14 +11,25 @@
   <!-- ====== Header ====== -->
   <header class="section-header">
     <div class="container">
-      <nav class="breadcrumb">
+      <nav class="breadcrumb lang-en">
         <a href="../index.html">Home</a> <span>&rsaquo;</span> Lovable AI
       </nav>
-      <h1 class="section-title">Lovable AI</h1>
-      <p class="section-subtitle">
+      <nav class="breadcrumb lang-fr">
+        <a href="../index.html">Accueil</a> <span>&rsaquo;</span> Lovable AI
+      </nav>
+
+      <h1 class="section-title lang-en">Lovable AI</h1>
+      <h1 class="section-title lang-fr">Lovable AI</h1>
+
+      <p class="section-subtitle lang-en">
         Built-in LLM integration that lets you add powerful AI features to your app — no API keys, no provider accounts, no setup. Just build.
       </p>
-      <span class="reading-time">&#128337; Estimated reading time: 12 minutes</span>
+      <p class="section-subtitle lang-fr">
+        Intégration LLM intégrée qui vous permet d'ajouter des fonctionnalités d'IA puissantes à votre application — sans clés API, sans comptes fournisseur, sans configuration. Construisez, tout simplement.
+      </p>
+
+      <span class="reading-time lang-en">&#128337; Estimated reading time: 12 minutes</span>
+      <span class="reading-time lang-fr">&#128337; Temps de lecture estimé : 12 minutes</span>
     </div>
   </header>
 
@@ -27,40 +38,65 @@
     <div class="container">
 
       <!-- What is Lovable AI -->
-      <h2>What is Lovable AI?</h2>
+      <h2 class="lang-en">What is Lovable AI?</h2>
+      <h2 class="lang-fr">Qu'est-ce que Lovable AI ?</h2>
 
       <div class="content-card">
-        <p>
+        <p class="lang-en">
           Lovable AI is a <strong>built-in LLM integration</strong> that allows you to access large language models
           directly from your Lovable apps — without managing API keys, creating provider accounts, or writing
           backend proxy code. It's a shared connector that comes <strong>enabled by default</strong>.
         </p>
-        <p>
+        <p class="lang-fr">
+          Lovable AI est une <strong>intégration LLM intégrée</strong> qui vous permet d'accéder à des grands modèles de langage
+          directement depuis vos applications Lovable — sans gérer de clés API, créer de comptes fournisseur, ou écrire
+          du code proxy backend. C'est un connecteur partagé qui est <strong>activé par défaut</strong>.
+        </p>
+
+        <p class="lang-en">
           Instead of spending time setting up OpenAI or Google Cloud accounts, configuring Edge Functions,
           and managing secrets, you simply build AI-powered features and Lovable handles the rest.
           The models are accessed through Lovable's infrastructure at the <strong>same cost as going direct
           to the provider</strong>.
         </p>
+        <p class="lang-fr">
+          Au lieu de passer du temps à configurer des comptes OpenAI ou Google Cloud, configurer des Edge Functions,
+          et gérer des secrets, vous construisez simplement des fonctionnalités alimentées par l'IA et Lovable s'occupe du reste.
+          Les modèles sont accessibles via l'infrastructure de Lovable au <strong>même coût qu'en allant directement
+          chez le fournisseur</strong>.
+        </p>
 
-        <div class="highlight-box info">
+        <div class="highlight-box info lang-en">
           <p class="box-title">&#128218; Zero Setup Required</p>
           <p>
             Lovable AI is enabled by default in every workspace. No API keys, no billing configuration,
             no Edge Functions — access models like Gemini and GPT instantly from your app code.
           </p>
         </div>
+        <div class="highlight-box info lang-fr">
+          <p class="box-title">&#128218; Aucune configuration requise</p>
+          <p>
+            Lovable AI est activé par défaut dans chaque workspace. Pas de clés API, pas de configuration de facturation,
+            pas d'Edge Functions — accédez à des modèles comme Gemini et GPT instantanément depuis le code de votre application.
+          </p>
+        </div>
       </div>
 
       <!-- How to Enable -->
-      <h2>Enabling Lovable AI</h2>
+      <h2 class="lang-en">Enabling Lovable AI</h2>
+      <h2 class="lang-fr">Activer Lovable AI</h2>
 
       <div class="content-card">
-        <p>
+        <p class="lang-en">
           Lovable AI is a <strong>shared connector</strong> — pre-configured and ready to use from the moment
           you create a project. To verify or adjust settings:
         </p>
+        <p class="lang-fr">
+          Lovable AI est un <strong>connecteur partagé</strong> — préconfiguré et prêt à l'emploi dès que
+          vous créez un projet. Pour vérifier ou ajuster les paramètres :
+        </p>
 
-        <ol class="steps-list">
+        <ol class="steps-list lang-en">
           <li>
             <strong>Open Settings:</strong> Go to <strong>Settings → Connectors → Shared connectors</strong> in your workspace.
           </li>
@@ -71,12 +107,29 @@
             <strong>Set permission preference:</strong> Choose how you want to approve AI usage in your apps.
           </li>
         </ol>
+        <ol class="steps-list lang-fr">
+          <li>
+            <strong>Ouvrir les paramètres :</strong> Allez dans <strong>Settings → Connectors → Shared connectors</strong> dans votre workspace.
+          </li>
+          <li>
+            <strong>Trouver Lovable AI :</strong> Il apparaît sous la liste des connecteurs partagés, activé par défaut.
+          </li>
+          <li>
+            <strong>Définir la préférence de permission :</strong> Choisissez comment vous souhaitez approuver l'utilisation de l'IA dans vos applications.
+          </li>
+        </ol>
 
-        <h3>Permission Preferences</h3>
-        <p>
+        <h3 class="lang-en">Permission Preferences</h3>
+        <h3 class="lang-fr">Préférences de permission</h3>
+
+        <p class="lang-en">
           You control how Lovable AI is used in your projects with three options:
         </p>
-        <table class="comparison-table">
+        <p class="lang-fr">
+          Vous contrôlez l'utilisation de Lovable AI dans vos projets avec trois options :
+        </p>
+
+        <table class="comparison-table lang-en">
           <thead>
             <tr>
               <th>Preference</th>
@@ -102,18 +155,49 @@
             </tr>
           </tbody>
         </table>
+        <table class="comparison-table lang-fr">
+          <thead>
+            <tr>
+              <th>Préférence</th>
+              <th>Comportement</th>
+              <th>Idéal pour</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Toujours autoriser</strong></td>
+              <td>Les fonctionnalités IA fonctionnent automatiquement, sans confirmation</td>
+              <td>Prototypage rapide, projets personnels</td>
+            </tr>
+            <tr>
+              <td><strong>Demander à chaque fois</strong></td>
+              <td>Vous approuvez ou refusez chaque requête IA</td>
+              <td>Flux de travail nécessitant une revue, workspaces partagés</td>
+            </tr>
+            <tr>
+              <td><strong>Ne jamais autoriser</strong></td>
+              <td>Les fonctionnalités IA sont complètement désactivées</td>
+              <td>Projets ne devant pas utiliser de LLM externes</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
       <!-- Supported Models -->
-      <h2>Supported Models</h2>
+      <h2 class="lang-en">Supported Models</h2>
+      <h2 class="lang-fr">Modèles pris en charge</h2>
 
       <div class="content-card">
-        <p>
+        <p class="lang-en">
           Lovable AI gives you access to a range of leading models. The <strong>default model is Gemini 3 Flash</strong>,
           optimised for speed and cost, but you can choose any model depending on your use case.
         </p>
+        <p class="lang-fr">
+          Lovable AI vous donne accès à une gamme de modèles de pointe. Le <strong>modèle par défaut est Gemini 3 Flash</strong>,
+          optimisé pour la vitesse et le coût, mais vous pouvez choisir n'importe quel modèle selon votre cas d'usage.
+        </p>
 
-        <table class="comparison-table">
+        <table class="comparison-table lang-en">
           <thead>
             <tr>
               <th>Model</th>
@@ -159,8 +243,54 @@
             </tr>
           </tbody>
         </table>
+        <table class="comparison-table lang-fr">
+          <thead>
+            <tr>
+              <th>Modèle</th>
+              <th>Fournisseur</th>
+              <th>Idéal pour</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Gemini 3 Flash</strong> (par défaut)</td>
+              <td>Google</td>
+              <td>Réponses rapides, faible coût, tâches générales</td>
+            </tr>
+            <tr>
+              <td><strong>Gemini Pro</strong></td>
+              <td>Google</td>
+              <td>Raisonnement complexe, contexte long</td>
+            </tr>
+            <tr>
+              <td><strong>GPT-5</strong></td>
+              <td>OpenAI</td>
+              <td>Qualité maximale, analyse complexe</td>
+            </tr>
+            <tr>
+              <td><strong>GPT-5.2</strong></td>
+              <td>OpenAI</td>
+              <td>Dernière génération, tâches avancées</td>
+            </tr>
+            <tr>
+              <td><strong>GPT-5 Mini</strong></td>
+              <td>OpenAI</td>
+              <td>Équilibre qualité et coût</td>
+            </tr>
+            <tr>
+              <td><strong>GPT-5 Nano</strong></td>
+              <td>OpenAI</td>
+              <td>Ultra-rapide, tâches légères</td>
+            </tr>
+            <tr>
+              <td><strong>Nano Banana Pro</strong></td>
+              <td>Various</td>
+              <td>Cas d'usage spécialisés / expérimentaux</td>
+            </tr>
+          </tbody>
+        </table>
 
-        <div class="highlight-box tip">
+        <div class="highlight-box tip lang-en">
           <p class="box-title">&#128161; Choosing the Right Model</p>
           <p>
             Start with <strong>Gemini 3 Flash</strong> for most features — it's fast and cheap. Switch to
@@ -168,120 +298,220 @@
             for complex analysis, nuanced generation, or long documents.
           </p>
         </div>
+        <div class="highlight-box tip lang-fr">
+          <p class="box-title">&#128161; Choisir le bon modèle</p>
+          <p>
+            Commencez avec <strong>Gemini 3 Flash</strong> pour la plupart des fonctionnalités — il est rapide et peu coûteux. Passez à
+            <strong>GPT-5</strong> ou <strong>Gemini Pro</strong> lorsque vous avez besoin d'une qualité de raisonnement supérieure
+            pour des analyses complexes, de la génération nuancée ou des documents longs.
+          </p>
+        </div>
       </div>
 
       <!-- Use Cases -->
-      <h2>What You Can Build</h2>
+      <h2 class="lang-en">What You Can Build</h2>
+      <h2 class="lang-fr">Ce que vous pouvez construire</h2>
 
       <div class="content-card">
-        <p>
+        <p class="lang-en">
           Lovable AI unlocks a wide range of AI-powered features you can add to your apps with minimal effort.
           Here are the primary use cases:
         </p>
+        <p class="lang-fr">
+          Lovable AI ouvre la porte à un large éventail de fonctionnalités alimentées par l'IA que vous pouvez ajouter à vos applications avec un effort minimal.
+          Voici les principaux cas d'usage :
+        </p>
 
-        <h3>AI Summaries</h3>
-        <p>
+        <h3 class="lang-en">AI Summaries</h3>
+        <h3 class="lang-fr">Résumés IA</h3>
+
+        <p class="lang-en">
           Automatically summarise long documents, articles, user reviews, or form submissions.
           Feed in text content and receive concise, structured summaries.
         </p>
+        <p class="lang-fr">
+          Résumez automatiquement de longs documents, articles, avis utilisateurs ou soumissions de formulaires.
+          Fournissez du contenu textuel et recevez des résumés concis et structurés.
+        </p>
 
-        <h3>AI Chatbots &amp; Agents</h3>
-        <p>
+        <h3 class="lang-en">AI Chatbots &amp; Agents</h3>
+        <h3 class="lang-fr">Chatbots &amp; agents IA</h3>
+
+        <p class="lang-en">
           Build conversational interfaces — customer support bots, FAQ assistants, onboarding guides,
           or interactive product demos. Handle multi-turn conversations with context retention.
         </p>
+        <p class="lang-fr">
+          Créez des interfaces conversationnelles — bots de support client, assistants FAQ, guides d'intégration,
+          ou démos produit interactives. Gérez des conversations multi-tours avec conservation du contexte.
+        </p>
 
-        <h3>Sentiment Detection</h3>
-        <p>
+        <h3 class="lang-en">Sentiment Detection</h3>
+        <h3 class="lang-fr">Détection de sentiment</h3>
+
+        <p class="lang-en">
           Analyse user feedback, reviews, or messages to determine positive, negative, or neutral sentiment.
           Great for dashboards, moderation tools, and customer analytics.
         </p>
+        <p class="lang-fr">
+          Analysez les retours utilisateurs, avis ou messages pour déterminer un sentiment positif, négatif ou neutre.
+          Idéal pour les tableaux de bord, les outils de modération et l'analytique client.
+        </p>
 
-        <h3>Document Q&amp;A</h3>
-        <p>
+        <h3 class="lang-en">Document Q&amp;A</h3>
+        <h3 class="lang-fr">Q&amp;R sur documents</h3>
+
+        <p class="lang-en">
           Let users ask natural language questions about uploaded documents, knowledge bases, or help articles.
           The AI extracts and returns relevant answers from your content.
         </p>
+        <p class="lang-fr">
+          Permettez aux utilisateurs de poser des questions en langage naturel sur des documents téléchargés, des bases de connaissances ou des articles d'aide.
+          L'IA extrait et renvoie des réponses pertinentes à partir de votre contenu.
+        </p>
 
-        <h3>Creative Generation</h3>
-        <p>
+        <h3 class="lang-en">Creative Generation</h3>
+        <h3 class="lang-fr">Génération créative</h3>
+
+        <p class="lang-en">
           Generate marketing copy, product descriptions, email templates, social media posts,
           or any creative text based on your brand voice and guidelines.
         </p>
+        <p class="lang-fr">
+          Générez des textes marketing, des descriptions de produits, des modèles d'e-mails, des publications sur les réseaux sociaux,
+          ou tout texte créatif basé sur votre ton de marque et vos directives.
+        </p>
 
-        <h3>Multilingual Translation</h3>
-        <p>
+        <h3 class="lang-en">Multilingual Translation</h3>
+        <h3 class="lang-fr">Traduction multilingue</h3>
+
+        <p class="lang-en">
           Translate content between languages on the fly — user-facing text, form inputs, help documentation,
           or notification messages — without external translation APIs.
         </p>
+        <p class="lang-fr">
+          Traduisez du contenu entre les langues à la volée — texte côté utilisateur, champs de formulaire, documentation d'aide,
+          ou messages de notification — sans API de traduction externe.
+        </p>
 
-        <h3>Image &amp; Document Analysis</h3>
-        <p>
+        <h3 class="lang-en">Image &amp; Document Analysis</h3>
+        <h3 class="lang-fr">Analyse d'images &amp; de documents</h3>
+
+        <p class="lang-en">
           Analyse images and documents using multimodal models. Extract text from receipts,
           describe product photos, categorise uploaded files, or validate document contents.
         </p>
+        <p class="lang-fr">
+          Analysez des images et des documents à l'aide de modèles multimodaux. Extrayez du texte à partir de reçus,
+          décrivez des photos de produits, catégorisez des fichiers téléchargés ou validez le contenu de documents.
+        </p>
 
-        <h3>Task Completion &amp; Workflow Automation</h3>
-        <p>
+        <h3 class="lang-en">Task Completion &amp; Workflow Automation</h3>
+        <h3 class="lang-fr">Achèvement de tâches &amp; automatisation des flux de travail</h3>
+
+        <p class="lang-en">
           Automate repetitive tasks: categorise support tickets, extract structured data from freeform text,
           generate reports from raw data, or trigger workflows based on AI classification.
+        </p>
+        <p class="lang-fr">
+          Automatisez les tâches répétitives : catégorisez les tickets de support, extrayez des données structurées à partir de texte libre,
+          générez des rapports à partir de données brutes, ou déclenchez des flux de travail basés sur la classification IA.
         </p>
       </div>
 
       <figure class="image-figure">
         <img src="../assets/images/ai.png" alt="Lovable AI integration in action" />
-        <figcaption>Lovable AI enables powerful LLM features directly inside your app — no API keys needed.</figcaption>
+        <figcaption class="lang-en">Lovable AI enables powerful LLM features directly inside your app — no API keys needed.</figcaption>
+        <figcaption class="lang-fr">Lovable AI permet des fonctionnalités LLM puissantes directement dans votre application — sans clés API.</figcaption>
       </figure>
 
       <!-- Usage & Pricing -->
-      <h2>Usage &amp; Pricing</h2>
+      <h2 class="lang-en">Usage &amp; Pricing</h2>
+      <h2 class="lang-fr">Utilisation &amp; tarification</h2>
 
       <div class="content-card">
-        <p>
+        <p class="lang-en">
           Lovable AI uses <strong>usage-based pricing</strong> — you pay only for what your app consumes.
           The cost is the <strong>same as going directly to the provider</strong>, with no Lovable markup.
         </p>
+        <p class="lang-fr">
+          Lovable AI utilise une <strong>tarification à l'usage</strong> — vous ne payez que ce que votre application consomme.
+          Le coût est le <strong>même qu'en allant directement chez le fournisseur</strong>, sans majoration de Lovable.
+        </p>
 
-        <h3>Free Tier</h3>
-        <p>
+        <h3 class="lang-en">Free Tier</h3>
+        <h3 class="lang-fr">Offre gratuite</h3>
+
+        <p class="lang-en">
           Every workspace gets <strong>$1 of free AI usage per month</strong>. This is enough
           for prototyping, testing, and light production use. Once you exceed the free tier,
           usage is billed at the provider's standard rates.
         </p>
+        <p class="lang-fr">
+          Chaque workspace bénéficie de <strong>1 $ d'utilisation IA gratuite par mois</strong>. C'est suffisant
+          pour le prototypage, les tests et une utilisation légère en production. Une fois l'offre gratuite dépassée,
+          l'utilisation est facturée aux tarifs standard du fournisseur.
+        </p>
 
-        <h3>How Costs Work</h3>
-        <ul>
+        <h3 class="lang-en">How Costs Work</h3>
+        <h3 class="lang-fr">Comment fonctionnent les coûts</h3>
+
+        <ul class="lang-en">
           <li>Each model has its own per-token pricing (input and output tokens)</li>
           <li>Cheaper models (Gemini 3 Flash, GPT-5 Nano) cost fractions of a cent per request</li>
           <li>Premium models (GPT-5, GPT-5.2) cost more but deliver higher quality</li>
           <li>Image and document analysis may cost more due to multimodal processing</li>
         </ul>
+        <ul class="lang-fr">
+          <li>Chaque modèle a sa propre tarification par token (tokens d'entrée et de sortie)</li>
+          <li>Les modèles moins chers (Gemini 3 Flash, GPT-5 Nano) coûtent des fractions de centime par requête</li>
+          <li>Les modèles premium (GPT-5, GPT-5.2) coûtent plus cher mais offrent une qualité supérieure</li>
+          <li>L'analyse d'images et de documents peut coûter plus cher en raison du traitement multimodal</li>
+        </ul>
 
-        <div class="highlight-box tip">
+        <div class="highlight-box tip lang-en">
           <p class="box-title">&#128161; Cost Optimisation</p>
           <p>
             Use <strong>Gemini 3 Flash</strong> as your default model and only upgrade to premium models
             for specific high-complexity tasks. This keeps costs minimal while maintaining quality.
           </p>
         </div>
+        <div class="highlight-box tip lang-fr">
+          <p class="box-title">&#128161; Optimisation des coûts</p>
+          <p>
+            Utilisez <strong>Gemini 3 Flash</strong> comme modèle par défaut et ne passez aux modèles premium
+            que pour des tâches spécifiques de haute complexité. Cela maintient les coûts au minimum tout en préservant la qualité.
+          </p>
+        </div>
 
-        <h3>Workspace Rate Limits</h3>
-        <p>
+        <h3 class="lang-en">Workspace Rate Limits</h3>
+        <h3 class="lang-fr">Limites de débit du workspace</h3>
+
+        <p class="lang-en">
           Each workspace has rate limits to prevent runaway costs and abuse. If your app hits a rate limit,
           requests are queued or throttled — they won't fail. Plan your architecture to handle brief
           delays in AI responses gracefully.
         </p>
+        <p class="lang-fr">
+          Chaque workspace dispose de limites de débit pour éviter les coûts incontrôlés et les abus. Si votre application atteint une limite de débit,
+          les requêtes sont mises en file d'attente ou limitées — elles n'échoueront pas. Concevez votre architecture pour gérer
+          les brefs délais dans les réponses IA de manière élégante.
+        </p>
       </div>
 
       <!-- How It Works Under the Hood -->
-      <h2>How It Works</h2>
+      <h2 class="lang-en">How It Works</h2>
+      <h2 class="lang-fr">Comment ça fonctionne</h2>
 
       <div class="content-card">
-        <p>
+        <p class="lang-en">
           When your app calls Lovable AI, the request flows through Lovable's infrastructure:
         </p>
+        <p class="lang-fr">
+          Lorsque votre application appelle Lovable AI, la requête transite par l'infrastructure de Lovable :
+        </p>
 
-        <ol class="steps-list">
+        <ol class="steps-list lang-en">
           <li>
             <strong>Your app makes an AI request:</strong> The frontend or backend code calls
             the Lovable AI connector with a prompt and chosen model.
@@ -299,21 +529,47 @@
             and renders it in your UI — a chat message, summary, translation, etc.
           </li>
         </ol>
+        <ol class="steps-list lang-fr">
+          <li>
+            <strong>Votre application effectue une requête IA :</strong> Le code frontend ou backend appelle
+            le connecteur Lovable AI avec un prompt et un modèle choisi.
+          </li>
+          <li>
+            <strong>Lovable achemine la requête :</strong> La requête est transmise via Lovable Cloud
+            au fournisseur de modèle sélectionné (Google, OpenAI, etc.).
+          </li>
+          <li>
+            <strong>Le modèle traite et répond :</strong> Le LLM génère une réponse basée sur
+            votre prompt, les instructions système et tout contexte que vous avez fourni.
+          </li>
+          <li>
+            <strong>Réponse renvoyée à votre application :</strong> Votre application reçoit la sortie du modèle
+            et l'affiche dans votre interface — un message de chat, un résumé, une traduction, etc.
+          </li>
+        </ol>
 
-        <div class="highlight-box info">
+        <div class="highlight-box info lang-en">
           <p class="box-title">&#128218; Works with Lovable Cloud</p>
           <p>
             Lovable AI requests are routed through Lovable Cloud. Your app doesn't need its own
             backend proxy, Edge Functions, or API key management — the infrastructure is handled for you.
           </p>
         </div>
+        <div class="highlight-box info lang-fr">
+          <p class="box-title">&#128218; Fonctionne avec Lovable Cloud</p>
+          <p>
+            Les requêtes Lovable AI sont acheminées via Lovable Cloud. Votre application n'a pas besoin de son propre
+            proxy backend, d'Edge Functions ou de gestion de clés API — l'infrastructure est gérée pour vous.
+          </p>
+        </div>
       </div>
 
       <!-- Best Practices -->
-      <h2>Best Practices</h2>
+      <h2 class="lang-en">Best Practices</h2>
+      <h2 class="lang-fr">Bonnes pratiques</h2>
 
       <div class="content-card">
-        <ol class="steps-list">
+        <ol class="steps-list lang-en">
           <li>
             <strong>Start with the default model:</strong> Gemini 3 Flash handles most tasks well
             at the lowest cost. Only switch to GPT-5 or Gemini Pro when you need higher quality.
@@ -339,9 +595,35 @@
             to maintain visibility and control over AI usage and costs.
           </li>
         </ol>
+        <ol class="steps-list lang-fr">
+          <li>
+            <strong>Commencez avec le modèle par défaut :</strong> Gemini 3 Flash gère bien la plupart des tâches
+            au coût le plus bas. Ne passez à GPT-5 ou Gemini Pro que lorsque vous avez besoin d'une qualité supérieure.
+          </li>
+          <li>
+            <strong>Rédigez des prompts système clairs :</strong> Donnez au modèle des instructions explicites sur
+            le ton, le format, la longueur et les contraintes. Des prompts vagues produisent des résultats vagues.
+          </li>
+          <li>
+            <strong>Gérez le chargement et les erreurs avec élégance :</strong> Les réponses IA prennent 1 à 10 secondes.
+            Affichez des états de chargement et gérez les délais d'attente ou les limites de débit dans votre interface.
+          </li>
+          <li>
+            <strong>Optimisez l'utilisation des tokens :</strong> N'envoyez pas tout le contenu de la page quand vous avez juste
+            besoin de résumer un paragraphe. Entrées plus petites = réponses plus rapides et coût moindre.
+          </li>
+          <li>
+            <strong>Testez avec du contenu réel :</strong> L'IA se comporte différemment avec des données utilisateur réelles
+            par rapport à des données de test. Utilisez du contenu réaliste pendant le développement pour détecter les cas limites.
+          </li>
+          <li>
+            <strong>Définissez les préférences de permission :</strong> Pour les applications en production, envisagez « Demander à chaque fois »
+            pour maintenir la visibilité et le contrôle sur l'utilisation et les coûts de l'IA.
+          </li>
+        </ol>
       </div>
 
-      <div class="highlight-box warning">
+      <div class="highlight-box warning lang-en">
         <p class="box-title">&#9888;&#65039; Rate Limits</p>
         <p>
           Workspace rate limits apply to all Lovable AI usage. If your app generates high volumes
@@ -349,18 +631,35 @@
           requests to stay within limits. Monitor your usage in the workspace settings.
         </p>
       </div>
+      <div class="highlight-box warning lang-fr">
+        <p class="box-title">&#9888;&#65039; Limites de débit</p>
+        <p>
+          Les limites de débit du workspace s'appliquent à toute utilisation de Lovable AI. Si votre application génère un volume élevé
+          de requêtes IA (par exemple, le traitement en masse de fichiers téléchargés par les utilisateurs), concevez votre interface pour regrouper ou mettre en file d'attente
+          les requêtes afin de rester dans les limites. Surveillez votre utilisation dans les paramètres du workspace.
+        </p>
+      </div>
 
       <!-- Summary -->
-      <h2>Section Summary</h2>
+      <h2 class="lang-en">Section Summary</h2>
+      <h2 class="lang-fr">Résumé de la section</h2>
 
       <div class="content-card">
-        <ol class="steps-list">
+        <ol class="steps-list lang-en">
           <li>Lovable AI is a built-in LLM integration — no API keys, no provider accounts, no setup.</li>
           <li>Access models like Gemini 3 Flash (default), GPT-5, GPT-5.2, and Gemini Pro.</li>
           <li>Build AI chatbots, summaries, sentiment detection, document Q&amp;A, translation, and more.</li>
           <li>Enabled by default; control permissions via Settings → Connectors → Shared connectors.</li>
           <li>Usage-based pricing with $1 free/month — same cost as going direct to the provider.</li>
           <li>Choose models strategically: Flash for speed/cost, Pro/GPT-5 for complex reasoning.</li>
+        </ol>
+        <ol class="steps-list lang-fr">
+          <li>Lovable AI est une intégration LLM intégrée — sans clés API, sans comptes fournisseur, sans configuration.</li>
+          <li>Accédez à des modèles comme Gemini 3 Flash (par défaut), GPT-5, GPT-5.2 et Gemini Pro.</li>
+          <li>Créez des chatbots IA, des résumés, de la détection de sentiment, des Q&amp;R sur documents, de la traduction, et plus encore.</li>
+          <li>Activé par défaut ; contrôlez les permissions via Settings → Connectors → Shared connectors.</li>
+          <li>Tarification à l'usage avec 1 $ gratuit/mois — même coût qu'en allant directement chez le fournisseur.</li>
+          <li>Choisissez les modèles stratégiquement : Flash pour la vitesse/le coût, Pro/GPT-5 pour le raisonnement complexe.</li>
         </ol>
       </div>
 
@@ -369,8 +668,10 @@
 
   <!-- ====== Footer ====== -->
   <footer class="section-footer">
-    <a href="../index.html" class="btn btn-back">&larr; Back to Presentation</a>
+    <a href="../index.html" class="btn btn-back lang-en">&larr; Back to Presentation</a>
+    <a href="../index.html" class="btn btn-back lang-fr">&larr; Retour à la présentation</a>
   </footer>
 
+  <script src="../js/lang.js"></script>
 </body>
 </html>

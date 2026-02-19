@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,14 +11,25 @@
   <!-- ====== Header ====== -->
   <header class="section-header">
     <div class="container">
-      <nav class="breadcrumb">
+      <nav class="breadcrumb lang-en">
         <a href="../index.html">Home</a> <span>&rsaquo;</span> Context Prompt
       </nav>
-      <h1 class="section-title">Context Prompt (Knowledge&nbsp;Base)</h1>
-      <p class="section-subtitle">
+      <nav class="breadcrumb lang-fr">
+        <a href="../index.html">Accueil</a> <span>&rsaquo;</span> Prompt de contexte
+      </nav>
+
+      <h1 class="section-title lang-en">Context Prompt (Knowledge&nbsp;Base)</h1>
+      <h1 class="section-title lang-fr">Prompt de contexte (Knowledge&nbsp;Base)</h1>
+
+      <p class="section-subtitle lang-en">
         Persistent instructions that shape every single response Lovable generates for your project.
       </p>
-      <span class="reading-time">&#128337; Estimated reading time: 12 minutes</span>
+      <p class="section-subtitle lang-fr">
+        Des instructions persistantes qui façonnent chaque réponse générée par Lovable pour votre projet.
+      </p>
+
+      <span class="reading-time lang-en">&#128337; Estimated reading time: 12 minutes</span>
+      <span class="reading-time lang-fr">&#128337; Temps de lecture estimé : 12 minutes</span>
     </div>
   </header>
 
@@ -27,42 +38,73 @@
     <div class="container">
 
       <!-- What Is a Context Prompt? -->
-      <h2>What Is a Context Prompt?</h2>
+      <h2 class="lang-en">What Is a Context Prompt?</h2>
+      <h2 class="lang-fr">Qu'est-ce qu'un prompt de contexte ?</h2>
 
       <div class="content-card">
-        <p>
+        <p class="lang-en">
           A <strong>context prompt</strong> (also called a <em>knowledge base</em> or <em>system
           prompt</em>) is a set of instructions that Lovable remembers <strong>across all future
           prompts</strong> in a project. It acts like a permanent set of rules or guidelines.
         </p>
-        <p>
+        <p class="lang-fr">
+          Un <strong>prompt de contexte</strong> (également appelé <em>Knowledge Base</em> ou <em>system
+          prompt</em>) est un ensemble d'instructions que Lovable mémorise <strong>pour tous les futurs
+          prompts</strong> d'un projet. Il agit comme un ensemble permanent de règles et de directives.
+        </p>
+
+        <p class="lang-en">
           Think of it as the project constitution. Every individual prompt you send is like a
           specific law — but it must always follow the constitution. The context prompt defines
           the constants: tech stack, coding style, naming conventions, security rules, design
           tokens, and more.
         </p>
-        <p>
+        <p class="lang-fr">
+          Considérez-le comme la constitution du projet. Chaque prompt individuel que vous envoyez est
+          comparable à une loi spécifique — mais elle doit toujours respecter la constitution. Le prompt
+          de contexte définit les constantes : stack technique, style de code, conventions de nommage,
+          règles de sécurité, design tokens, et plus encore.
+        </p>
+
+        <p class="lang-en">
           Without a context prompt, Lovable starts every new prompt with a blank slate. It might
           choose different styles, different patterns, or inconsistent naming across features.
           With a context prompt, all output stays aligned.
         </p>
+        <p class="lang-fr">
+          Sans prompt de contexte, Lovable repart de zéro à chaque nouveau prompt. Il peut
+          choisir des styles différents, des patterns différents ou des conventions de nommage
+          incohérentes d'une fonctionnalité à l'autre. Avec un prompt de contexte, toutes les
+          sorties restent cohérentes.
+        </p>
       </div>
 
       <!-- Persistent Knowledge -->
-      <h2>Persistent Knowledge</h2>
+      <h2 class="lang-en">Persistent Knowledge</h2>
+      <h2 class="lang-fr">Connaissances persistantes</h2>
 
       <div class="content-card">
-        <p>
+        <p class="lang-en">
           Persistent knowledge means the AI always has access to your context — even when you
           don't repeat it. This is critical for:
         </p>
-        <ul>
+        <p class="lang-fr">
+          Les connaissances persistantes signifient que l'IA a toujours accès à votre contexte — même
+          lorsque vous ne le répétez pas. C'est essentiel pour :
+        </p>
+
+        <ul class="lang-en">
           <li><strong>Consistency:</strong> Every generated component uses the same patterns.</li>
           <li><strong>Efficiency:</strong> You don't repeat the same instructions every time.</li>
           <li><strong>Quality:</strong> The AI makes better decisions when it knows the full picture.</li>
         </ul>
+        <ul class="lang-fr">
+          <li><strong>La cohérence :</strong> Chaque composant généré utilise les mêmes patterns.</li>
+          <li><strong>L'efficacité :</strong> Vous ne répétez pas les mêmes instructions à chaque fois.</li>
+          <li><strong>La qualité :</strong> L'IA prend de meilleures décisions lorsqu'elle connaît le contexte complet.</li>
+        </ul>
 
-        <div class="highlight-box info">
+        <div class="highlight-box info lang-en">
           <p class="box-title">&#128218; Analogy</p>
           <p>
             Imagine hiring a new developer every day and having to re-explain your project
@@ -70,19 +112,34 @@
             it's like having a developer who already read the entire codebase documentation.
           </p>
         </div>
+        <div class="highlight-box info lang-fr">
+          <p class="box-title">&#128218; Analogie</p>
+          <p>
+            Imaginez embaucher un nouveau développeur chaque jour et devoir lui réexpliquer votre
+            projet depuis le début chaque matin. C'est ce qui se passe sans prompt de contexte.
+            Avec un prompt de contexte, c'est comme avoir un développeur qui a déjà lu l'intégralité
+            de la documentation du codebase.
+          </p>
+        </div>
       </div>
 
       <!-- Rules vs Suggestions -->
-      <h2>Rules vs. Suggestions</h2>
+      <h2 class="lang-en">Rules vs. Suggestions</h2>
+      <h2 class="lang-fr">Règles vs. suggestions</h2>
 
       <div class="content-card">
-        <p>
+        <p class="lang-en">
           Not everything in a context prompt carries the same weight. It helps to categorise
           your instructions into <strong>rules</strong> (must always follow) and
           <strong>suggestions</strong> (preferred but flexible).
         </p>
+        <p class="lang-fr">
+          Tout ce qui figure dans un prompt de contexte n'a pas la même importance. Il est utile
+          de catégoriser vos instructions en <strong>règles</strong> (à toujours respecter) et
+          en <strong>suggestions</strong> (préférées mais flexibles).
+        </p>
 
-        <table class="comparison-table">
+        <table class="comparison-table lang-en">
           <thead>
             <tr>
               <th>Type</th>
@@ -113,35 +170,85 @@
             </tr>
           </tbody>
         </table>
+        <table class="comparison-table lang-fr">
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Exemple</th>
+              <th>Quand l'utiliser</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Règle</strong></td>
+              <td>« Toujours utiliser TypeScript. Ne jamais utiliser le type 'any'. »</td>
+              <td>Standards non négociables</td>
+            </tr>
+            <tr>
+              <td><strong>Règle</strong></td>
+              <td>« Toutes les clés API doivent être dans des variables d'environnement. »</td>
+              <td>Exigences de sécurité</td>
+            </tr>
+            <tr>
+              <td><strong>Suggestion</strong></td>
+              <td>« Privilégier les mises en page en cartes pour afficher des listes. »</td>
+              <td>Préférences de design</td>
+            </tr>
+            <tr>
+              <td><strong>Suggestion</strong></td>
+              <td>« Utiliser des notifications toast pour les messages de succès. »</td>
+              <td>Patterns UX</td>
+            </tr>
+          </tbody>
+        </table>
 
-        <div class="highlight-box tip">
+        <div class="highlight-box tip lang-en">
           <p class="box-title">&#128161; Tip</p>
           <p>
             Use strong language for rules: "Always", "Never", "Must". Use softer language for
             suggestions: "Prefer", "When possible", "Default to".
           </p>
         </div>
+        <div class="highlight-box tip lang-fr">
+          <p class="box-title">&#128161; Conseil</p>
+          <p>
+            Utilisez un langage fort pour les règles : « Toujours », « Jamais », « Doit ».
+            Utilisez un langage plus souple pour les suggestions : « Privilégier »,
+            « Si possible », « Par défaut ».
+          </p>
+        </div>
       </div>
 
       <!-- How Context Affects Outputs -->
-      <h2>How Context Affects Outputs</h2>
+      <h2 class="lang-en">How Context Affects Outputs</h2>
+      <h2 class="lang-fr">Comment le contexte influence les résultats</h2>
 
       <div class="content-card">
-        <p>Here's a concrete example of how context changes the AI's behaviour:</p>
+        <p class="lang-en">Here's a concrete example of how context changes the AI's behaviour:</p>
+        <p class="lang-fr">Voici un exemple concret de la façon dont le contexte modifie le comportement de l'IA :</p>
 
-        <h3>Without Context Prompt</h3>
+        <h3 class="lang-en">Without Context Prompt</h3>
+        <h3 class="lang-fr">Sans prompt de contexte</h3>
         <div class="code-block">
-          <span class="code-label">Prompt</span>
+          <span class="code-label lang-en">Prompt</span>
+          <span class="code-label lang-fr">Prompt</span>
           <code>Build a user profile page.</code>
         </div>
-        <p>
+        <p class="lang-en">
           Result: The AI might use JavaScript (not TypeScript), use a random colour scheme,
           skip error handling, and use inline styles. It works, but it doesn't match your project.
         </p>
+        <p class="lang-fr">
+          Résultat : l'IA pourrait utiliser JavaScript (et non TypeScript), choisir une palette de
+          couleurs aléatoire, ignorer la gestion des erreurs et utiliser des styles en ligne.
+          Cela fonctionne, mais ne correspond pas à votre projet.
+        </p>
 
-        <h3>With Context Prompt</h3>
+        <h3 class="lang-en">With Context Prompt</h3>
+        <h3 class="lang-fr">Avec prompt de contexte</h3>
         <div class="code-block">
-          <span class="code-label">Context + Prompt</span>
+          <span class="code-label lang-en">Context + Prompt</span>
+          <span class="code-label lang-fr">Contexte + Prompt</span>
           <code>Context (always active):
 - Use TypeScript with strict mode
 - Use Tailwind CSS for styling
@@ -153,24 +260,32 @@
 Prompt:
 Build a user profile page.</code>
         </div>
-        <p>
+        <p class="lang-en">
           Result: The AI generates a TypeScript React component, uses Tailwind with the correct
           purple accent, includes loading spinners and error toasts, fetches data from Supabase,
           and builds mobile-first.
+        </p>
+        <p class="lang-fr">
+          Résultat : l'IA génère un composant React en TypeScript, utilise Tailwind avec le bon
+          accent violet, inclut des indicateurs de chargement et des toasts d'erreur, récupère
+          les données depuis Supabase et adopte une approche mobile-first.
         </p>
       </div>
 
       <figure class="image-figure">
         <img src="../assets/images/knowledge.png" alt="Knowledge base configuration in Lovable" />
-        <figcaption>The Knowledge Base (context prompt) panel in Lovable — add persistent rules here.</figcaption>
+        <figcaption class="lang-en">The Knowledge Base (context prompt) panel in Lovable — add persistent rules here.</figcaption>
+        <figcaption class="lang-fr">Le panneau Knowledge Base (prompt de contexte) dans Lovable — ajoutez vos règles persistantes ici.</figcaption>
       </figure>
 
       <!-- Example: Stack Rules -->
-      <h2>Example: Stack Rules</h2>
+      <h2 class="lang-en">Example: Stack Rules</h2>
+      <h2 class="lang-fr">Exemple : règles de stack</h2>
 
       <div class="content-card">
         <div class="code-block">
-          <span class="code-label">Context Prompt – Stack</span>
+          <span class="code-label lang-en">Context Prompt – Stack</span>
+          <span class="code-label lang-fr">Prompt de contexte – Stack</span>
           <code>## Tech Stack Rules
 
 - Frontend: React 18 + TypeScript (strict mode)
@@ -186,11 +301,13 @@ Build a user profile page.</code>
       </div>
 
       <!-- Example: Security Rules -->
-      <h2>Example: Security Rules</h2>
+      <h2 class="lang-en">Example: Security Rules</h2>
+      <h2 class="lang-fr">Exemple : règles de sécurité</h2>
 
       <div class="content-card">
         <div class="code-block">
-          <span class="code-label">Context Prompt – Security</span>
+          <span class="code-label lang-en">Context Prompt – Security</span>
+          <span class="code-label lang-fr">Prompt de contexte – Sécurité</span>
           <code>## Security Rules
 
 - NEVER hardcode API keys, secrets, or passwords in source code
@@ -205,11 +322,13 @@ Build a user profile page.</code>
       </div>
 
       <!-- Example: Design Rules -->
-      <h2>Example: Design Rules</h2>
+      <h2 class="lang-en">Example: Design Rules</h2>
+      <h2 class="lang-fr">Exemple : règles de design</h2>
 
       <div class="content-card">
         <div class="code-block">
-          <span class="code-label">Context Prompt – Design</span>
+          <span class="code-label lang-en">Context Prompt – Design</span>
+          <span class="code-label lang-fr">Prompt de contexte – Design</span>
           <code>## Design System Rules
 
 - Primary colour: #7c3aed (purple)
@@ -227,7 +346,7 @@ Build a user profile page.</code>
         </div>
       </div>
 
-      <div class="highlight-box warning">
+      <div class="highlight-box warning lang-en">
         <p class="box-title">&#9888;&#65039; Warning</p>
         <p>
           A context prompt that is too long (over 2000 words) can confuse the AI or cause it to
@@ -235,17 +354,34 @@ Build a user profile page.</code>
           instructions that are obvious or default behaviour.
         </p>
       </div>
+      <div class="highlight-box warning lang-fr">
+        <p class="box-title">&#9888;&#65039; Avertissement</p>
+        <p>
+          Un prompt de contexte trop long (plus de 2000 mots) peut dérouter l'IA ou l'amener à
+          ignorer certaines parties. Restez concis : privilégiez les règles par rapport aux
+          suggestions, et supprimez toute instruction évidente ou correspondant au comportement
+          par défaut.
+        </p>
+      </div>
 
       <!-- Summary -->
-      <h2>Section Summary</h2>
+      <h2 class="lang-en">Section Summary</h2>
+      <h2 class="lang-fr">Résumé de la section</h2>
 
       <div class="content-card">
-        <ol class="steps-list">
+        <ol class="steps-list lang-en">
           <li>A context prompt provides persistent instructions that apply to every prompt in a project.</li>
           <li>It ensures consistency in tech stack, coding style, security, and design across all outputs.</li>
           <li>Separate rules (must follow) from suggestions (preferred but flexible).</li>
           <li>Include stack rules, security rules, and design rules as a minimum.</li>
           <li>Keep the context prompt under 2000 words to avoid diluting effectiveness.</li>
+        </ol>
+        <ol class="steps-list lang-fr">
+          <li>Un prompt de contexte fournit des instructions persistantes qui s'appliquent à chaque prompt d'un projet.</li>
+          <li>Il garantit la cohérence de la stack technique, du style de code, de la sécurité et du design dans toutes les sorties.</li>
+          <li>Séparez les règles (à respecter impérativement) des suggestions (préférées mais flexibles).</li>
+          <li>Incluez au minimum des règles de stack, de sécurité et de design.</li>
+          <li>Maintenez le prompt de contexte sous 2000 mots pour ne pas diluer son efficacité.</li>
         </ol>
       </div>
 
@@ -254,8 +390,10 @@ Build a user profile page.</code>
 
   <!-- ====== Footer ====== -->
   <footer class="section-footer">
-    <a href="../index.html" class="btn btn-back">&larr; Back to Presentation</a>
+    <a href="../index.html" class="btn btn-back lang-en">&larr; Back to Presentation</a>
+    <a href="../index.html" class="btn btn-back lang-fr">&larr; Retour à la présentation</a>
   </footer>
 
+  <script src="../js/lang.js"></script>
 </body>
 </html>

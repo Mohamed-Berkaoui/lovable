@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,14 +11,25 @@
   <!-- ====== Header ====== -->
   <header class="section-header">
     <div class="container">
-      <nav class="breadcrumb">
+      <nav class="breadcrumb lang-en">
         <a href="../index.html">Home</a> <span>&rsaquo;</span> Lovable Cloud
       </nav>
-      <h1 class="section-title">Lovable Cloud</h1>
-      <p class="section-subtitle">
+      <nav class="breadcrumb lang-fr">
+        <a href="../index.html">Accueil</a> <span>&rsaquo;</span> Lovable Cloud
+      </nav>
+
+      <h1 class="section-title lang-en">Lovable Cloud</h1>
+      <h1 class="section-title lang-fr">Lovable Cloud</h1>
+
+      <p class="section-subtitle lang-en">
         Deploy, manage environments, and version-control your apps — all from the Lovable platform.
       </p>
-      <span class="reading-time">&#128337; Estimated reading time: 10 minutes</span>
+      <p class="section-subtitle lang-fr">
+        Déployez, gérez vos environnements et contrôlez les versions de vos applications — le tout depuis la plateforme Lovable.
+      </p>
+
+      <span class="reading-time lang-en">&#128337; Estimated reading time: 10 minutes</span>
+      <span class="reading-time lang-fr">&#128337; Temps de lecture estimé : 10 minutes</span>
     </div>
   </header>
 
@@ -27,18 +38,29 @@
     <div class="container">
 
       <!-- Hosting Model -->
-      <h2>Hosting Model</h2>
+      <h2 class="lang-en">Hosting Model</h2>
+      <h2 class="lang-fr">Modèle d'hébergement</h2>
 
       <div class="content-card">
-        <p>
+        <p class="lang-en">
           Lovable Cloud is the built-in hosting infrastructure that powers your apps. When you
           build something in Lovable, it's not just a preview — it's a real, deployed web
           application running on Lovable's cloud infrastructure.
         </p>
-        <p>
+        <p class="lang-fr">
+          Lovable Cloud est l'infrastructure d'hébergement intégrée qui fait fonctionner vos applications. Lorsque vous
+          créez quelque chose dans Lovable, ce n'est pas qu'un simple aperçu — c'est une véritable application web
+          déployée, exécutée sur l'infrastructure cloud de Lovable.
+        </p>
+
+        <p class="lang-en">
           Here's how it works under the hood:
         </p>
-        <ul>
+        <p class="lang-fr">
+          Voici comment cela fonctionne en coulisses :
+        </p>
+
+        <ul class="lang-en">
           <li>
             <strong>Static assets</strong> (HTML, CSS, JS, images) are served via a global CDN
             for fast delivery anywhere in the world.
@@ -56,8 +78,26 @@
             gets HTTPS out of the box.
           </li>
         </ul>
+        <ul class="lang-fr">
+          <li>
+            <strong>Ressources statiques</strong> (HTML, CSS, JS, images) sont servies via un CDN mondial
+            pour une livraison rapide partout dans le monde.
+          </li>
+          <li>
+            <strong>Logique côté serveur</strong> (le cas échéant) s'exécute via les Supabase Edge Functions —
+            des fonctions serverless déployées en périphérie.
+          </li>
+          <li>
+            <strong>Base de données et authentification</strong> sont gérées par Supabase PostgreSQL, avec
+            un pooling de connexions automatique et la Row Level Security.
+          </li>
+          <li>
+            <strong>Certificats SSL</strong> sont provisionnés automatiquement. Chaque application déployée
+            bénéficie du HTTPS par défaut.
+          </li>
+        </ul>
 
-        <div class="highlight-box info">
+        <div class="highlight-box info lang-en">
           <p class="box-title">&#128218; What This Means for You</p>
           <p>
             You never need to configure a server, set up NGINX, manage SSL, or worry about
@@ -65,18 +105,31 @@
             handles the infrastructure.
           </p>
         </div>
+        <div class="highlight-box info lang-fr">
+          <p class="box-title">&#128218; Ce que cela signifie pour vous</p>
+          <p>
+            Vous n'avez jamais besoin de configurer un serveur, de mettre en place NGINX, de gérer le SSL ou de
+            vous soucier de la mise à l'échelle. Lovable Cloud s'occupe de tout cela. Vous vous concentrez sur le
+            produit ; la plateforme gère l'infrastructure.
+          </p>
+        </div>
       </div>
 
       <!-- Environments -->
-      <h2>Environments</h2>
+      <h2 class="lang-en">Environments</h2>
+      <h2 class="lang-fr">Environnements</h2>
 
       <div class="content-card">
-        <p>
+        <p class="lang-en">
           Professional software development uses <strong>environments</strong> to separate
           different stages of your app. Lovable Cloud supports this pattern:
         </p>
+        <p class="lang-fr">
+          Le développement logiciel professionnel utilise des <strong>environnements</strong> pour séparer
+          les différentes étapes de votre application. Lovable Cloud prend en charge ce modèle :
+        </p>
 
-        <table class="comparison-table">
+        <table class="comparison-table lang-en">
           <thead>
             <tr>
               <th>Environment</th>
@@ -102,32 +155,76 @@
             </tr>
           </tbody>
         </table>
+        <table class="comparison-table lang-fr">
+          <thead>
+            <tr>
+              <th>Environnement</th>
+              <th>Objectif</th>
+              <th>Qui l'utilise</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Preview</strong></td>
+              <td>Aperçu en direct pendant le développement. Mis à jour à chaque prompt.</td>
+              <td>Vous (le créateur)</td>
+            </tr>
+            <tr>
+              <td><strong>Staging</strong></td>
+              <td>Un environnement de test pour l'assurance qualité avant la mise en ligne.</td>
+              <td>Vous + testeurs</td>
+            </tr>
+            <tr>
+              <td><strong>Production</strong></td>
+              <td>La version en ligne accessible aux utilisateurs réels.</td>
+              <td>Tout le monde (public)</td>
+            </tr>
+          </tbody>
+        </table>
 
-        <h3>Why Environments Matter</h3>
-        <p>
+        <h3 class="lang-en">Why Environments Matter</h3>
+        <h3 class="lang-fr">Pourquoi les environnements sont importants</h3>
+
+        <p class="lang-en">
           Without environments, every change you make is immediately visible to users. This is
           dangerous — a broken prompt could take down your live app. Environments let you test
           changes safely before pushing them to production.
         </p>
+        <p class="lang-fr">
+          Sans environnements, chaque modification que vous effectuez est immédiatement visible par les utilisateurs.
+          C'est risqué — un prompt défaillant pourrait rendre votre application en production inaccessible.
+          Les environnements vous permettent de tester les modifications en toute sécurité avant de les pousser en production.
+        </p>
 
-        <div class="highlight-box tip">
+        <div class="highlight-box tip lang-en">
           <p class="box-title">&#128161; Best Practice</p>
           <p>
             Always test new features in the preview environment first. Only promote to production
             when you've verified everything works correctly.
           </p>
         </div>
+        <div class="highlight-box tip lang-fr">
+          <p class="box-title">&#128161; Bonne pratique</p>
+          <p>
+            Testez toujours les nouvelles fonctionnalités dans l'environnement preview en premier.
+            Ne passez en production que lorsque vous avez vérifié que tout fonctionne correctement.
+          </p>
+        </div>
       </div>
 
       <!-- Deployment Flow -->
-      <h2>Deployment Flow</h2>
+      <h2 class="lang-en">Deployment Flow</h2>
+      <h2 class="lang-fr">Flux de déploiement</h2>
 
       <div class="content-card">
-        <p>
+        <p class="lang-en">
           Deploying with Lovable Cloud follows a simple, predictable flow:
         </p>
+        <p class="lang-fr">
+          Le déploiement avec Lovable Cloud suit un flux simple et prévisible :
+        </p>
 
-        <ol class="steps-list">
+        <ol class="steps-list lang-en">
           <li>
             <strong>Build in Lovable:</strong> Use prompts and Visual Mode to create or update
             your app. Every change is automatically reflected in the preview.
@@ -153,9 +250,36 @@
             user-reported bugs. Roll back if needed.
           </li>
         </ol>
+        <ol class="steps-list lang-fr">
+          <li>
+            <strong>Construire dans Lovable :</strong> Utilisez les prompts et le Visual Mode pour créer ou
+            mettre à jour votre application. Chaque modification est automatiquement reflétée dans l'aperçu.
+          </li>
+          <li>
+            <strong>Tester dans le Preview :</strong> Parcourez votre application dans le panneau d'aperçu.
+            Testez toutes les fonctionnalités, formulaires, la navigation et les cas limites.
+          </li>
+          <li>
+            <strong>Déployer en Staging :</strong> Une fois satisfait, cliquez sur « Deploy » et sélectionnez
+            l'environnement staging. Partagez l'URL staging avec les testeurs.
+          </li>
+          <li>
+            <strong>QA et retours :</strong> Les testeurs vérifient le fonctionnement. Collectez les retours
+            et corrigez les problèmes identifiés.
+          </li>
+          <li>
+            <strong>Promouvoir en Production :</strong> Une fois approuvé, promouvez le build staging en
+            production. Votre URL en ligne est mise à jour instantanément.
+          </li>
+          <li>
+            <strong>Surveiller :</strong> Après le déploiement, vérifiez les erreurs, les problèmes de
+            performance ou les bugs signalés par les utilisateurs. Effectuez un rollback si nécessaire.
+          </li>
+        </ol>
 
         <div class="code-block">
-          <span class="code-label">Flow Diagram</span>
+          <span class="code-label lang-en">Flow Diagram</span>
+          <span class="code-label lang-fr">Diagramme de flux</span>
           <code>  Build (Prompt/Visual)
         ↓
   Preview (auto-updated)
@@ -173,34 +297,58 @@
       </div>
 
       <!-- Version Control -->
-      <h2>Version Control</h2>
+      <h2 class="lang-en">Version Control</h2>
+      <h2 class="lang-fr">Contrôle de version</h2>
 
       <div class="content-card">
-        <p>
+        <p class="lang-en">
           Version control means keeping a history of every change made to your project. Lovable
           provides built-in version control so you can:
         </p>
+        <p class="lang-fr">
+          Le contrôle de version consiste à conserver un historique de chaque modification apportée à votre projet.
+          Lovable fournit un contrôle de version intégré qui vous permet de :
+        </p>
 
-        <ul>
+        <ul class="lang-en">
           <li><strong>See change history:</strong> Every prompt you send creates a new version snapshot.</li>
           <li><strong>Roll back:</strong> If a change breaks something, restore a previous working version.</li>
           <li><strong>Compare versions:</strong> See what changed between any two snapshots.</li>
           <li><strong>Branch (via GitHub):</strong> Lovable integrates with GitHub. You can push your code to a repository and use standard Git workflows.</li>
         </ul>
+        <ul class="lang-fr">
+          <li><strong>Voir l'historique des modifications :</strong> Chaque prompt que vous envoyez crée un nouvel instantané de version.</li>
+          <li><strong>Revenir en arrière :</strong> Si une modification casse quelque chose, restaurez une version fonctionnelle précédente.</li>
+          <li><strong>Comparer les versions :</strong> Visualisez ce qui a changé entre deux instantanés.</li>
+          <li><strong>Créer des branches (via GitHub) :</strong> Lovable s'intègre avec GitHub. Vous pouvez pousser votre code vers un dépôt et utiliser les workflows Git standards.</li>
+        </ul>
 
-        <h3>Lovable + GitHub Integration</h3>
-        <p>
+        <h3 class="lang-en">Lovable + GitHub Integration</h3>
+        <h3 class="lang-fr">Intégration Lovable + GitHub</h3>
+
+        <p class="lang-en">
           Lovable can sync your project with a GitHub repository. This gives you:
         </p>
-        <ul>
+        <p class="lang-fr">
+          Lovable peut synchroniser votre projet avec un dépôt GitHub. Cela vous offre :
+        </p>
+
+        <ul class="lang-en">
           <li>Full Git history with commits for each change</li>
           <li>Ability to clone the repo and work locally</li>
           <li>Pull requests and code reviews if you have a team</li>
           <li>CI/CD pipeline integration if needed</li>
         </ul>
+        <ul class="lang-fr">
+          <li>Un historique Git complet avec des commits pour chaque modification</li>
+          <li>La possibilité de cloner le dépôt et de travailler localement</li>
+          <li>Des pull requests et des revues de code si vous avez une équipe</li>
+          <li>L'intégration de pipelines CI/CD si nécessaire</li>
+        </ul>
 
         <div class="code-block">
-          <span class="code-label">Example Git Flow</span>
+          <span class="code-label lang-en">Example Git Flow</span>
+          <span class="code-label lang-fr">Exemple de flux Git</span>
           <code>  Lovable generates code
         ↓
   Auto-commit to GitHub (main branch)
@@ -212,25 +360,40 @@
   Lovable syncs with latest main</code>
         </div>
 
-        <div class="highlight-box warning">
+        <div class="highlight-box warning lang-en">
           <p class="box-title">&#9888;&#65039; Important</p>
           <p>
             If you make changes in GitHub directly (outside Lovable), make sure to sync before
             building more in Lovable to avoid conflicts.
           </p>
         </div>
+        <div class="highlight-box warning lang-fr">
+          <p class="box-title">&#9888;&#65039; Important</p>
+          <p>
+            Si vous effectuez des modifications directement dans GitHub (en dehors de Lovable), assurez-vous
+            de synchroniser avant de continuer à construire dans Lovable pour éviter les conflits.
+          </p>
+        </div>
       </div>
 
       <!-- Summary -->
-      <h2>Section Summary</h2>
+      <h2 class="lang-en">Section Summary</h2>
+      <h2 class="lang-fr">Résumé de la section</h2>
 
       <div class="content-card">
-        <ol class="steps-list">
+        <ol class="steps-list lang-en">
           <li>Lovable Cloud provides built-in hosting with CDN, SSL, and serverless functions.</li>
           <li>Use environments (preview, staging, production) to separate development from live.</li>
           <li>Follow the deployment flow: build → test → staging → QA → production → monitor.</li>
           <li>Built-in version control lets you track changes, roll back, and compare versions.</li>
           <li>GitHub integration adds full Git history, branching, and team collaboration.</li>
+        </ol>
+        <ol class="steps-list lang-fr">
+          <li>Lovable Cloud fournit un hébergement intégré avec CDN, SSL et des fonctions serverless.</li>
+          <li>Utilisez les environnements (preview, staging, production) pour séparer le développement de la mise en ligne.</li>
+          <li>Suivez le flux de déploiement : construire → tester → staging → QA → production → surveiller.</li>
+          <li>Le contrôle de version intégré vous permet de suivre les modifications, de revenir en arrière et de comparer les versions.</li>
+          <li>L'intégration GitHub ajoute un historique Git complet, la gestion des branches et la collaboration en équipe.</li>
         </ol>
       </div>
 
@@ -239,8 +402,10 @@
 
   <!-- ====== Footer ====== -->
   <footer class="section-footer">
-    <a href="../index.html" class="btn btn-back">&larr; Back to Presentation</a>
+    <a href="../index.html" class="btn btn-back lang-en">&larr; Back to Presentation</a>
+    <a href="../index.html" class="btn btn-back lang-fr">&larr; Retour à la présentation</a>
   </footer>
 
+  <script src="../js/lang.js"></script>
 </body>
 </html>

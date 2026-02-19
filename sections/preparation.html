@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,14 +11,25 @@
   <!-- ====== Header ====== -->
   <header class="section-header">
     <div class="container">
-      <nav class="breadcrumb">
+      <nav class="breadcrumb lang-en">
         <a href="../index.html">Home</a> <span>&rsaquo;</span> Project Preparation
       </nav>
-      <h1 class="section-title">Project Preparation</h1>
-      <p class="section-subtitle">
+      <nav class="breadcrumb lang-fr">
+        <a href="../index.html">Accueil</a> <span>&rsaquo;</span> Préparation du projet
+      </nav>
+
+      <h1 class="section-title lang-en">Project Preparation</h1>
+      <h1 class="section-title lang-fr">Préparation du projet</h1>
+
+      <p class="section-subtitle lang-en">
         Great software starts long before the first line of code. Learn how to prepare your project for success.
       </p>
-      <span class="reading-time">&#128337; Estimated reading time: 12 minutes</span>
+      <p class="section-subtitle lang-fr">
+        Un bon logiciel commence bien avant la première ligne de code. Apprenez à préparer votre projet pour réussir.
+      </p>
+
+      <span class="reading-time lang-en">&#128337; Estimated reading time: 12 minutes</span>
+      <span class="reading-time lang-fr">&#128337; Temps de lecture estimé : 12 minutes</span>
     </div>
   </header>
 
@@ -27,56 +38,94 @@
     <div class="container">
 
       <!-- Why Preparation Matters -->
-      <h2>Why Preparation Matters</h2>
+      <h2 class="lang-en">Why Preparation Matters</h2>
+      <h2 class="lang-fr">Pourquoi la préparation est essentielle</h2>
 
       <div class="content-card">
-        <p>
+        <p class="lang-en">
           Imagine building a house without a blueprint. You might start with the walls, realise the
           door is in the wrong place, tear it down, and start over. Software works exactly the same
           way.
         </p>
-        <p>
+        <p class="lang-fr">
+          Imaginez construire une maison sans plan. Vous pourriez commencer par les murs, réaliser
+          que la porte est au mauvais endroit, tout démolir et recommencer. Le développement logiciel
+          fonctionne exactement de la même manière.
+        </p>
+
+        <p class="lang-en">
           <strong>Preparation reduces waste.</strong> When you invest time upfront to clarify your
           goals, understand your users, and define success metrics, every minute of building time
           that follows becomes dramatically more productive.
         </p>
-        <p>
+        <p class="lang-fr">
+          <strong>La préparation réduit le gaspillage.</strong> Lorsque vous investissez du temps
+          en amont pour clarifier vos objectifs, comprendre vos utilisateurs et définir des
+          indicateurs de succès, chaque minute de développement qui suit devient considérablement
+          plus productive.
+        </p>
+
+        <p class="lang-en">
           This is especially true with Lovable. Because the AI builds so quickly, a vague prompt
           can produce a fully built — but completely wrong — application in minutes. Preparation
           ensures you build the <em>right thing</em>, not just <em>a thing</em>.
         </p>
+        <p class="lang-fr">
+          C'est particulièrement vrai avec Lovable. Comme l'IA construit très rapidement, un prompt
+          vague peut produire une application entièrement développée — mais complètement inadaptée —
+          en quelques minutes. La préparation garantit que vous construisez <em>la bonne chose</em>,
+          et pas simplement <em>quelque chose</em>.
+        </p>
       </div>
 
-      <div class="highlight-box info">
+      <div class="highlight-box info lang-en">
         <p class="box-title">&#128218; Remember</p>
         <p>
           "Weeks of coding can save you hours of planning." — an old engineering proverb that is
           even more relevant in the age of AI.
         </p>
       </div>
+      <div class="highlight-box info lang-fr">
+        <p class="box-title">&#128218; À retenir</p>
+        <p>
+          « Des semaines de développement peuvent vous faire économiser des heures de planification. »
+          — un vieil adage d'ingénierie encore plus pertinent à l'ère de l'IA.
+        </p>
+      </div>
 
       <!-- Understanding the Problem -->
-      <h2>Understanding the Problem</h2>
+      <h2 class="lang-en">Understanding the Problem</h2>
+      <h2 class="lang-fr">Comprendre le problème</h2>
 
       <div class="content-card">
-        <p>
+        <p class="lang-en">
           Before you think about features, screens, or technology, ask yourself one question:
           <strong>"What problem am I solving?"</strong>
         </p>
-        <p>Write down the answer in one or two sentences. If you can't, you're not ready to build yet.</p>
+        <p class="lang-fr">
+          Avant de penser aux fonctionnalités, aux écrans ou à la technologie, posez-vous une
+          question : <strong>« Quel problème est-ce que je résous ? »</strong>
+        </p>
 
-        <h3>Problem Statement Template</h3>
+        <p class="lang-en">Write down the answer in one or two sentences. If you can't, you're not ready to build yet.</p>
+        <p class="lang-fr">Écrivez la réponse en une ou deux phrases. Si vous n'y parvenez pas, vous n'êtes pas encore prêt à développer.</p>
+
+        <h3 class="lang-en">Problem Statement Template</h3>
+        <h3 class="lang-fr">Modèle d'énoncé du problème</h3>
         <div class="code-block">
-          <span class="code-label">Template</span>
+          <span class="code-label lang-en">Template</span>
+          <span class="code-label lang-fr">Modèle</span>
           <code>[Target users] need a way to [action/goal]
 because [reason/pain point].
 Currently, they [current workaround],
 which is [why it's inadequate].</code>
         </div>
 
-        <h3>Example</h3>
+        <h3 class="lang-en">Example</h3>
+        <h3 class="lang-fr">Exemple</h3>
         <div class="code-block">
-          <span class="code-label">Example</span>
+          <span class="code-label lang-en">Example</span>
+          <span class="code-label lang-fr">Exemple</span>
           <code>Freelance designers need a way to track project hours
 because they bill clients by the hour.
 Currently, they use spreadsheets,
@@ -85,27 +134,44 @@ which are error-prone and lack automation.</code>
       </div>
 
       <!-- User Personas -->
-      <h2>Defining User Personas</h2>
+      <h2 class="lang-en">Defining User Personas</h2>
+      <h2 class="lang-fr">Définir les personas utilisateurs</h2>
 
       <div class="content-card">
-        <p>
+        <p class="lang-en">
           A <strong>user persona</strong> is a fictional but realistic description of one type of
           person who will use your app. Personas keep your design decisions grounded in reality
           instead of assumptions.
         </p>
+        <p class="lang-fr">
+          Un <strong>persona utilisateur</strong> est une description fictive mais réaliste d'un
+          type de personne qui utilisera votre application. Les personas ancrent vos décisions de
+          conception dans la réalité plutôt que dans des suppositions.
+        </p>
 
-        <h3>What to Include in a Persona</h3>
-        <ul>
+        <h3 class="lang-en">What to Include in a Persona</h3>
+        <h3 class="lang-fr">Que faut-il inclure dans un persona</h3>
+
+        <ul class="lang-en">
           <li><strong>Name &amp; role:</strong> "Sarah, 32, freelance graphic designer"</li>
           <li><strong>Goals:</strong> What do they want to achieve?</li>
           <li><strong>Pain points:</strong> What frustrates them today?</li>
           <li><strong>Tech comfort:</strong> Are they tech-savvy or beginners?</li>
           <li><strong>Context:</strong> When and where will they use your app?</li>
         </ul>
+        <ul class="lang-fr">
+          <li><strong>Nom et rôle :</strong> « Sarah, 32 ans, graphiste freelance »</li>
+          <li><strong>Objectifs :</strong> Que souhaitent-ils accomplir ?</li>
+          <li><strong>Points de friction :</strong> Qu'est-ce qui les frustre aujourd'hui ?</li>
+          <li><strong>Aisance technologique :</strong> Sont-ils à l'aise avec la technologie ou débutants ?</li>
+          <li><strong>Contexte :</strong> Quand et où utiliseront-ils votre application ?</li>
+        </ul>
 
-        <h3>Example Persona</h3>
+        <h3 class="lang-en">Example Persona</h3>
+        <h3 class="lang-fr">Exemple de persona</h3>
         <div class="code-block">
-          <span class="code-label">Persona</span>
+          <span class="code-label lang-en">Persona</span>
+          <span class="code-label lang-fr">Persona</span>
           <code>Name: Sarah
 Role: Freelance graphic designer
 Age: 32
@@ -115,26 +181,41 @@ Tech Comfort: Medium — uses Figma, Notion, Slack
 Context: Works from home, uses laptop + phone</code>
         </div>
 
-        <div class="highlight-box tip">
+        <div class="highlight-box tip lang-en">
           <p class="box-title">&#128161; Tip</p>
           <p>
             Create 2–3 personas maximum. More than that and you'll lose focus. Your MVP should
             serve your <em>primary</em> persona extremely well.
           </p>
         </div>
+        <div class="highlight-box tip lang-fr">
+          <p class="box-title">&#128161; Conseil</p>
+          <p>
+            Créez 2 à 3 personas maximum. Au-delà, vous perdrez en concentration. Votre MVP doit
+            servir votre persona <em>principal</em> de manière excellente.
+          </p>
+        </div>
       </div>
 
       <!-- Success Metrics -->
-      <h2>Defining Success Metrics</h2>
+      <h2 class="lang-en">Defining Success Metrics</h2>
+      <h2 class="lang-fr">Définir les indicateurs de succès</h2>
 
       <div class="content-card">
-        <p>
+        <p class="lang-en">
           How will you know if your app is successful? Without metrics, you're guessing. Define
           measurable goals <strong>before</strong> you start building.
         </p>
+        <p class="lang-fr">
+          Comment saurez-vous si votre application est un succès ? Sans indicateurs, vous ne faites
+          que deviner. Définissez des objectifs mesurables <strong>avant</strong> de commencer à
+          développer.
+        </p>
 
-        <h3>Types of Metrics</h3>
-        <table class="comparison-table">
+        <h3 class="lang-en">Types of Metrics</h3>
+        <h3 class="lang-fr">Types d'indicateurs</h3>
+
+        <table class="comparison-table lang-en">
           <thead>
             <tr>
               <th>Metric Type</th>
@@ -170,54 +251,127 @@ Context: Works from home, uses laptop + phone</code>
             </tr>
           </tbody>
         </table>
+        <table class="comparison-table lang-fr">
+          <thead>
+            <tr>
+              <th>Type d'indicateur</th>
+              <th>Exemple</th>
+              <th>Quand l'utiliser</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Acquisition</td>
+              <td>100 inscriptions la première semaine</td>
+              <td>Valider la demande</td>
+            </tr>
+            <tr>
+              <td>Activation</td>
+              <td>60 % complètent l'onboarding</td>
+              <td>Mesurer la première expérience</td>
+            </tr>
+            <tr>
+              <td>Rétention</td>
+              <td>40 % reviennent sous 7 jours</td>
+              <td>Tester la fidélisation</td>
+            </tr>
+            <tr>
+              <td>Revenus</td>
+              <td>10 conversions payantes/mois</td>
+              <td>Viabilité commerciale</td>
+            </tr>
+            <tr>
+              <td>Complétion de tâche</td>
+              <td>L'utilisateur enregistre le temps en &lt; 30 sec</td>
+              <td>Qualité UX</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
       <!-- Common Mistakes -->
-      <h2>Common Mistakes</h2>
+      <h2 class="lang-en">Common Mistakes</h2>
+      <h2 class="lang-fr">Erreurs courantes</h2>
 
       <div class="content-card">
-        <div class="highlight-box warning">
+        <div class="highlight-box warning lang-en">
           <p class="box-title">&#9888;&#65039; Mistake 1: Skipping research</p>
           <p>
             Building without talking to real potential users. Your assumptions about what people
             need are almost always wrong. Talk to at least 5 people before building anything.
           </p>
         </div>
+        <div class="highlight-box warning lang-fr">
+          <p class="box-title">&#9888;&#65039; Erreur 1 : Négliger la recherche</p>
+          <p>
+            Développer sans parler à de vrais utilisateurs potentiels. Vos suppositions sur les
+            besoins des gens sont presque toujours fausses. Parlez à au moins 5 personnes avant
+            de construire quoi que ce soit.
+          </p>
+        </div>
 
-        <div class="highlight-box warning">
+        <div class="highlight-box warning lang-en">
           <p class="box-title">&#9888;&#65039; Mistake 2: Feature overload</p>
           <p>
             Trying to build everything at once. Your MVP should have 3–5 core features, not 30.
             If you can't describe your app in one sentence, it's too complex.
           </p>
         </div>
+        <div class="highlight-box warning lang-fr">
+          <p class="box-title">&#9888;&#65039; Erreur 2 : Surcharge de fonctionnalités</p>
+          <p>
+            Essayer de tout construire en une seule fois. Votre MVP devrait comporter 3 à 5
+            fonctionnalités essentielles, pas 30. Si vous ne pouvez pas décrire votre application
+            en une phrase, elle est trop complexe.
+          </p>
+        </div>
 
-        <div class="highlight-box warning">
+        <div class="highlight-box warning lang-en">
           <p class="box-title">&#9888;&#65039; Mistake 3: Vague goals</p>
           <p>
             "I want to build something cool" is not a goal. "I want freelancers to track billable
             hours in under 30 seconds" is a goal.
           </p>
         </div>
+        <div class="highlight-box warning lang-fr">
+          <p class="box-title">&#9888;&#65039; Erreur 3 : Objectifs vagues</p>
+          <p>
+            « Je veux créer quelque chose de cool » n'est pas un objectif. « Je veux que les
+            freelances enregistrent leurs heures facturables en moins de 30 secondes » est un objectif.
+          </p>
+        </div>
 
-        <div class="highlight-box warning">
+        <div class="highlight-box warning lang-en">
           <p class="box-title">&#9888;&#65039; Mistake 4: Ignoring the competition</p>
           <p>
             If similar tools exist, study them. What do they do well? What do they do poorly?
             Your app should clearly improve on at least one dimension.
           </p>
         </div>
+        <div class="highlight-box warning lang-fr">
+          <p class="box-title">&#9888;&#65039; Erreur 4 : Ignorer la concurrence</p>
+          <p>
+            Si des outils similaires existent, étudiez-les. Que font-ils bien ? Que font-ils mal ?
+            Votre application doit clairement s'améliorer sur au moins un aspect.
+          </p>
+        </div>
       </div>
 
       <!-- Example: Idea → Plan -->
-      <h2>Example: Turning an Idea into a Structured Plan</h2>
+      <h2 class="lang-en">Example: Turning an Idea into a Structured Plan</h2>
+      <h2 class="lang-fr">Exemple : Transformer une idée en plan structuré</h2>
 
       <div class="content-card">
-        <h3>Raw Idea</h3>
-        <p><em>"I want to build a time-tracking app for freelancers."</em></p>
+        <h3 class="lang-en">Raw Idea</h3>
+        <h3 class="lang-fr">Idée brute</h3>
 
-        <h3>Step-by-Step Structuring</h3>
-        <ol class="steps-list">
+        <p class="lang-en"><em>"I want to build a time-tracking app for freelancers."</em></p>
+        <p class="lang-fr"><em>« Je veux créer une application de suivi du temps pour les freelances. »</em></p>
+
+        <h3 class="lang-en">Step-by-Step Structuring</h3>
+        <h3 class="lang-fr">Structuration étape par étape</h3>
+
+        <ol class="steps-list lang-en">
           <li>
             <strong>Define the problem:</strong> Freelancers lose money because they forget to log
             hours or use error-prone spreadsheets.
@@ -244,24 +398,63 @@ Context: Works from home, uses laptop + phone</code>
             which are error-prone and lack automation."
           </li>
         </ol>
+        <ol class="steps-list lang-fr">
+          <li>
+            <strong>Définir le problème :</strong> Les freelances perdent de l'argent parce qu'ils
+            oublient de consigner leurs heures ou utilisent des tableurs sujets aux erreurs.
+          </li>
+          <li>
+            <strong>Identifier le persona principal :</strong> Sarah, 32 ans, graphiste freelance,
+            travaille depuis chez elle, a besoin d'une solution adaptée au mobile.
+          </li>
+          <li>
+            <strong>Définir les indicateurs de succès :</strong> 50 inscriptions la première
+            semaine, 60 % complètent l'onboarding, enregistrement du temps en moins de 30 secondes
+            en moyenne.
+          </li>
+          <li>
+            <strong>Lister les fonctionnalités essentielles (MVP) :</strong> Chronomètre
+            start/stop, saisie manuelle du temps, catégorisation par projet, export du récapitulatif
+            hebdomadaire.
+          </li>
+          <li>
+            <strong>Lister les fonctionnalités souhaitables (post-MVP) :</strong> Génération de
+            factures, portail client, intégrations avec Stripe/Notion.
+          </li>
+          <li>
+            <strong>Rédiger l'énoncé du problème :</strong> « Les graphistes freelances ont besoin
+            d'un moyen de suivre les heures par projet car ils facturent à l'heure. Actuellement,
+            ils utilisent des tableurs, qui sont sujets aux erreurs et manquent d'automatisation. »
+          </li>
+        </ol>
       </div>
 
       <figure class="image-figure">
         <img src="../assets/images/plan.png" alt="Structured project plan example" />
-        <figcaption>A structured plan turns a vague idea into an actionable project brief.</figcaption>
+        <figcaption class="lang-en">A structured plan turns a vague idea into an actionable project brief.</figcaption>
+        <figcaption class="lang-fr">Un plan structuré transforme une idée vague en un cahier des charges exploitable.</figcaption>
       </figure>
 
       <!-- Summary -->
-      <h2>Section Summary</h2>
+      <h2 class="lang-en">Section Summary</h2>
+      <h2 class="lang-fr">Résumé de la section</h2>
 
       <div class="content-card">
-        <ol class="steps-list">
+        <ol class="steps-list lang-en">
           <li>Preparation prevents wasted build time — especially with AI tools that build fast.</li>
           <li>Start by clearly defining the problem you're solving in 1–2 sentences.</li>
           <li>Create 2–3 user personas to ground your design decisions in reality.</li>
           <li>Set measurable success metrics before writing a single prompt.</li>
           <li>Avoid common traps: feature overload, skipping research, and vague goals.</li>
           <li>Structure your raw idea into a clear plan before moving to the PRD stage.</li>
+        </ol>
+        <ol class="steps-list lang-fr">
+          <li>La préparation évite de perdre du temps de développement — surtout avec des outils d'IA qui construisent rapidement.</li>
+          <li>Commencez par définir clairement le problème que vous résolvez en 1 à 2 phrases.</li>
+          <li>Créez 2 à 3 personas utilisateurs pour ancrer vos décisions de conception dans la réalité.</li>
+          <li>Définissez des indicateurs de succès mesurables avant d'écrire le moindre prompt.</li>
+          <li>Évitez les pièges courants : surcharge de fonctionnalités, absence de recherche et objectifs vagues.</li>
+          <li>Structurez votre idée brute en un plan clair avant de passer à l'étape du PRD.</li>
         </ol>
       </div>
 
@@ -270,8 +463,10 @@ Context: Works from home, uses laptop + phone</code>
 
   <!-- ====== Footer ====== -->
   <footer class="section-footer">
-    <a href="../index.html" class="btn btn-back">&larr; Back to Presentation</a>
+    <a href="../index.html" class="btn btn-back lang-en">&larr; Back to Presentation</a>
+    <a href="../index.html" class="btn btn-back lang-fr">&larr; Retour à la présentation</a>
   </footer>
 
+  <script src="../js/lang.js"></script>
 </body>
 </html>

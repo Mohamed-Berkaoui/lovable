@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,14 +11,22 @@
   <!-- ====== Header ====== -->
   <header class="section-header">
     <div class="container">
-      <nav class="breadcrumb">
+      <nav class="breadcrumb lang-en">
         <a href="../index.html">Home</a> <span>&rsaquo;</span> PRD Creation
       </nav>
-      <h1 class="section-title">PRD Creation</h1>
-      <p class="section-subtitle">
+      <nav class="breadcrumb lang-fr">
+        <a href="../index.html">Accueil</a> <span>&rsaquo;</span> Création du PRD
+      </nav>
+      <h1 class="section-title lang-en">PRD Creation</h1>
+      <h1 class="section-title lang-fr">Création du PRD</h1>
+      <p class="section-subtitle lang-en">
         The Product Requirements Document is your blueprint. Learn how to write one that Lovable can execute flawlessly.
       </p>
-      <span class="reading-time">&#128337; Estimated reading time: 15 minutes</span>
+      <p class="section-subtitle lang-fr">
+        Le Product Requirements Document est votre plan directeur. Apprenez à en rédiger un que Lovable pourra exécuter parfaitement.
+      </p>
+      <span class="reading-time lang-en">&#128337; Estimated reading time: 15 minutes</span>
+      <span class="reading-time lang-fr">&#128337; Temps de lecture estimé : 15 minutes</span>
     </div>
   </header>
 
@@ -27,35 +35,57 @@
     <div class="container">
 
       <!-- What is a PRD? -->
-      <h2>What Is a PRD?</h2>
+      <h2 class="lang-en">What Is a PRD?</h2>
+      <h2 class="lang-fr">Qu'est-ce qu'un PRD ?</h2>
 
       <div class="content-card">
-        <p>
+        <p class="lang-en">
           A <strong>Product Requirements Document (PRD)</strong> is a structured document that
           describes <em>exactly</em> what a product should do, who it's for, and how it should
           behave. It acts as the single source of truth between the idea and the implementation.
         </p>
-        <p>
+        <p class="lang-fr">
+          Un <strong>Product Requirements Document (PRD)</strong> est un document structuré qui
+          décrit <em>exactement</em> ce que doit faire un produit, à qui il s'adresse et comment
+          il doit se comporter. Il constitue la source unique de vérité entre l'idée et sa réalisation.
+        </p>
+        <p class="lang-en">
           In traditional companies, PRDs are written by product managers and handed to engineering
           teams. With Lovable, the PRD is handed to an AI — which means precision matters even more,
           because the AI takes every word literally.
         </p>
+        <p class="lang-fr">
+          Dans les entreprises traditionnelles, les PRD sont rédigés par les chefs de produit et
+          transmis aux équipes de développement. Avec Lovable, le PRD est transmis à une IA — ce
+          qui signifie que la précision est encore plus importante, car l'IA prend chaque mot au
+          pied de la lettre.
+        </p>
       </div>
 
       <!-- Why Lovable Relies on PRDs -->
-      <h2>Why Lovable Relies on PRDs</h2>
+      <h2 class="lang-en">Why Lovable Relies on PRDs</h2>
+      <h2 class="lang-fr">Pourquoi Lovable s'appuie sur les PRD</h2>
 
       <div class="content-card">
-        <p>
+        <p class="lang-en">
           Lovable's AI interprets your instructions to generate code. The more structured and
           detailed your instructions, the more accurate the output. A PRD provides that structure.
         </p>
-        <p>
+        <p class="lang-fr">
+          L'IA de Lovable interprète vos instructions pour générer du code. Plus vos instructions
+          sont structurées et détaillées, plus le résultat est précis. Un PRD fournit cette structure.
+        </p>
+        <p class="lang-en">
           Without a PRD, you end up in an endless loop of "fix this", "change that", "no, not like
           that". With a PRD, you get most of it right on the first pass.
         </p>
+        <p class="lang-fr">
+          Sans PRD, vous entrez dans une boucle sans fin de « corrige ça », « change ça », « non,
+          pas comme ça ». Avec un PRD, vous obtenez la majeure partie du résultat correctement
+          dès le premier essai.
+        </p>
 
-        <div class="highlight-box info">
+        <div class="highlight-box info lang-en">
           <p class="box-title">&#128218; Think of it this way</p>
           <p>
             A PRD is like a restaurant order. If you say "bring me food", you'll get something —
@@ -63,15 +93,26 @@
             vegetables and lemon butter sauce", you'll get exactly what you need.
           </p>
         </div>
+        <div class="highlight-box info lang-fr">
+          <p class="box-title">&#128218; Voyez les choses ainsi</p>
+          <p>
+            Un PRD est comme une commande au restaurant. Si vous dites « apportez-moi à manger »,
+            vous recevrez quelque chose — mais probablement pas ce que vous vouliez. Si vous dites
+            « saumon grillé, à point, avec des légumes vapeur et une sauce au beurre citronné »,
+            vous obtiendrez exactement ce qu'il vous faut.
+          </p>
+        </div>
       </div>
 
       <!-- Required PRD Sections -->
-      <h2>Required PRD Sections</h2>
+      <h2 class="lang-en">Required PRD Sections</h2>
+      <h2 class="lang-fr">Sections requises d'un PRD</h2>
 
       <div class="content-card">
-        <p>Every good PRD should include the following sections:</p>
+        <p class="lang-en">Every good PRD should include the following sections:</p>
+        <p class="lang-fr">Tout bon PRD devrait inclure les sections suivantes :</p>
 
-        <ol class="steps-list">
+        <ol class="steps-list lang-en">
           <li>
             <strong>Project Overview:</strong> A 2–3 sentence summary of what the app does and
             who it serves.
@@ -108,27 +149,78 @@
             just as important as listing what you are building.
           </li>
         </ol>
+        <ol class="steps-list lang-fr">
+          <li>
+            <strong>Aperçu du projet :</strong> Un résumé de 2 à 3 phrases décrivant ce que fait
+            l'application et à qui elle s'adresse.
+          </li>
+          <li>
+            <strong>Énoncé du problème :</strong> Quel problème ce produit résout-il ?
+          </li>
+          <li>
+            <strong>Utilisateurs cibles :</strong> Qui utilisera le produit ? Incluez des personas
+            si possible.
+          </li>
+          <li>
+            <strong>Fonctionnalités principales :</strong> Une liste numérotée des fonctionnalités
+            indispensables pour le MVP.
+          </li>
+          <li>
+            <strong>Parcours utilisateurs :</strong> Descriptions étape par étape de la façon dont
+            un utilisateur navigue dans l'application (ex. : inscription → tableau de bord → créer
+            un projet → enregistrer le temps).
+          </li>
+          <li>
+            <strong>Pages et écrans :</strong> Listez chaque page/écran avec ses éléments et
+            sa fonction.
+          </li>
+          <li>
+            <strong>Exigences techniques :</strong> Schéma de base de données, méthode
+            d'authentification, intégrations, etc.
+          </li>
+          <li>
+            <strong>Directives de design :</strong> Couleurs, polices, préférences de mise en
+            page, exigences de responsive design.
+          </li>
+          <li>
+            <strong>Indicateurs de succès :</strong> Comment mesurerez-vous si le produit fonctionne ?
+          </li>
+          <li>
+            <strong>Hors périmètre :</strong> Listez explicitement ce que vous ne construisez PAS.
+            C'est tout aussi important que de lister ce que vous construisez.
+          </li>
+        </ol>
       </div>
 
       <!-- Bad PRD vs Good PRD -->
-      <h2>Bad PRD vs. Good PRD</h2>
+      <h2 class="lang-en">Bad PRD vs. Good PRD</h2>
+      <h2 class="lang-fr">Mauvais PRD vs. bon PRD</h2>
 
       <div class="content-card">
-        <h3>&#10060; Bad PRD</h3>
+        <h3 class="lang-en">&#10060; Bad PRD</h3>
+        <h3 class="lang-fr">&#10060; Mauvais PRD</h3>
         <div class="code-block">
-          <span class="code-label">Bad Example</span>
+          <span class="code-label lang-en">Bad Example</span>
+          <span class="code-label lang-fr">Mauvais exemple</span>
           <code>I want an online store. It should have products, a cart,
 and checkout. Make it look modern.</code>
         </div>
-        <p>
+        <p class="lang-en">
           <strong>Why it's bad:</strong> No target audience. No specifics about products (categories?
           variants? images?). "Modern" is subjective. No mention of authentication, payments, or
           database structure.
         </p>
+        <p class="lang-fr">
+          <strong>Pourquoi c'est mauvais :</strong> Pas de public cible. Aucune précision sur les
+          produits (catégories ? variantes ? images ?). « Moderne » est subjectif. Aucune mention
+          de l'authentification, des paiements ou de la structure de la base de données.
+        </p>
 
-        <h3>&#9989; Good PRD (Summary)</h3>
+        <h3 class="lang-en">&#9989; Good PRD (Summary)</h3>
+        <h3 class="lang-fr">&#9989; Bon PRD (Résumé)</h3>
         <div class="code-block">
-          <span class="code-label">Good Example</span>
+          <span class="code-label lang-en">Good Example</span>
+          <span class="code-label lang-fr">Bon exemple</span>
           <code>Project: TechMart — a B2C e-commerce store for consumer electronics.
 
 Target Users: Tech-savvy consumers aged 20–40 who prefer
@@ -159,31 +251,52 @@ Design: Clean, white background, blue accent (#2563eb),
       </div>
 
       <!-- Full PRD Example -->
-      <h2>Full PRD Example: TechMart B2C Store</h2>
+      <h2 class="lang-en">Full PRD Example: TechMart B2C Store</h2>
+      <h2 class="lang-fr">Exemple complet de PRD : boutique B2C TechMart</h2>
 
       <div class="content-card">
-        <h3>1. Project Overview</h3>
-        <p>
+        <h3 class="lang-en">1. Project Overview</h3>
+        <h3 class="lang-fr">1. Aperçu du projet</h3>
+        <p class="lang-en">
           TechMart is a business-to-consumer (B2C) online store specialising in consumer electronics.
           Users can browse products by category, read reviews, add items to a cart, and complete
           purchases using Stripe. Admins can manage inventory through a protected dashboard.
         </p>
+        <p class="lang-fr">
+          TechMart est une boutique en ligne B2C spécialisée dans l'électronique grand public.
+          Les utilisateurs peuvent parcourir les produits par catégorie, lire des avis, ajouter
+          des articles au panier et finaliser leurs achats via Stripe. Les administrateurs peuvent
+          gérer l'inventaire depuis un tableau de bord protégé.
+        </p>
 
-        <h3>2. Problem Statement</h3>
-        <p>
+        <h3 class="lang-en">2. Problem Statement</h3>
+        <h3 class="lang-fr">2. Énoncé du problème</h3>
+        <p class="lang-en">
           Tech enthusiasts want a simple, fast, and trustworthy place to buy electronics online
           without the clutter and complexity of large marketplaces like Amazon.
         </p>
+        <p class="lang-fr">
+          Les passionnés de technologie souhaitent un endroit simple, rapide et fiable pour acheter
+          de l'électronique en ligne, sans l'encombrement et la complexité des grandes places de
+          marché comme Amazon.
+        </p>
 
-        <h3>3. Target Users</h3>
-        <ul>
+        <h3 class="lang-en">3. Target Users</h3>
+        <h3 class="lang-fr">3. Utilisateurs cibles</h3>
+        <ul class="lang-en">
           <li><strong>Primary:</strong> Tech-savvy consumers, 20–40, comfortable buying online.</li>
           <li><strong>Secondary:</strong> Store admin who manages products and orders.</li>
         </ul>
+        <ul class="lang-fr">
+          <li><strong>Principaux :</strong> Consommateurs technophiles, 20–40 ans, à l'aise avec l'achat en ligne.</li>
+          <li><strong>Secondaires :</strong> Administrateur de la boutique qui gère les produits et les commandes.</li>
+        </ul>
 
-        <h3>4. Core Features (MVP)</h3>
+        <h3 class="lang-en">4. Core Features (MVP)</h3>
+        <h3 class="lang-fr">4. Fonctionnalités principales (MVP)</h3>
         <div class="code-block">
-          <span class="code-label">Features</span>
+          <span class="code-label lang-en">Features</span>
+          <span class="code-label lang-fr">Fonctionnalités</span>
           <code>1. Product catalog with categories and search
 2. Product detail pages with image gallery and specs
 3. Shopping cart (add, remove, update quantity)
@@ -193,9 +306,11 @@ Design: Clean, white background, blue accent (#2563eb),
 7. Admin dashboard (add/edit/delete products, view orders)</code>
         </div>
 
-        <h3>5. User Flows</h3>
+        <h3 class="lang-en">5. User Flows</h3>
+        <h3 class="lang-fr">5. Parcours utilisateurs</h3>
         <div class="code-block">
-          <span class="code-label">Main User Flow</span>
+          <span class="code-label lang-en">Main User Flow</span>
+          <span class="code-label lang-fr">Flux utilisateur principal</span>
           <code>Home → Browse Category → View Product → Add to Cart
 → View Cart → Checkout → Payment → Order Confirmation
 
@@ -204,8 +319,9 @@ Login → Admin Dashboard → Add Product → Set Price
 → Upload Images → Publish</code>
         </div>
 
-        <h3>6. Pages &amp; Screens</h3>
-        <table class="comparison-table">
+        <h3 class="lang-en">6. Pages &amp; Screens</h3>
+        <h3 class="lang-fr">6. Pages et écrans</h3>
+        <table class="comparison-table lang-en">
           <thead>
             <tr>
               <th>Page</th>
@@ -224,10 +340,31 @@ Login → Admin Dashboard → Add Product → Set Price
             <tr><td>Admin Dashboard</td><td>Product CRUD, order management</td><td>Yes (admin)</td></tr>
           </tbody>
         </table>
+        <table class="comparison-table lang-fr">
+          <thead>
+            <tr>
+              <th>Page</th>
+              <th>Éléments clés</th>
+              <th>Auth. requise</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Accueil</td><td>Hero, produits vedettes, navigation par catégorie</td><td>Non</td></tr>
+            <tr><td>Catégorie</td><td>Grille de produits, filtres, tri</td><td>Non</td></tr>
+            <tr><td>Détail produit</td><td>Images, caractéristiques, avis, ajout au panier</td><td>Non</td></tr>
+            <tr><td>Panier</td><td>Articles, quantité, sous-total</td><td>Non</td></tr>
+            <tr><td>Paiement</td><td>Formulaire de livraison, paiement</td><td>Oui</td></tr>
+            <tr><td>Historique des commandes</td><td>Commandes passées avec statut</td><td>Oui</td></tr>
+            <tr><td>Authentification</td><td>Connexion / Inscription</td><td>Non</td></tr>
+            <tr><td>Tableau de bord admin</td><td>CRUD produits, gestion des commandes</td><td>Oui (admin)</td></tr>
+          </tbody>
+        </table>
 
-        <h3>7. Tech Requirements</h3>
+        <h3 class="lang-en">7. Tech Requirements</h3>
+        <h3 class="lang-fr">7. Exigences techniques</h3>
         <div class="code-block">
-          <span class="code-label">Stack</span>
+          <span class="code-label lang-en">Stack</span>
+          <span class="code-label lang-fr">Stack</span>
           <code>Frontend: React + TypeScript + Tailwind CSS
 Backend: Supabase (PostgreSQL, Auth, Storage)
 Payments: Stripe Checkout
@@ -235,31 +372,51 @@ Hosting: Lovable Cloud
 Auth: Supabase Auth (email + Google OAuth)</code>
         </div>
 
-        <h3>8. Design Guidelines</h3>
-        <ul>
+        <h3 class="lang-en">8. Design Guidelines</h3>
+        <h3 class="lang-fr">8. Directives de design</h3>
+        <ul class="lang-en">
           <li>White background, blue accent (#2563eb)</li>
           <li>Card-based product layout with soft shadows</li>
           <li>Mobile-first responsive design</li>
           <li>Clean typography (Inter or system fonts)</li>
         </ul>
+        <ul class="lang-fr">
+          <li>Fond blanc, accent bleu (#2563eb)</li>
+          <li>Mise en page par cartes avec ombres douces</li>
+          <li>Design responsive mobile-first</li>
+          <li>Typographie épurée (Inter ou polices système)</li>
+        </ul>
 
-        <h3>9. Success Metrics</h3>
-        <ul>
+        <h3 class="lang-en">9. Success Metrics</h3>
+        <h3 class="lang-fr">9. Indicateurs de succès</h3>
+        <ul class="lang-en">
           <li>50 products listed within first week</li>
           <li>Average page load under 2 seconds</li>
           <li>Cart-to-checkout conversion above 30%</li>
         </ul>
+        <ul class="lang-fr">
+          <li>50 produits référencés dès la première semaine</li>
+          <li>Temps de chargement moyen inférieur à 2 secondes</li>
+          <li>Taux de conversion panier-paiement supérieur à 30 %</li>
+        </ul>
 
-        <h3>10. Out of Scope (v1)</h3>
-        <ul>
+        <h3 class="lang-en">10. Out of Scope (v1)</h3>
+        <h3 class="lang-fr">10. Hors périmètre (v1)</h3>
+        <ul class="lang-en">
           <li>Wishlist feature</li>
           <li>Multi-currency support</li>
           <li>Inventory tracking alerts</li>
           <li>Customer support chat</li>
         </ul>
+        <ul class="lang-fr">
+          <li>Fonctionnalité de liste de souhaits</li>
+          <li>Support multidevise</li>
+          <li>Alertes de suivi des stocks</li>
+          <li>Chat de support client</li>
+        </ul>
       </div>
 
-      <div class="highlight-box tip">
+      <div class="highlight-box tip lang-en">
         <p class="box-title">&#9989; Pro Tip</p>
         <p>
           Keep your PRD in a separate document (Google Doc, Notion, or Markdown file). Reference
@@ -267,17 +424,33 @@ Auth: Supabase Auth (email + Google OAuth)</code>
           of truth.
         </p>
       </div>
+      <div class="highlight-box tip lang-fr">
+        <p class="box-title">&#9989; Conseil de pro</p>
+        <p>
+          Conservez votre PRD dans un document séparé (Google Doc, Notion ou fichier Markdown).
+          Consultez-le à chaque fois que vous rédigez un nouveau prompt pour Lovable. La cohérence
+          vient d'une source unique de vérité.
+        </p>
+      </div>
 
       <!-- Summary -->
-      <h2>Section Summary</h2>
+      <h2 class="lang-en">Section Summary</h2>
+      <h2 class="lang-fr">Résumé de la section</h2>
 
       <div class="content-card">
-        <ol class="steps-list">
+        <ol class="steps-list lang-en">
           <li>A PRD is a structured blueprint that describes what to build and how.</li>
           <li>Lovable works best when given detailed, structured instructions — a PRD provides that.</li>
           <li>Include 10 key sections: overview, problem, users, features, flows, pages, tech, design, metrics, and out-of-scope.</li>
           <li>Bad PRDs are vague and subjective; good PRDs are specific and measurable.</li>
           <li>Always write your PRD before opening Lovable.</li>
+        </ol>
+        <ol class="steps-list lang-fr">
+          <li>Un PRD est un plan structuré qui décrit quoi construire et comment.</li>
+          <li>Lovable fonctionne mieux avec des instructions détaillées et structurées — un PRD fournit exactement cela.</li>
+          <li>Incluez 10 sections clés : aperçu, problème, utilisateurs, fonctionnalités, parcours, pages, technique, design, indicateurs et hors périmètre.</li>
+          <li>Les mauvais PRD sont vagues et subjectifs ; les bons PRD sont précis et mesurables.</li>
+          <li>Rédigez toujours votre PRD avant d'ouvrir Lovable.</li>
         </ol>
       </div>
 
@@ -286,8 +459,10 @@ Auth: Supabase Auth (email + Google OAuth)</code>
 
   <!-- ====== Footer ====== -->
   <footer class="section-footer">
-    <a href="../index.html" class="btn btn-back">&larr; Back to Presentation</a>
+    <a href="../index.html" class="btn btn-back lang-en">&larr; Back to Presentation</a>
+    <a href="../index.html" class="btn btn-back lang-fr">&larr; Retour à la présentation</a>
   </footer>
 
+  <script src="../js/lang.js"></script>
 </body>
 </html>

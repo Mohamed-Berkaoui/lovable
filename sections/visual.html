@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,14 +11,25 @@
   <!-- ====== Header ====== -->
   <header class="section-header">
     <div class="container">
-      <nav class="breadcrumb">
+      <nav class="breadcrumb lang-en">
         <a href="../index.html">Home</a> <span>&rsaquo;</span> Visual Mode
       </nav>
-      <h1 class="section-title">Visual Mode</h1>
-      <p class="section-subtitle">
+      <nav class="breadcrumb lang-fr">
+        <a href="../index.html">Accueil</a> <span>&rsaquo;</span> Mode Visuel
+      </nav>
+
+      <h1 class="section-title lang-en">Visual Mode</h1>
+      <h1 class="section-title lang-fr">Mode Visuel</h1>
+
+      <p class="section-subtitle lang-en">
         Click, drag, and tweak your UI visually — no code required. Understand when and how to use it.
       </p>
-      <span class="reading-time">&#128337; Estimated reading time: 9 minutes</span>
+      <p class="section-subtitle lang-fr">
+        Cliquez, glissez et ajustez votre interface visuellement — sans écrire de code. Découvrez quand et comment l'utiliser.
+      </p>
+
+      <span class="reading-time lang-en">&#128337; Estimated reading time: 9 minutes</span>
+      <span class="reading-time lang-fr">&#128337; Temps de lecture estimé : 9 minutes</span>
     </div>
   </header>
 
@@ -27,37 +38,61 @@
     <div class="container">
 
       <!-- What Is Visual Mode? -->
-      <h2>What Is Visual Mode?</h2>
+      <h2 class="lang-en">What Is Visual Mode?</h2>
+      <h2 class="lang-fr">Qu'est-ce que le Mode Visuel ?</h2>
 
       <div class="content-card">
-        <p>
+        <p class="lang-en">
           <strong>Visual Mode</strong> is a feature in Lovable that lets you edit your app's
           interface by directly clicking on elements in the preview, rather than writing text
           prompts. It provides a point-and-click editing experience similar to Figma or a
           WYSIWYG editor.
         </p>
-        <p>
+        <p class="lang-fr">
+          Le <strong>Mode Visuel</strong> est une fonctionnalité de Lovable qui vous permet de modifier
+          l'interface de votre application en cliquant directement sur les éléments dans l'aperçu,
+          plutôt qu'en rédigeant des prompts textuels. Il offre une expérience d'édition pointer-cliquer
+          similaire à Figma ou un éditeur WYSIWYG.
+        </p>
+
+        <p class="lang-en">
           When you activate Visual Mode, hovering over any element in the preview highlights it.
           Clicking selects it, and a panel appears with editable properties: text content, colours,
           spacing, font sizes, borders, and more.
         </p>
-        <p>
+        <p class="lang-fr">
+          Lorsque vous activez le Mode Visuel, le survol de n'importe quel élément dans l'aperçu
+          le met en surbrillance. Un clic le sélectionne, et un panneau apparaît avec les propriétés
+          modifiables : contenu textuel, couleurs, espacement, tailles de police, bordures, etc.
+        </p>
+
+        <p class="lang-en">
           Under the hood, Lovable translates your visual changes into actual code changes. So
           when you drag a button 20 pixels to the right in Visual Mode, the underlying CSS/JSX
           is updated accordingly.
         </p>
+        <p class="lang-fr">
+          En coulisses, Lovable traduit vos modifications visuelles en véritables changements de code.
+          Ainsi, lorsque vous déplacez un bouton de 20 pixels vers la droite en Mode Visuel,
+          le CSS/JSX sous-jacent est mis à jour en conséquence.
+        </p>
       </div>
 
       <!-- When to Use It -->
-      <h2>When to Use Visual Mode</h2>
+      <h2 class="lang-en">When to Use Visual Mode</h2>
+      <h2 class="lang-fr">Quand utiliser le Mode Visuel</h2>
 
       <div class="content-card">
-        <p>
+        <p class="lang-en">
           Visual Mode is ideal for <strong>small, visual adjustments</strong>. It's not designed
           for adding new features or changing business logic. Here's a guide:
         </p>
+        <p class="lang-fr">
+          Le Mode Visuel est idéal pour les <strong>petits ajustements visuels</strong>. Il n'est pas
+          conçu pour ajouter de nouvelles fonctionnalités ou modifier la logique métier. Voici un guide :
+        </p>
 
-        <table class="comparison-table">
+        <table class="comparison-table lang-en">
           <thead>
             <tr>
               <th>Use Visual Mode For</th>
@@ -92,67 +127,150 @@
           </tbody>
         </table>
 
-        <div class="highlight-box tip">
+        <table class="comparison-table lang-fr">
+          <thead>
+            <tr>
+              <th>Utiliser le Mode Visuel pour</th>
+              <th>Utiliser les prompts textuels pour</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Changer la couleur d'un bouton</td>
+              <td>Ajouter un nouveau bouton avec de la logique</td>
+            </tr>
+            <tr>
+              <td>Ajuster le padding/les marges</td>
+              <td>Restructurer l'ensemble de la mise en page</td>
+            </tr>
+            <tr>
+              <td>Modifier le contenu textuel</td>
+              <td>Ajouter du texte dynamique depuis une base de données</td>
+            </tr>
+            <tr>
+              <td>Changer la taille de police</td>
+              <td>Implémenter un sélecteur de thème</td>
+            </tr>
+            <tr>
+              <td>Ajuster le border radius</td>
+              <td>Ajouter la validation de formulaire</td>
+            </tr>
+            <tr>
+              <td>Masquer/afficher un élément</td>
+              <td>Rendu conditionnel basé sur les données</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="highlight-box tip lang-en">
           <p class="box-title">&#128161; Rule of Thumb</p>
           <p>
             If the change is purely cosmetic and takes less than 5 seconds to describe, use Visual
             Mode. If the change involves logic, data, or multiple elements, use a text prompt.
           </p>
         </div>
+        <div class="highlight-box tip lang-fr">
+          <p class="box-title">&#128161; Règle générale</p>
+          <p>
+            Si la modification est purement esthétique et prend moins de 5 secondes à décrire,
+            utilisez le Mode Visuel. Si elle implique de la logique, des données ou plusieurs
+            éléments, utilisez un prompt textuel.
+          </p>
+        </div>
       </div>
 
       <!-- Visual vs Textual Control -->
-      <h2>Visual vs. Textual Control</h2>
+      <h2 class="lang-en">Visual vs. Textual Control</h2>
+      <h2 class="lang-fr">Contrôle visuel vs. textuel</h2>
 
       <div class="content-card">
-        <p>
+        <p class="lang-en">
           Both visual and textual editing have strengths. The best approach is to use them
           <strong>together</strong>:
         </p>
+        <p class="lang-fr">
+          L'édition visuelle et textuelle ont chacune leurs forces. La meilleure approche
+          est de les utiliser <strong>ensemble</strong> :
+        </p>
 
-        <h3>Textual Prompts — Best For:</h3>
-        <ul>
+        <h3 class="lang-en">Textual Prompts — Best For:</h3>
+        <h3 class="lang-fr">Prompts textuels — Idéaux pour :</h3>
+
+        <ul class="lang-en">
           <li>Building new features from scratch</li>
           <li>Implementing complex logic (auth, data fetching, state management)</li>
           <li>Making changes that affect multiple pages simultaneously</li>
           <li>Creating reusable components with specific props</li>
         </ul>
+        <ul class="lang-fr">
+          <li>Construire de nouvelles fonctionnalités à partir de zéro</li>
+          <li>Implémenter une logique complexe (auth, data fetching, state management)</li>
+          <li>Effectuer des modifications affectant plusieurs pages simultanément</li>
+          <li>Créer des composants réutilisables avec des props spécifiques</li>
+        </ul>
 
-        <h3>Visual Mode — Best For:</h3>
-        <ul>
+        <h3 class="lang-en">Visual Mode — Best For:</h3>
+        <h3 class="lang-fr">Mode Visuel — Idéal pour :</h3>
+
+        <ul class="lang-en">
           <li>Fine-tuning spacing, alignment, and sizing</li>
           <li>Quick colour adjustments</li>
           <li>Editing static text (headings, labels, placeholder text)</li>
           <li>Previewing changes instantly before committing</li>
         </ul>
+        <ul class="lang-fr">
+          <li>Peaufiner l'espacement, l'alignement et le dimensionnement</li>
+          <li>Ajustements rapides des couleurs</li>
+          <li>Modifier le texte statique (titres, libellés, textes de remplacement)</li>
+          <li>Prévisualiser les modifications instantanément avant de valider</li>
+        </ul>
 
-        <h3>The Ideal Workflow</h3>
-        <ol class="steps-list">
+        <h3 class="lang-en">The Ideal Workflow</h3>
+        <h3 class="lang-fr">Le flux de travail idéal</h3>
+
+        <ol class="steps-list lang-en">
           <li><strong>Build with text prompts:</strong> Generate the feature structure and logic.</li>
           <li><strong>Review in preview:</strong> Check the output visually.</li>
           <li><strong>Polish with Visual Mode:</strong> Adjust spacing, colours, text as needed.</li>
           <li><strong>Refine with text prompts:</strong> If bigger changes are needed, go back to text.</li>
         </ol>
+        <ol class="steps-list lang-fr">
+          <li><strong>Construire avec les prompts textuels :</strong> Générer la structure et la logique de la fonctionnalité.</li>
+          <li><strong>Vérifier dans l'aperçu :</strong> Contrôler le résultat visuellement.</li>
+          <li><strong>Peaufiner avec le Mode Visuel :</strong> Ajuster l'espacement, les couleurs et le texte selon les besoins.</li>
+          <li><strong>Affiner avec les prompts textuels :</strong> Si des modifications plus importantes sont nécessaires, revenir au texte.</li>
+        </ol>
       </div>
 
       <figure class="image-figure">
         <img src="../assets/images/visual-edits.png" alt="Visual editing mode in Lovable" />
-        <figcaption>Visual Mode — click on any element to edit its properties directly.</figcaption>
+        <figcaption class="lang-en">Visual Mode — click on any element to edit its properties directly.</figcaption>
+        <figcaption class="lang-fr">Mode Visuel — cliquez sur n'importe quel élément pour modifier ses propriétés directement.</figcaption>
       </figure>
 
       <!-- Example: Editing Layout -->
-      <h2>Example: Editing Layout with Visual Mode</h2>
+      <h2 class="lang-en">Example: Editing Layout with Visual Mode</h2>
+      <h2 class="lang-fr">Exemple : Modifier la mise en page avec le Mode Visuel</h2>
 
       <div class="content-card">
-        <h3>Scenario</h3>
-        <p>
+        <h3 class="lang-en">Scenario</h3>
+        <h3 class="lang-fr">Scénario</h3>
+
+        <p class="lang-en">
           You generated a product card component with a text prompt. The card works correctly,
           but the image is too small, the padding is uneven, and the "Add to Cart" button should
           be green instead of blue.
         </p>
+        <p class="lang-fr">
+          Vous avez généré un composant de carte produit avec un prompt textuel. La carte fonctionne
+          correctement, mais l'image est trop petite, le padding est inégal, et le bouton
+          « Add to Cart » devrait être vert au lieu de bleu.
+        </p>
 
-        <h3>Visual Mode Steps</h3>
-        <ol class="steps-list">
+        <h3 class="lang-en">Visual Mode Steps</h3>
+        <h3 class="lang-fr">Étapes en Mode Visuel</h3>
+
+        <ol class="steps-list lang-en">
           <li>
             <strong>Activate Visual Mode</strong> by clicking the toggle in Lovable's toolbar.
           </li>
@@ -172,28 +290,64 @@
             <strong>Review</strong> the changes. If satisfied, they're automatically saved to code.
           </li>
         </ol>
+        <ol class="steps-list lang-fr">
+          <li>
+            <strong>Activer le Mode Visuel</strong> en cliquant sur le bouton bascule dans la barre d'outils de Lovable.
+          </li>
+          <li>
+            <strong>Cliquer sur l'image du produit.</strong> Un panneau de propriétés s'ouvre. Modifier la hauteur
+            de 200px à 280px. Les changements s'appliquent instantanément dans l'aperçu.
+          </li>
+          <li>
+            <strong>Cliquer sur le conteneur de la carte.</strong> Ajuster le padding de 12px à 20px sur tous
+            les côtés. L'espacement est maintenant équilibré.
+          </li>
+          <li>
+            <strong>Cliquer sur le bouton « Add to Cart ».</strong> Changer la couleur de fond de
+            #3b82f6 (bleu) à #16a34a (vert). Le bouton se met à jour immédiatement.
+          </li>
+          <li>
+            <strong>Vérifier</strong> les modifications. Si vous êtes satisfait, elles sont automatiquement enregistrées dans le code.
+          </li>
+        </ol>
 
-        <div class="highlight-box info">
+        <div class="highlight-box info lang-en">
           <p class="box-title">&#128218; Note</p>
           <p>
             Every change you make in Visual Mode is reflected in the actual source code. You can
             switch to the code view to see exactly what CSS or JSX was modified.
           </p>
         </div>
+        <div class="highlight-box info lang-fr">
+          <p class="box-title">&#128218; Remarque</p>
+          <p>
+            Chaque modification effectuée en Mode Visuel est reflétée dans le code source réel.
+            Vous pouvez basculer vers la vue code pour voir exactement quel CSS ou JSX a été modifié.
+          </p>
+        </div>
       </div>
 
       <!-- Example: Component Tuning -->
-      <h2>Example: Component Tuning</h2>
+      <h2 class="lang-en">Example: Component Tuning</h2>
+      <h2 class="lang-fr">Exemple : Ajustement de composants</h2>
 
       <div class="content-card">
-        <h3>Scenario</h3>
-        <p>
+        <h3 class="lang-en">Scenario</h3>
+        <h3 class="lang-fr">Scénario</h3>
+
+        <p class="lang-en">
           Your navigation bar looks good on desktop but the links are too small on tablet, and
           the search bar needs more width.
         </p>
+        <p class="lang-fr">
+          Votre barre de navigation est bien sur desktop, mais les liens sont trop petits sur tablette,
+          et la barre de recherche a besoin de plus de largeur.
+        </p>
 
-        <h3>Visual Mode Steps</h3>
-        <ol class="steps-list">
+        <h3 class="lang-en">Visual Mode Steps</h3>
+        <h3 class="lang-fr">Étapes en Mode Visuel</h3>
+
+        <ol class="steps-list lang-en">
           <li>
             <strong>Switch to tablet preview</strong> using Lovable's responsive toggle.
           </li>
@@ -210,9 +364,26 @@
             menu layout.
           </li>
         </ol>
+        <ol class="steps-list lang-fr">
+          <li>
+            <strong>Passer à l'aperçu tablette</strong> en utilisant le sélecteur responsive de Lovable.
+          </li>
+          <li>
+            <strong>Cliquer sur un lien de navigation.</strong> Augmenter la taille de police de 14px à 16px.
+            Augmenter le padding de 4px 8px à 8px 16px.
+          </li>
+          <li>
+            <strong>Cliquer sur la barre de recherche.</strong> Changer la largeur de 200px à 100 % (ou définir
+            flex-grow: 1) pour qu'elle occupe l'espace disponible.
+          </li>
+          <li>
+            <strong>Vérifier en vue mobile</strong> pour s'assurer que les modifications ne cassent pas
+            la mise en page du menu hamburger.
+          </li>
+        </ol>
       </div>
 
-      <div class="highlight-box warning">
+      <div class="highlight-box warning lang-en">
         <p class="box-title">&#9888;&#65039; Warning</p>
         <p>
           Visual Mode changes can sometimes conflict with responsive styles defined via text
@@ -220,17 +391,33 @@
           broke.
         </p>
       </div>
+      <div class="highlight-box warning lang-fr">
+        <p class="box-title">&#9888;&#65039; Avertissement</p>
+        <p>
+          Les modifications du Mode Visuel peuvent parfois entrer en conflit avec les styles
+          responsive définis via les prompts textuels. Après avoir utilisé le Mode Visuel,
+          vérifiez toujours plusieurs tailles d'écran pour vous assurer que rien n'est cassé.
+        </p>
+      </div>
 
       <!-- Summary -->
-      <h2>Section Summary</h2>
+      <h2 class="lang-en">Section Summary</h2>
+      <h2 class="lang-fr">Résumé de la section</h2>
 
       <div class="content-card">
-        <ol class="steps-list">
+        <ol class="steps-list lang-en">
           <li>Visual Mode lets you edit UI elements by clicking directly in the preview.</li>
           <li>Use it for cosmetic tweaks: colours, spacing, text, sizing.</li>
           <li>Use text prompts for logic, data, and multi-element changes.</li>
           <li>The ideal workflow: build with text → polish with visual → refine with text.</li>
           <li>Always check responsive views after visual edits.</li>
+        </ol>
+        <ol class="steps-list lang-fr">
+          <li>Le Mode Visuel vous permet de modifier les éléments de l'interface en cliquant directement dans l'aperçu.</li>
+          <li>Utilisez-le pour les ajustements esthétiques : couleurs, espacement, texte, dimensionnement.</li>
+          <li>Utilisez les prompts textuels pour la logique, les données et les modifications multi-éléments.</li>
+          <li>Le flux de travail idéal : construire avec le texte → peaufiner avec le visuel → affiner avec le texte.</li>
+          <li>Vérifiez toujours les vues responsive après les modifications visuelles.</li>
         </ol>
       </div>
 
@@ -239,8 +426,10 @@
 
   <!-- ====== Footer ====== -->
   <footer class="section-footer">
-    <a href="../index.html" class="btn btn-back">&larr; Back to Presentation</a>
+    <a href="../index.html" class="btn btn-back lang-en">&larr; Back to Presentation</a>
+    <a href="../index.html" class="btn btn-back lang-fr">&larr; Retour à la présentation</a>
   </footer>
 
+  <script src="../js/lang.js"></script>
 </body>
 </html>

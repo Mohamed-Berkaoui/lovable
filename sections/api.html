@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,14 +11,25 @@
   <!-- ====== Header ====== -->
   <header class="section-header">
     <div class="container">
-      <nav class="breadcrumb">
+      <nav class="breadcrumb lang-en">
         <a href="../index.html">Home</a> <span>&rsaquo;</span> API Integration
       </nav>
-      <h1 class="section-title">API Integration</h1>
-      <p class="section-subtitle">
+      <nav class="breadcrumb lang-fr">
+        <a href="../index.html">Accueil</a> <span>&rsaquo;</span> Intégration API
+      </nav>
+
+      <h1 class="section-title lang-en">API Integration</h1>
+      <h1 class="section-title lang-fr">Intégration API</h1>
+
+      <p class="section-subtitle lang-en">
         Connect external services, manage API keys securely, and test endpoints — all inside Lovable.
       </p>
-      <span class="reading-time">&#128337; Estimated reading time: 15 minutes</span>
+      <p class="section-subtitle lang-fr">
+        Connectez des services externes, gérez vos clés API en toute sécurité et testez vos endpoints — le tout dans Lovable.
+      </p>
+
+      <span class="reading-time lang-en">&#128337; Estimated reading time: 15 minutes</span>
+      <span class="reading-time lang-fr">&#128337; Temps de lecture estimé : 15 minutes</span>
     </div>
   </header>
 
@@ -27,17 +38,25 @@
     <div class="container">
 
       <!-- REST API Basics -->
-      <h2>REST API Basics</h2>
+      <h2 class="lang-en">REST API Basics</h2>
+      <h2 class="lang-fr">Les bases des API REST</h2>
 
       <div class="content-card">
-        <p>
+        <p class="lang-en">
           An <strong>API</strong> (Application Programming Interface) is a way for two pieces of
           software to talk to each other. A <strong>REST API</strong> uses standard HTTP methods
           to perform operations on resources.
         </p>
+        <p class="lang-fr">
+          Une <strong>API</strong> (Application Programming Interface) est un moyen pour deux
+          logiciels de communiquer entre eux. Une <strong>API REST</strong> utilise les méthodes
+          HTTP standard pour effectuer des opérations sur des ressources.
+        </p>
 
-        <h3>HTTP Methods</h3>
-        <table class="comparison-table">
+        <h3 class="lang-en">HTTP Methods</h3>
+        <h3 class="lang-fr">Méthodes HTTP</h3>
+
+        <table class="comparison-table lang-en">
           <thead>
             <tr>
               <th>Method</th>
@@ -73,10 +92,48 @@
             </tr>
           </tbody>
         </table>
+        <table class="comparison-table lang-fr">
+          <thead>
+            <tr>
+              <th>Méthode</th>
+              <th>Objectif</th>
+              <th>Exemple</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>GET</strong></td>
+              <td>Lire / récupérer des données</td>
+              <td>GET /api/products → retourne la liste des produits</td>
+            </tr>
+            <tr>
+              <td><strong>POST</strong></td>
+              <td>Créer de nouvelles données</td>
+              <td>POST /api/products → crée un produit</td>
+            </tr>
+            <tr>
+              <td><strong>PUT</strong></td>
+              <td>Mettre à jour des données (remplacement complet)</td>
+              <td>PUT /api/products/123 → met à jour le produit 123</td>
+            </tr>
+            <tr>
+              <td><strong>PATCH</strong></td>
+              <td>Mettre à jour des données (partiel)</td>
+              <td>PATCH /api/products/123 → met à jour certains champs</td>
+            </tr>
+            <tr>
+              <td><strong>DELETE</strong></td>
+              <td>Supprimer des données</td>
+              <td>DELETE /api/products/123 → supprime le produit 123</td>
+            </tr>
+          </tbody>
+        </table>
 
-        <h3>Anatomy of an API Request</h3>
+        <h3 class="lang-en">Anatomy of an API Request</h3>
+        <h3 class="lang-fr">Anatomie d'une requête API</h3>
         <div class="code-block">
-          <span class="code-label">HTTP Request</span>
+          <span class="code-label lang-en">HTTP Request</span>
+          <span class="code-label lang-fr">Requête HTTP</span>
           <code>GET https://api.example.com/v1/products?category=phones
 Headers:
   Authorization: Bearer sk_live_abc123...
@@ -84,9 +141,11 @@ Headers:
   Accept: application/json</code>
         </div>
 
-        <h3>Anatomy of an API Response</h3>
+        <h3 class="lang-en">Anatomy of an API Response</h3>
+        <h3 class="lang-fr">Anatomie d'une réponse API</h3>
         <div class="code-block">
-          <span class="code-label">HTTP Response</span>
+          <span class="code-label lang-en">HTTP Response</span>
+          <span class="code-label lang-fr">Réponse HTTP</span>
           <code>Status: 200 OK
 Body:
 {
@@ -111,26 +170,44 @@ Body:
       </div>
 
       <!-- Secure API Keys -->
-      <h2>Secure API Keys</h2>
+      <h2 class="lang-en">Secure API Keys</h2>
+      <h2 class="lang-fr">Sécuriser les clés API</h2>
 
       <div class="content-card">
-        <p>
+        <p class="lang-en">
           API keys are like passwords — they prove your identity to an external service. If
           someone steals your API key, they can use your account (and potentially run up
           charges). <strong>Never, ever expose API keys in client-side code.</strong>
         </p>
+        <p class="lang-fr">
+          Les clés API sont comme des mots de passe — elles prouvent votre identité auprès d'un
+          service externe. Si quelqu'un vole votre clé API, il peut utiliser votre compte (et
+          potentiellement générer des frais). <strong>N'exposez jamais vos clés API dans le code côté client.</strong>
+        </p>
 
-        <h3>The Golden Rule</h3>
-        <div class="highlight-box warning">
+        <h3 class="lang-en">The Golden Rule</h3>
+        <h3 class="lang-fr">La règle d'or</h3>
+
+        <div class="highlight-box warning lang-en">
           <p class="box-title">&#9888;&#65039; Critical Security Rule</p>
           <p>
             API keys must NEVER appear in your frontend code, HTML source, or version control.
             Always store them in environment variables and access them from server-side code only.
           </p>
         </div>
+        <div class="highlight-box warning lang-fr">
+          <p class="box-title">&#9888;&#65039; Règle de sécurité critique</p>
+          <p>
+            Les clés API ne doivent JAMAIS apparaître dans votre code frontend, le code source HTML
+            ou le contrôle de version. Stockez-les toujours dans des variables d'environnement et
+            accédez-y uniquement depuis du code côté serveur.
+          </p>
+        </div>
 
-        <h3>How to Store API Keys in Lovable</h3>
-        <ol class="steps-list">
+        <h3 class="lang-en">How to Store API Keys in Lovable</h3>
+        <h3 class="lang-fr">Comment stocker les clés API dans Lovable</h3>
+
+        <ol class="steps-list lang-en">
           <li>
             <strong>Use Supabase Secrets:</strong> Lovable uses Supabase Edge Functions for
             server-side logic. Store API keys as Supabase secrets (environment variables).
@@ -144,9 +221,24 @@ Body:
             (not the external API directly). The Edge Function acts as a secure proxy.
           </li>
         </ol>
+        <ol class="steps-list lang-fr">
+          <li>
+            <strong>Utiliser les secrets Supabase :</strong> Lovable utilise les Supabase Edge Functions
+            pour la logique côté serveur. Stockez les clés API en tant que secrets Supabase (variables d'environnement).
+          </li>
+          <li>
+            <strong>Créer une Edge Function :</strong> Écrivez une Supabase Edge Function qui lit
+            le secret et effectue l'appel API externe.
+          </li>
+          <li>
+            <strong>Appeler depuis le frontend :</strong> Votre frontend appelle votre propre Edge Function
+            (et non l'API externe directement). L'Edge Function agit comme un proxy sécurisé.
+          </li>
+        </ol>
 
         <div class="code-block">
-          <span class="code-label">Architecture</span>
+          <span class="code-label lang-en">Architecture</span>
+          <span class="code-label lang-fr">Architecture</span>
           <code>  Frontend (React)
       ↓ (calls your own endpoint)
   Supabase Edge Function
@@ -160,16 +252,22 @@ Body:
       </div>
 
       <!-- Authenticated Requests -->
-      <h2>Authenticated Requests</h2>
+      <h2 class="lang-en">Authenticated Requests</h2>
+      <h2 class="lang-fr">Requêtes authentifiées</h2>
 
       <div class="content-card">
-        <p>
+        <p class="lang-en">
           Most APIs require authentication. The two most common methods are:
         </p>
+        <p class="lang-fr">
+          La plupart des API nécessitent une authentification. Les deux méthodes les plus courantes sont :
+        </p>
 
-        <h3>1. API Key in Header</h3>
+        <h3 class="lang-en">1. API Key in Header</h3>
+        <h3 class="lang-fr">1. Clé API dans l'en-tête</h3>
         <div class="code-block">
-          <span class="code-label">JavaScript (Edge Function)</span>
+          <span class="code-label lang-en">JavaScript (Edge Function)</span>
+          <span class="code-label lang-fr">JavaScript (Edge Function)</span>
           <code>// Inside a Supabase Edge Function
 const apiKey = Deno.env.get('OPENAI_API_KEY');
 
@@ -189,9 +287,11 @@ const data = await response.json();
 return new Response(JSON.stringify(data));</code>
         </div>
 
-        <h3>2. OAuth Bearer Token</h3>
+        <h3 class="lang-en">2. OAuth Bearer Token</h3>
+        <h3 class="lang-fr">2. Jeton OAuth Bearer</h3>
         <div class="code-block">
-          <span class="code-label">JavaScript</span>
+          <span class="code-label lang-en">JavaScript</span>
+          <span class="code-label lang-fr">JavaScript</span>
           <code>// OAuth flow: exchange code for access token
 const tokenResponse = await fetch('https://oauth.example.com/token', {
   method: 'POST',
@@ -215,15 +315,20 @@ const dataResponse = await fetch('https://api.example.com/user', {
       </div>
 
       <!-- Testing APIs -->
-      <h2>Testing APIs Inside Lovable</h2>
+      <h2 class="lang-en">Testing APIs Inside Lovable</h2>
+      <h2 class="lang-fr">Tester les API dans Lovable</h2>
 
       <div class="content-card">
-        <p>
+        <p class="lang-en">
           Lovable lets you test API integrations directly within the platform. Here's the
           recommended workflow:
         </p>
+        <p class="lang-fr">
+          Lovable vous permet de tester les intégrations API directement dans la plateforme. Voici
+          le flux de travail recommandé :
+        </p>
 
-        <ol class="steps-list">
+        <ol class="steps-list lang-en">
           <li>
             <strong>Write the Edge Function:</strong> Ask Lovable to create a Supabase Edge
             Function that calls the external API.
@@ -245,8 +350,30 @@ const dataResponse = await fetch('https://api.example.com/user', {
             actual feature (e.g., product search, AI chat, payment processing).
           </li>
         </ol>
+        <ol class="steps-list lang-fr">
+          <li>
+            <strong>Écrire l'Edge Function :</strong> Demandez à Lovable de créer une Supabase Edge
+            Function qui appelle l'API externe.
+          </li>
+          <li>
+            <strong>Définir le secret :</strong> Ajoutez votre clé API dans la gestion des secrets
+            Supabase (Project Settings → Edge Functions → Secrets).
+          </li>
+          <li>
+            <strong>Créer une interface de test :</strong> Demandez à Lovable de construire un formulaire
+            simple qui appelle votre Edge Function et affiche le résultat.
+          </li>
+          <li>
+            <strong>Tester avec des données d'exemple :</strong> Utilisez le formulaire pour envoyer des
+            requêtes de test. Vérifiez le format de la réponse et gérez les erreurs.
+          </li>
+          <li>
+            <strong>Intégrer dans l'application :</strong> Une fois que l'appel API fonctionne, connectez-le
+            à la fonctionnalité réelle (ex. : recherche de produits, chat IA, traitement des paiements).
+          </li>
+        </ol>
 
-        <div class="highlight-box tip">
+        <div class="highlight-box tip lang-en">
           <p class="box-title">&#128161; Tip</p>
           <p>
             Always test with error cases: wrong API key, empty response, network timeout, rate
@@ -254,20 +381,35 @@ const dataResponse = await fetch('https://api.example.com/user', {
             messages.
           </p>
         </div>
+        <div class="highlight-box tip lang-fr">
+          <p class="box-title">&#128161; Conseil</p>
+          <p>
+            Testez toujours avec des cas d'erreur : mauvaise clé API, réponse vide, délai d'attente
+            réseau, limitation de débit. Votre application doit gérer tous ces cas de manière élégante
+            avec des messages d'erreur compréhensibles.
+          </p>
+        </div>
       </div>
 
       <!-- Full Example: External AI API -->
-      <h2>Full Example: Connecting an External AI API</h2>
+      <h2 class="lang-en">Full Example: Connecting an External AI API</h2>
+      <h2 class="lang-fr">Exemple complet : connecter une API IA externe</h2>
 
       <div class="content-card">
-        <p>
+        <p class="lang-en">
           Let's walk through a complete example: adding an AI-powered product description
           generator using the OpenAI API.
         </p>
+        <p class="lang-fr">
+          Passons en revue un exemple complet : ajouter un générateur de descriptions de produits
+          alimenté par l'IA en utilisant l'API OpenAI.
+        </p>
 
-        <h3>Step 1: Create the Edge Function</h3>
+        <h3 class="lang-en">Step 1: Create the Edge Function</h3>
+        <h3 class="lang-fr">Étape 1 : Créer l'Edge Function</h3>
         <div class="code-block">
-          <span class="code-label">Prompt to Lovable</span>
+          <span class="code-label lang-en">Prompt to Lovable</span>
+          <span class="code-label lang-fr">Prompt pour Lovable</span>
           <code>"Create a Supabase Edge Function called 'generate-description'.
 It should:
 1. Accept a POST request with { productName, category, features }
@@ -280,18 +422,22 @@ It should:
 7. Handle errors: return 500 with { error: message } if API fails"</code>
         </div>
 
-        <h3>Step 2: Store the API Key</h3>
+        <h3 class="lang-en">Step 2: Store the API Key</h3>
+        <h3 class="lang-fr">Étape 2 : Stocker la clé API</h3>
         <div class="code-block">
-          <span class="code-label">Instructions</span>
+          <span class="code-label lang-en">Instructions</span>
+          <span class="code-label lang-fr">Instructions</span>
           <code>1. Go to Supabase Dashboard → Project Settings → Edge Functions
 2. Click "Secrets"
 3. Add: OPENAI_API_KEY = sk-proj-... (your actual key)
 4. Save</code>
         </div>
 
-        <h3>Step 3: Build the Frontend Integration</h3>
+        <h3 class="lang-en">Step 3: Build the Frontend Integration</h3>
+        <h3 class="lang-fr">Étape 3 : Construire l'intégration frontend</h3>
         <div class="code-block">
-          <span class="code-label">Prompt to Lovable</span>
+          <span class="code-label lang-en">Prompt to Lovable</span>
+          <span class="code-label lang-fr">Prompt pour Lovable</span>
           <code>"On the admin 'Add Product' page, add a section
 called 'AI Description Generator':
 1. Button: 'Generate with AI' (purple, with sparkle icon)
@@ -303,9 +449,11 @@ called 'AI Description Generator':
 6. The user can edit the AI-generated text before saving"</code>
         </div>
 
-        <h3>Step 4: Test</h3>
+        <h3 class="lang-en">Step 4: Test</h3>
+        <h3 class="lang-fr">Étape 4 : Tester</h3>
         <div class="code-block">
-          <span class="code-label">Test Cases</span>
+          <span class="code-label lang-en">Test Cases</span>
+          <span class="code-label lang-fr">Cas de test</span>
           <code>✅ Normal case: Enter product details, click generate, get description
 ✅ Empty fields: Show validation error before calling API
 ✅ API error: Show error toast, keep form functional
@@ -314,7 +462,7 @@ called 'AI Description Generator':
         </div>
       </div>
 
-      <div class="highlight-box warning">
+      <div class="highlight-box warning lang-en">
         <p class="box-title">&#9888;&#65039; Cost Awareness</p>
         <p>
           External APIs often charge per request. OpenAI charges per token. Always add rate
@@ -322,18 +470,35 @@ called 'AI Description Generator':
           avoid unexpected bills.
         </p>
       </div>
+      <div class="highlight-box warning lang-fr">
+        <p class="box-title">&#9888;&#65039; Sensibilisation aux coûts</p>
+        <p>
+          Les API externes facturent souvent par requête. OpenAI facture par token. Ajoutez toujours
+          une limitation de débit (ex. : max 10 générations par heure par utilisateur) et surveillez
+          votre consommation pour éviter les factures imprévues.
+        </p>
+      </div>
 
       <!-- Summary -->
-      <h2>Section Summary</h2>
+      <h2 class="lang-en">Section Summary</h2>
+      <h2 class="lang-fr">Résumé de la section</h2>
 
       <div class="content-card">
-        <ol class="steps-list">
+        <ol class="steps-list lang-en">
           <li>REST APIs use HTTP methods (GET, POST, PUT, PATCH, DELETE) to interact with external services.</li>
           <li>NEVER expose API keys in frontend code — always use server-side Edge Functions as a proxy.</li>
           <li>Common auth methods: API key in header and OAuth bearer tokens.</li>
           <li>Test APIs thoroughly with both success and error cases before integrating into features.</li>
           <li>Use the pattern: Frontend → Edge Function → External API → Edge Function → Frontend.</li>
           <li>Monitor API usage and add rate limiting to control costs.</li>
+        </ol>
+        <ol class="steps-list lang-fr">
+          <li>Les API REST utilisent les méthodes HTTP (GET, POST, PUT, PATCH, DELETE) pour interagir avec des services externes.</li>
+          <li>N'exposez JAMAIS les clés API dans le code frontend — utilisez toujours des Edge Functions côté serveur comme proxy.</li>
+          <li>Méthodes d'authentification courantes : clé API dans l'en-tête et jetons OAuth bearer.</li>
+          <li>Testez les API de manière approfondie avec des cas de succès et d'erreur avant de les intégrer aux fonctionnalités.</li>
+          <li>Utilisez le schéma : Frontend → Edge Function → API externe → Edge Function → Frontend.</li>
+          <li>Surveillez l'utilisation des API et ajoutez une limitation de débit pour maîtriser les coûts.</li>
         </ol>
       </div>
 
@@ -342,8 +507,10 @@ called 'AI Description Generator':
 
   <!-- ====== Footer ====== -->
   <footer class="section-footer">
-    <a href="../index.html" class="btn btn-back">&larr; Back to Presentation</a>
+    <a href="../index.html" class="btn btn-back lang-en">&larr; Back to Presentation</a>
+    <a href="../index.html" class="btn btn-back lang-fr">&larr; Retour à la présentation</a>
   </footer>
 
+  <script src="../js/lang.js"></script>
 </body>
 </html>

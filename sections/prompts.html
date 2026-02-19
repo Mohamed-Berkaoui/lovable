@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,14 +11,25 @@
   <!-- ====== Header ====== -->
   <header class="section-header">
     <div class="container">
-      <nav class="breadcrumb">
+      <nav class="breadcrumb lang-en">
         <a href="../index.html">Home</a> <span>&rsaquo;</span> PRD → Lovable Prompts
       </nav>
-      <h1 class="section-title">PRD → Lovable Prompts</h1>
-      <p class="section-subtitle">
+      <nav class="breadcrumb lang-fr">
+        <a href="../index.html">Accueil</a> <span>&rsaquo;</span> PRD → Prompts Lovable
+      </nav>
+
+      <h1 class="section-title lang-en">PRD → Lovable Prompts</h1>
+      <h1 class="section-title lang-fr">PRD → Prompts Lovable</h1>
+
+      <p class="section-subtitle lang-en">
         Transform your structured PRD into precise prompts that Lovable can execute perfectly.
       </p>
-      <span class="reading-time">&#128337; Estimated reading time: 14 minutes</span>
+      <p class="section-subtitle lang-fr">
+        Transformez votre PRD structuré en prompts précis que Lovable peut exécuter parfaitement.
+      </p>
+
+      <span class="reading-time lang-en">&#128337; Estimated reading time: 14 minutes</span>
+      <span class="reading-time lang-fr">&#128337; Temps de lecture estimé : 14 minutes</span>
     </div>
   </header>
 
@@ -27,21 +38,33 @@
     <div class="container">
 
       <!-- How Lovable Interprets Prompts -->
-      <h2>How Lovable Interprets Prompts</h2>
+      <h2 class="lang-en">How Lovable Interprets Prompts</h2>
+      <h2 class="lang-fr">Comment Lovable interprète les prompts</h2>
 
       <div class="content-card">
-        <p>
+        <p class="lang-en">
           Lovable's AI reads your prompt, breaks it down into tasks, and generates code for each
           task. It processes prompts <strong>sequentially and literally</strong>. This means:
         </p>
-        <ul>
+        <p class="lang-fr">
+          L'IA de Lovable lit votre prompt, le décompose en tâches et génère du code pour chacune
+          d'entre elles. Elle traite les prompts <strong>séquentiellement et littéralement</strong>. Cela signifie :
+        </p>
+
+        <ul class="lang-en">
           <li>Every sentence can result in a code decision.</li>
           <li>Ambiguity leads to the AI choosing for you — and it might choose wrong.</li>
           <li>Order matters: the AI processes from top to bottom.</li>
           <li>Shorter, focused prompts yield better results than massive monolithic ones.</li>
         </ul>
+        <ul class="lang-fr">
+          <li>Chaque phrase peut entraîner une décision de code.</li>
+          <li>L'ambiguïté amène l'IA à choisir à votre place — et elle peut se tromper.</li>
+          <li>L'ordre compte : l'IA traite de haut en bas.</li>
+          <li>Des prompts courts et ciblés donnent de meilleurs résultats que des prompts monolithiques.</li>
+        </ul>
 
-        <div class="highlight-box info">
+        <div class="highlight-box info lang-en">
           <p class="box-title">&#128218; Key Concept</p>
           <p>
             Think of Lovable's AI as a very fast, very literal junior developer. It will do
@@ -49,21 +72,39 @@
             out, it won't be built.
           </p>
         </div>
+        <div class="highlight-box info lang-fr">
+          <p class="box-title">&#128218; Concept clé</p>
+          <p>
+            Considérez l'IA de Lovable comme un développeur junior très rapide et très littéral.
+            Elle fera exactement ce que vous dites — mais elle ne lira pas entre les lignes.
+            Si vous omettez quelque chose, cela ne sera pas construit.
+          </p>
+        </div>
       </div>
 
       <!-- Prompt Engineering Basics -->
-      <h2>Prompt Engineering Basics</h2>
+      <h2 class="lang-en">Prompt Engineering Basics</h2>
+      <h2 class="lang-fr">Les bases du prompt engineering</h2>
 
       <div class="content-card">
-        <p>
+        <p class="lang-en">
           <strong>Prompt engineering</strong> is the skill of writing instructions that produce the
           best possible output from an AI. Here are the fundamental principles:
         </p>
+        <p class="lang-fr">
+          Le <strong>prompt engineering</strong> est l'art de rédiger des instructions qui produisent
+          le meilleur résultat possible d'une IA. Voici les principes fondamentaux :
+        </p>
 
-        <h3>1. Be Specific</h3>
-        <p>Instead of "add a navbar", say:</p>
+        <h3 class="lang-en">1. Be Specific</h3>
+        <h3 class="lang-fr">1. Soyez précis</h3>
+
+        <p class="lang-en">Instead of "add a navbar", say:</p>
+        <p class="lang-fr">Au lieu de « add a navbar », dites :</p>
+
         <div class="code-block">
-          <span class="code-label">Prompt</span>
+          <span class="code-label lang-en">Prompt</span>
+          <span class="code-label lang-fr">Prompt</span>
           <code>Add a fixed horizontal navigation bar at the top of every page.
 It should contain:
 - Logo on the left (link to home page)
@@ -72,39 +113,66 @@ It should contain:
 - On mobile: collapse to a hamburger menu</code>
         </div>
 
-        <h3>2. One Task Per Prompt</h3>
-        <p>
+        <h3 class="lang-en">2. One Task Per Prompt</h3>
+        <h3 class="lang-fr">2. Une tâche par prompt</h3>
+
+        <p class="lang-en">
           Avoid sending a 500-word prompt that asks for 10 things at once. Break it down into
           individual prompts, each focused on a single feature or page.
         </p>
+        <p class="lang-fr">
+          Évitez d'envoyer un prompt de 500 mots demandant 10 choses à la fois. Décomposez-le en
+          prompts individuels, chacun axé sur une seule fonctionnalité ou page.
+        </p>
 
-        <h3>3. Use Structured Formatting</h3>
-        <p>
+        <h3 class="lang-en">3. Use Structured Formatting</h3>
+        <h3 class="lang-fr">3. Utilisez un formatage structuré</h3>
+
+        <p class="lang-en">
           Use bullet points, numbered lists, and clear headings. The AI parses structured text
           much better than long paragraphs.
         </p>
+        <p class="lang-fr">
+          Utilisez des puces, des listes numérotées et des titres clairs. L'IA analyse le texte
+          structuré bien mieux que de longs paragraphes.
+        </p>
 
-        <h3>4. Include Constraints</h3>
-        <p>
+        <h3 class="lang-en">4. Include Constraints</h3>
+        <h3 class="lang-fr">4. Incluez des contraintes</h3>
+
+        <p class="lang-en">
           Tell the AI what <em>not</em> to do. For example: "Do NOT add pagination. Show all
           products on one page."
         </p>
+        <p class="lang-fr">
+          Dites à l'IA ce qu'elle ne doit <em>pas</em> faire. Par exemple : « Do NOT add pagination. Show all
+          products on one page. »
+        </p>
 
-        <h3>5. Reference Previous Context</h3>
-        <p>
+        <h3 class="lang-en">5. Reference Previous Context</h3>
+        <h3 class="lang-fr">5. Référencez le contexte précédent</h3>
+
+        <p class="lang-en">
           If you've already built a page, reference it: "On the existing product detail page,
           add a reviews section below the specs table."
+        </p>
+        <p class="lang-fr">
+          Si vous avez déjà construit une page, référencez-la : « On the existing product detail page,
+          add a reviews section below the specs table. »
         </p>
       </div>
 
       <!-- Prompt Structure -->
-      <h2>Prompt Structure Template</h2>
+      <h2 class="lang-en">Prompt Structure Template</h2>
+      <h2 class="lang-fr">Modèle de structure de prompt</h2>
 
       <div class="content-card">
-        <p>Use this template for every prompt you send to Lovable:</p>
+        <p class="lang-en">Use this template for every prompt you send to Lovable:</p>
+        <p class="lang-fr">Utilisez ce modèle pour chaque prompt que vous envoyez à Lovable :</p>
 
         <div class="code-block">
-          <span class="code-label">Template</span>
+          <span class="code-label lang-en">Template</span>
+          <span class="code-label lang-fr">Modèle</span>
           <code>## [Task Title]
 
 ### What to build:
@@ -131,12 +199,16 @@ It should contain:
       </div>
 
       <!-- Page Generation Prompts -->
-      <h2>Example: Page Generation Prompts</h2>
+      <h2 class="lang-en">Example: Page Generation Prompts</h2>
+      <h2 class="lang-fr">Exemple : Prompts de génération de pages</h2>
 
       <div class="content-card">
-        <h3>Prompt 1: Home Page</h3>
+        <h3 class="lang-en">Prompt 1: Home Page</h3>
+        <h3 class="lang-fr">Prompt 1 : Page d'accueil</h3>
+
         <div class="code-block">
-          <span class="code-label">Prompt</span>
+          <span class="code-label lang-en">Prompt</span>
+          <span class="code-label lang-fr">Prompt</span>
           <code>## Build the Home Page
 
 ### What to build:
@@ -169,9 +241,12 @@ The main landing page for TechMart e-commerce store.
 - Categories are hardcoded for now</code>
         </div>
 
-        <h3>Prompt 2: Product Detail Page</h3>
+        <h3 class="lang-en">Prompt 2: Product Detail Page</h3>
+        <h3 class="lang-fr">Prompt 2 : Page de détail produit</h3>
+
         <div class="code-block">
-          <span class="code-label">Prompt</span>
+          <span class="code-label lang-en">Prompt</span>
+          <span class="code-label lang-fr">Prompt</span>
           <code>## Build the Product Detail Page
 
 ### What to build:
@@ -203,12 +278,16 @@ A detail page for a single product, accessible via /product/:id.
       </div>
 
       <!-- Feature Prompts -->
-      <h2>Example: Feature Prompts</h2>
+      <h2 class="lang-en">Example: Feature Prompts</h2>
+      <h2 class="lang-fr">Exemple : Prompts de fonctionnalités</h2>
 
       <div class="content-card">
-        <h3>Adding Authentication</h3>
+        <h3 class="lang-en">Adding Authentication</h3>
+        <h3 class="lang-fr">Ajout de l'authentification</h3>
+
         <div class="code-block">
-          <span class="code-label">Prompt</span>
+          <span class="code-label lang-en">Prompt</span>
+          <span class="code-label lang-fr">Prompt</span>
           <code>## Add User Authentication
 
 ### What to build:
@@ -233,9 +312,12 @@ Email + Google OAuth authentication using Supabase Auth.
 - Passwords must be minimum 8 characters</code>
         </div>
 
-        <h3>Adding a Shopping Cart</h3>
+        <h3 class="lang-en">Adding a Shopping Cart</h3>
+        <h3 class="lang-fr">Ajout d'un panier d'achat</h3>
+
         <div class="code-block">
-          <span class="code-label">Prompt</span>
+          <span class="code-label lang-en">Prompt</span>
+          <span class="code-label lang-fr">Prompt</span>
           <code>## Build Shopping Cart Feature
 
 ### What to build:
@@ -262,32 +344,56 @@ A client-side shopping cart stored in localStorage.
         </div>
       </div>
 
-      <div class="highlight-box tip">
+      <div class="highlight-box tip lang-en">
         <p class="box-title">&#128161; Pro Tip</p>
         <p>
           Send prompts in a logical order: layout first, then data, then interactions, then
           edge cases. This mirrors how a human developer would build.
         </p>
       </div>
+      <div class="highlight-box tip lang-fr">
+        <p class="box-title">&#128161; Conseil pro</p>
+        <p>
+          Envoyez les prompts dans un ordre logique : d'abord la mise en page, puis les données,
+          puis les interactions, puis les cas limites. Cela reflète la façon dont un développeur
+          humain construirait.
+        </p>
+      </div>
 
-      <div class="highlight-box warning">
+      <div class="highlight-box warning lang-en">
         <p class="box-title">&#9888;&#65039; Common Mistake</p>
         <p>
           Don't ask Lovable to "make it look good" or "use best practices". These are too vague.
           Instead, specify exact colours, spacing, fonts, and layout rules.
         </p>
       </div>
+      <div class="highlight-box warning lang-fr">
+        <p class="box-title">&#9888;&#65039; Erreur courante</p>
+        <p>
+          Ne demandez pas à Lovable de « make it look good » ou « use best practices ».
+          C'est trop vague. Spécifiez plutôt les couleurs exactes, l'espacement, les polices
+          et les règles de mise en page.
+        </p>
+      </div>
 
       <!-- Summary -->
-      <h2>Section Summary</h2>
+      <h2 class="lang-en">Section Summary</h2>
+      <h2 class="lang-fr">Résumé de la section</h2>
 
       <div class="content-card">
-        <ol class="steps-list">
+        <ol class="steps-list lang-en">
           <li>Lovable reads prompts literally — be specific and structured.</li>
           <li>Use the prompt template: Task → Requirements → Layout → Behaviour → Constraints → Data.</li>
           <li>One prompt per feature or page for best results.</li>
           <li>Include explicit constraints (what NOT to do).</li>
           <li>Send prompts in logical build order: layout → data → interactions → edge cases.</li>
+        </ol>
+        <ol class="steps-list lang-fr">
+          <li>Lovable lit les prompts littéralement — soyez précis et structuré.</li>
+          <li>Utilisez le modèle de prompt : Tâche → Exigences → Mise en page → Comportement → Contraintes → Données.</li>
+          <li>Un prompt par fonctionnalité ou page pour de meilleurs résultats.</li>
+          <li>Incluez des contraintes explicites (ce qu'il ne faut PAS faire).</li>
+          <li>Envoyez les prompts dans un ordre logique : mise en page → données → interactions → cas limites.</li>
         </ol>
       </div>
 
@@ -296,8 +402,10 @@ A client-side shopping cart stored in localStorage.
 
   <!-- ====== Footer ====== -->
   <footer class="section-footer">
-    <a href="../index.html" class="btn btn-back">&larr; Back to Presentation</a>
+    <a href="../index.html" class="btn btn-back lang-en">&larr; Back to Presentation</a>
+    <a href="../index.html" class="btn btn-back lang-fr">&larr; Retour à la présentation</a>
   </footer>
 
+  <script src="../js/lang.js"></script>
 </body>
 </html>
